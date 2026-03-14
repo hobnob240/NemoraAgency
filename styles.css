@@ -350,7 +350,7 @@ body.home .hero-card::before{filter:none; opacity:.45}
   display:flex; align-items:flex-start; justify-content:space-between;
   gap:24px;
 }
-.footer .brand img{height:30px}
+.footer .brand img{height:100px}
 .footer-links{
   display:flex; gap:18px; flex-wrap:wrap; justify-content:flex-end;
   font-size:14px;
