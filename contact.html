@@ -1,189 +1,64 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contact NEMORA to discuss a premium website build or strategic digital infrastructure project." />
-  <meta name="theme-color" content="#0b0f1a" />
-
-  <meta property="og:title" content="Contact — NEMORA" />
-  <meta property="og:description" content="Contact NEMORA to discuss a premium website build or strategic digital infrastructure project." />
-  <meta property="og:image" content="assets/nemora-logo.png" />
-  <meta property="og:type" content="website" />
-
-  <title>Contact — NEMORA</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preload" as="image" href="assets/nemora-logo.png" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact | NEMORA</title>
+<meta name="description" content="Start a project with NEMORA. Tell us about your business and we’ll reply with honest advice and clear next steps.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nemora.uk/contact.html">
+<meta name="theme-color" content="#0f1119">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website"><meta property="og:site_name" content="NEMORA"><meta property="og:title" content="Contact | NEMORA"><meta property="og:description" content="Start a project with NEMORA. Tell us about your business and we’ll reply with honest advice and clear next steps."><meta property="og:url" content="https://nemora.uk/contact.html"><meta property="og:image" content="https://nemora.uk/assets/og.png"><meta property="og:locale" content="en_GB"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon-64.png" type="image/png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/serif.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/site.js?v=1" defer></script>
 </head>
 <body>
-
-<header class="header">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Home">
-      <img src="assets/nemora-logo.png" alt="NEMORA logo" />
-    </a>
-
-    <nav class="nav" aria-label="Primary">
-      <a data-nav href="index.html">Home</a>
-      <a data-nav href="services.html">Services</a>
-      <a data-nav href="work.html">Work</a>
-      <a data-nav href="about.html">About</a>
-      <a data-nav href="contact.html">Contact</a>
-    </nav>
-
-    <div class="nav-cta">
-      <a class="btn btn-secondary" href="work.html">View Our Work</a>
-      <a class="btn btn-primary" href="contact.html">Start a Conversation</a>
-    </div>
-
-    <button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menuPanel">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-      </svg>
-    </button>
-  </div>
-
-  <div id="menuPanel" class="menu" hidden>
-    <div class="container menu-inner">
-      <a data-nav href="index.html">Home</a>
-      <a data-nav href="services.html">Services</a>
-      <a data-nav href="work.html">Work</a>
-      <a data-nav href="about.html">About</a>
-      <a data-nav href="contact.html">Contact</a>
-      <div class="menu-cta">
-        <a class="btn btn-secondary" href="work.html">View Our Work</a>
-        <a class="btn btn-primary" href="contact.html">Start a Conversation</a>
-      </div>
-    </div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="index.html" aria-label="NEMORA, home"><img src="assets/logo-h.png" alt="NEMORA" width="416" height="96"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span></button>
+    <nav id="nav" class="nav" aria-label="Main"><a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a class="btn btn-gold" href="contact.html" aria-current="page">Start a project</a></nav>
   </div>
 </header>
 <main id="main">
-  <section class="section lg">
-    <div class="container">
-      <p class="kicker">Contact</p>
-      <h1 class="reveal">Let’s Discuss Your Next Move.</h1>
-      <p class="lede reveal" style="margin-top:14px">Share a short overview and we’ll respond with clear next steps.</p>
-
-      <div class="grid-2" style="margin-top:28px; gap:18px; align-items:start">
-        <div class="card reveal">
-          <h2>Start a consultation</h2>
-          <p class="small"> <span style="color:var(--gold)"></span> </p>
-          <div class="hr"></div>
-
-          <form id="contactForm" class="form" data-to="hello@nemora.agency">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
-            </div>
-            <div class="field">
-              <label for="company">Company</label>
-              <input id="company" name="company" type="text" autocomplete="organization" />
-            </div>
-            <div class="field">
-              <label for="message">What are you looking to build?</label>
-              <textarea id="message" name="message" required placeholder="Brief context, timeline, and any priorities."></textarea>
-            </div>
-
-            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
-              <button class="btn btn-primary" type="submit">Send Enquiry</button>
-              <a class="btn btn-secondary" href="work.html">View Our Work</a>
-            </div>
-          </form>
-        </div>
-
-        <div class="card reveal">
-          <p class="kicker">What to expect</p>
-          <h2>Clarity first.</h2>
-          <p class="lede">We’ll identify the objective, define the scope, and align on the right path to execution.</p>
-          <div class="hr"></div>
-          <div class="steps">
-            <div class="step">
-              <div>
-                <div class="n">01</div>
-                <h3>Discovery</h3>
-                <p class="small">Understand goals, constraints, and positioning.</p>
-              </div>
-              <div class="badge">Alignment</div>
-            </div>
-            <div class="step">
-              <div>
-                <div class="n">02</div>
-                <h3>Plan</h3>
-                <p class="small">Scope, structure, and delivery roadmap.</p>
-              </div>
-              <div class="badge">Strategy</div>
-            </div>
-            <div class="step">
-              <div>
-                <div class="n">03</div>
-                <h3>Execute</h3>
-                <p class="small">Design, build, and performance optimisation.</p>
-              </div>
-              <div class="badge">Build</div>
-            </div>
-          </div>
-
-          <div class="hr"></div>
-          <div class="small">
-            Prefer email? Contact us at <span style="color:var(--gold)">daniel@nemora.uk</span> 
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div>
-        <a class="brand" href="index.html" aria-label="Home">
-          <img src="assets/nemora-logo.png" alt="NEMORA logo" />
-        </a>
-        <div class="small" style="max-width:62ch; margin-top:12px">
-          Strategic digital infrastructure for modern businesses — built with precision, speed, and long-term positioning in mind.
-        </div>
-      </div>
-
-      <div class="footer-links" aria-label="Footer links">
-        <a href="services.html">Services</a>
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="small">© <span id="year"></span> NEMORA. All rights reserved.</div>
-
-      <div class="social" aria-label="Social">
-        <a href="#" aria-label="LinkedIn" title="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M6.6 9.2V18M6.6 6.2v.1M10.3 9.2V18m0-4.8c0-2.2 1.2-4 3.6-4 2.5 0 3.5 1.8 3.5 4V18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-          </svg>
-        </a>
-        <a href="#" aria-label="X" title="X">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7 17L17 7M9 7h6.2L15 7.2V9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-          </svg>
-        </a>
-        <a href="#" aria-label="Email" title="Email">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M5 7.5h14v9H5v-9Zm0 .2 7 5.2 7-5.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-    </div>
+<section class="page-head">
+  <div class="wrap"><p class="eyebrow reveal">Contact</p><h1 class="reveal">Let’s talk about your website.</h1><p class="lede reveal">Tell us a little about your business and what you need. We’ll reply with honest advice and clear next steps.</p></div>
+</section>
+<section class="section">
+  <div class="wrap contact-grid">
+    <form class="form reveal" id="contact-form" data-to="daniel@nemora.uk" action="mailto:daniel@nemora.uk" method="post" enctype="text/plain">
+      <div class="row2"><div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" autocapitalize="none" spellcheck="false" required></div></div>
+      <div class="row2"><div class="field"><label for="f-phone">Phone <span class="opt">(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="f-business">Business name <span class="opt">(optional)</span></label><input id="f-business" name="business" type="text" autocomplete="organization"></div></div>
+      <div class="field"><label for="f-need">What do you need?</label><select id="f-need" name="need" required><option value="">Choose one</option><option>A new website</option><option>A redesign of my current website</option><option>A booking, membership or payment system</option><option>Not sure yet</option></select></div>
+      <div class="field"><label for="f-message">Tell us about your business</label><textarea id="f-message" name="message" rows="6" required placeholder="What you do, who your customers are, and anything you like or dislike about your current website."></textarea></div>
+      <p class="fine">When you press send, your email app opens with your message ready to go. We only use your details to reply. See our <a href="privacy.html">privacy notice</a>.</p>
+      <div><button class="btn btn-gold" type="submit">Send enquiry <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+      <p class="form-msg" id="form-msg" role="status" hidden></p>
+    </form>
+    <aside class="contact-aside">
+      <a class="contact-line reveal" href="mailto:daniel@nemora.uk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span><small>Email</small><b>daniel@nemora.uk</b></span></a>
+      <div class="contact-line reveal"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.5"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span><small>Timescales</small><b>Most websites go live in around two weeks</b></span></div>
+      <div class="note-card reveal"><h3>What happens next</h3><p>We’ll reply to talk through what you need, then send a clear plan and price. No pressure, and no obligation.</p></div>
+    </aside>
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><img src="assets/logo-h.png" alt="NEMORA" width="416" height="96" loading="lazy"><p>Premium websites for businesses that want to be taken seriously. Designed, built and looked after by us.</p></div>
+      <div><h2>Studio</h2><ul><li><a href="services.html">Services &amp; pricing</a></li><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div><h2>Contact</h2><ul><li><a href="contact.html">Start a project</a></li><li><a href="mailto:daniel@nemora.uk">daniel@nemora.uk</a></li></ul></div>
+    </div>
+    <div class="foot-base"><span>&copy; <span id="year">2026</span> NEMORA. All rights reserved.</span><a href="privacy.html">Privacy</a></div>
+  </div>
 </footer>
-
-<script src="main.js"></script>
 </body>
 </html>
