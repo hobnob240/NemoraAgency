@@ -1,4 +1,5 @@
 // NEMORA — small progressive enhancements. Everything works without JavaScript.
+window.NEMORA = 1;
 (function () {
   // header: solid background once the page scrolls
   var head = document.querySelector('.site-head');
