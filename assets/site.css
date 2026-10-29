@@ -7,7 +7,7 @@
 
 :root {
   --bg: #0f1119; --bg-2: #151826; --bg-3: #1b1f30; --line: rgba(233, 225, 205, .09); --line-2: rgba(233, 225, 205, .16);
-  --text: #ece6d8; --text-2: #b8b2a4; --muted: #8f8a7f;
+  --text: #ece6d8; --text-2: #b8b2a4; --muted: #9a958a;
   --gold: #c9a35a; --gold-2: #e8cf97; --gold-3: #a8873f;
   --serif: "Nemora Serif", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -323,3 +323,38 @@ em.g, .g { font-style: italic; color: var(--gold-2); }
 .no-border { border-bottom: 0; }
 .mt { margin-top: 28px; }
 .nav .btn[aria-current="page"] { color: #15120b; }
+
+/* ---------- guides ---------- */
+.wrap.narrow { max-width: 760px; }
+.crumbs { display: flex; gap: 10px; align-items: center; font-size: .85rem; color: var(--muted); margin-bottom: 22px; }
+.crumbs a { color: var(--gold-2); text-decoration: none; }
+.meta { font-size: .85rem; color: var(--muted); letter-spacing: .02em; }
+.prose ul { padding-left: 1.2em; display: grid; gap: .55em; margin: 0 0 1.2em; }
+.prose li::marker { color: var(--gold); }
+.prose a, .lede a, .faq-more a { color: var(--gold-2); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.prose strong { color: var(--text); font-weight: 600; }
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px; }
+.guide-card { display: flex; flex-direction: column; gap: 10px; padding: 28px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg-2); text-decoration: none; color: inherit; transition: border-color 200ms ease, transform 140ms var(--ease-out); }
+.guide-card + .guide-card { margin-top: 16px; }
+.guide-grid .guide-card + .guide-card { margin-top: 0; }
+.guide-card h2, .guide-card h3 { font-size: 1.45rem; margin: 0; }
+.guide-card p { color: var(--text-2); margin: 0; }
+.guide-card .link-arrow { margin-top: auto; padding-top: 8px; }
+.guide-card:active { transform: scale(0.99); }
+@media (hover: hover) and (pointer: fine) { .guide-card:hover { border-color: rgba(232,207,151,.4); } .guide-card:hover .link-arrow svg { transform: translateX(4px); } }
+.link-stack { display: grid; gap: 14px; justify-items: start; }
+.mt-sm { margin-top: 14px; }
+.price-wrap > div:first-child .link-arrow { display: flex; width: fit-content; }
+.faq-more { margin-top: 28px; color: var(--text-2); }
+.case .link-arrow { margin-top: 18px; }
+.card .link-arrow { margin-top: 16px; font-size: .92rem; }
+
+/* ---------- footer + consent ---------- */
+.foot-links { display: inline-flex; gap: 18px; }
+.linklike { background: none; border: 0; padding: 0; font: inherit; color: var(--muted); text-decoration: underline; cursor: pointer; }
+.consent { position: fixed; z-index: 60; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); max-width: 520px; margin-inline: auto; padding: 20px 22px; border: 1px solid var(--line-2); border-radius: var(--r); background: rgba(21,24,38,.97); box-shadow: 0 20px 60px -20px rgba(0,0,0,.7); transition: opacity 220ms var(--ease-out), transform 220ms var(--ease-out); }
+@starting-style { .consent { opacity: 0; transform: translateY(12px); } }
+.consent p { margin: 0 0 14px; font-size: .92rem; color: var(--text-2); }
+.consent .cta-row { gap: 10px; }
+.consent .btn { min-height: 44px; padding-inline: 18px; }
+@media (prefers-reduced-motion: reduce) { .consent, .guide-card { transition: none; } .guide-card:active { transform: none; } }

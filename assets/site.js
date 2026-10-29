@@ -61,5 +61,37 @@ window.NEMORA = 1;
     });
   }
 
+
+  // Microsoft Clarity: only when switched on in the build, and only after the visitor says yes (UK GDPR / PECR)
+  var clarityId = document.documentElement.getAttribute('data-clarity');
+  if (clarityId) {
+    var KEY = 'nemora-consent';
+    var get = function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
+    var set = function (v) { try { localStorage.setItem(KEY, v); } catch (e) {} };
+    var load = function () {
+      if (window.clarity) return;
+      window.clarity = function () { (window.clarity.q = window.clarity.q || []).push(arguments); };
+      var s = document.createElement('script'); s.async = true; s.src = 'https://www.clarity.ms/tag/' + encodeURIComponent(clarityId);
+      document.head.appendChild(s);
+    };
+    var banner;
+    var show = function () {
+      if (banner) return;
+      banner = document.createElement('div');
+      banner.className = 'consent'; banner.setAttribute('role', 'dialog'); banner.setAttribute('aria-label', 'Cookie choice');
+      banner.innerHTML = '<p>Can we use Microsoft Clarity cookies to see how people use this site, so we can improve it? It’s optional and nothing changes if you say no. <a href="/privacy.html">Privacy notice</a></p><div class="cta-row"><button type="button" class="btn btn-gold" data-c="yes">Accept</button><button type="button" class="btn btn-line" data-c="no">Reject</button></div>';
+      banner.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-c]'); if (!b) return;
+        var yes = b.getAttribute('data-c') === 'yes'; set(yes ? 'yes' : 'no');
+        banner.remove(); banner = null;
+        if (yes) load(); else if (window.clarity) location.reload();
+      });
+      document.body.appendChild(banner);
+    };
+    var choice = get();
+    if (choice === 'yes') load(); else if (choice !== 'no') show();
+    document.querySelectorAll('[data-consent-open]').forEach(function (b) { b.addEventListener('click', show); });
+  }
+
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
 })();
