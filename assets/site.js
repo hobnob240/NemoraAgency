@@ -38,6 +38,8 @@ window.NEMORA = 1;
   // contact form: opens the visitor's email app with the details filled in
   var form = document.getElementById('contact-form');
   if (form) {
+    var pk = new URLSearchParams(location.search).get('package'), sel = form.elements['package'];
+    if (pk && sel && sel.querySelector('option[value="' + pk.replace(/[^a-z]/g, '') + '"]')) sel.value = pk;
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var msg = document.getElementById('form-msg');
@@ -50,10 +52,11 @@ window.NEMORA = 1;
         'Email: ' + v('email'),
         v('phone') ? 'Phone: ' + v('phone') : '',
         v('business') ? 'Business: ' + v('business') : '',
+        'Package: ' + (form.elements['package'] && form.elements['package'].value ? form.elements['package'].selectedOptions[0].text : 'Not sure yet'),
         'Looking for: ' + v('need'),
         '',
         v('message')
-      ].filter(function (l, i) { return l !== '' || i === 5; }).join('\n');
+      ].filter(function (l, i) { return l !== '' || i === 6; }).join('\n');
       window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       msg.hidden = false;
       msg.className = 'form-msg';
