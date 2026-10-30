@@ -4,6 +4,7 @@
   "name": "nemora-inbox",
   "main": "src/worker.js",
   "compatibility_date": "2025-09-01",
+  "compatibility_flags": ["global_fetch_strictly_public"],
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
@@ -18,7 +19,7 @@
     { "binding": "DB", "database_name": "nemora-analytics" }
   ],
   // daily clean-up of visit statistics older than 13 months
-  "triggers": { "crons": ["17 3 * * *"] },
+  "triggers": { "crons": ["17 3 * * *", "*/15 * * * *"] },
   "vars": {
     "SITE_ORIGINS": "https://nemora.uk,https://www.nemora.uk"
   },
