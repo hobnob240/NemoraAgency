@@ -115,3 +115,15 @@ window.NEMORA = 1;
 
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
 })();
+
+// visit counter: cookieless and anonymous (page, referring site, screen width only). Skipped if the browser asks not to be tracked.
+(function () {
+  try {
+    if (navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;
+    if (!/(^|\.)nemora\.uk$/.test(location.hostname)) return;
+    var body = JSON.stringify({ p: location.pathname, r: document.referrer || '', w: window.innerWidth || 0 });
+    var url = 'https://nemora-inbox.demositeforyou.workers.dev/api/hit';
+    if (navigator.sendBeacon) navigator.sendBeacon(url, new Blob([body], { type: 'text/plain' }));
+    else fetch(url, { method: 'POST', mode: 'cors', credentials: 'omit', keepalive: true, headers: { 'Content-Type': 'text/plain' }, body: body });
+  } catch (e) {}
+})();
