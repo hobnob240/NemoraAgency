@@ -383,3 +383,6 @@ em.g, .g { font-style: italic; color: var(--gold-2); }
 .tier-monthly { margin: -4px 0 0; display: grid; gap: 6px; }
 .tier-monthly b { font-weight: 600; color: var(--gold-2); }
 .tier-monthly span { font-size: .88rem; color: var(--muted); line-height: 1.5; }
+/* contact form honeypot: hidden from people, visible to bots */
+.hp { position: absolute !important; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.btn[disabled] { opacity: .6; cursor: progress; }
