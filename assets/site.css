@@ -386,3 +386,61 @@ em.g, .g { font-style: italic; color: var(--gold-2); }
 /* contact form honeypot: hidden from people, visible to bots */
 .hp { position: absolute !important; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .btn[disabled] { opacity: .6; cursor: progress; }
+
+/* ===================================================================
+   Unslop pass (Oct 2026): quiet chrome, gold used like a glaze, not a glow.
+   The client screenshots and the prices carry the colour; everything else stays still.
+   =================================================================== */
+:root { --r: 16px; --r-sm: 10px; --r-btn: 10px; }
+em.g, .g { font-style: normal; color: inherit; }
+
+/* labels: sentence case, no wide tracking */
+.eyebrow { font: 500 .9rem/1.2 var(--sans); letter-spacing: 0; text-transform: none; color: var(--gold-2); margin-bottom: 16px; }
+.case .kind, .contact-line small, .foot-grid h2, .tier-name { letter-spacing: 0; text-transform: none; }
+.foot-grid h2 { font: 500 .9rem var(--sans); color: var(--text); }
+.tier-name { font: 500 1rem var(--sans); color: var(--text); }
+.case .kind { font: 500 .9rem var(--sans); }
+.contact-line small { font-size: .82rem; }
+.card .num { display: none; }
+.steps li::before { font: 500 .85rem var(--sans); letter-spacing: 0; color: var(--gold-2); border-top-color: var(--gold-2); }
+
+/* buttons: flat, no glow, a real radius instead of a pill */
+.btn, .nav a, .nav .btn { border-radius: var(--r-btn); }
+.btn { font-weight: 500; letter-spacing: 0; transition: transform 140ms var(--ease-out), background-color 160ms ease, border-color 160ms ease, color 160ms ease; }
+.btn-gold { background: var(--gold-2); box-shadow: none; color: #17130a; }
+.btn-line { background: transparent; }
+@media (hover: hover) and (pointer: fine) {
+  .btn-gold:hover { background: #f1dcab; box-shadow: none; }
+  .btn-line:hover { border-color: var(--text-2); }
+}
+@media (max-width: 860px) { .nav .btn { border-radius: var(--r-btn); } }
+
+/* no light washes, grids or glows behind content */
+.hero::before { background: var(--bg); }
+.hero::after, .cta-band::before { content: none; }
+.page-head::before { background: var(--bg); }
+.hero-note .dot { box-shadow: none; }
+
+/* client screenshots: quiet tag */
+.work-media .tag { letter-spacing: 0; text-transform: none; font: 500 .8rem/1 var(--sans); border-radius: 6px; padding: 6px 10px; backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(15,17,25,.88); color: var(--text); }
+.sectors li { border-radius: var(--r-btn); }
+
+/* prices: the numbers are the moment, the cards stay plain */
+.price-card { background: var(--bg-2); border-color: var(--line-2); border-radius: var(--r); }
+.price-card::before { content: none; }
+.tier.popular { border-color: var(--line-2); background: var(--bg-2); box-shadow: none; }
+.tier-flag { display: none; }
+.tier-price b { font-size: clamp(2.8rem, 4.6vw, 3.6rem); }
+
+/* backstamp: the maker's mark from the bottom of Stoke pottery, used twice (hero and footer) */
+.backstamp { display: inline-flex; align-items: center; gap: 12px; color: var(--text-2); font: 400 .95rem/1.2 var(--serif); }
+.backstamp img { width: 28px; height: auto; opacity: .9; }
+.backstamp span { display: block; }
+.backstamp small { display: block; font: 400 .78rem/1.3 var(--sans); color: var(--muted); }
+.hero .backstamp { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--line); }
+.foot-grid .backstamp { margin-top: 20px; }
+
+/* motion: one short entrance for the hero, nothing on scroll */
+.js .reveal { opacity: 1; transform: none; transition: none; }
+.js .hero .reveal { animation: fade 400ms ease both; }
+.tier-price { flex-direction: column; align-items: flex-start; gap: 6px; }
