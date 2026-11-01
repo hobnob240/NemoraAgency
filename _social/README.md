@@ -16,3 +16,11 @@ node _social/tools/reel.mjs spec.json social/2026-11/spitfire-comedy.mp4
 
 To scroll a real site from its source: `cd <site repo> && python3 -m http.server 8800` and use `http://localhost:8800/` as the scene URL. Screenshots of the portfolio sites are in `assets/work/`.
 - `tools/motion-reel-example.mjs` is a worked example of a smoother reel (word-by-word captions, a camera push-in, a phone hand-off, a colour change between sections), built by following `video-toolkit/skills/remotion/motion-craft.md` with the Playwright already installed. Copy it for a new video when reel.mjs looks too plain: `node _social/tools/motion-reel-example.mjs . social/YYYY-MM/<slug>.mp4` (add a third argument such as `2,5,9` to save stills to check first).
+
+## Learning from results (added 1 Nov 2026)
+
+- The admin fills `social_posts.insights` every hour for 30 days after a post goes out: `{ ig: { reach, views, likes, comments, shares, saves, interactions }, fb: { reach, views, likes or reactions, comments, shares, clicks }, error }`, with `insights_at` showing when. Charlie sees the same numbers in the Social tab.
+- When planning, compare reach, saves, shares and comments by kind and topic, and note in each post's `idea` what the numbers suggested. Saves and shares say more than likes for a small local account.
+- An `error` mentioning permissions means the Page token needs `read_insights` and `instagram_manage_insights`: tell Charlie in the run's one notification.
+- Charlie liked the motion version of the Spitfire Comedy reel (`tools/motion-reel-example.mjs`). Use that standard for the weekly video. Videos stay silent (his choice, 1 Nov 2026).
+- Charlie is allowing the session to reach nemora.uk, the client sites and *.demositeforyou.workers.dev. Try live sites first for real scroll-throughs, and check pushed media URLs load.
