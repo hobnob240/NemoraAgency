@@ -41,7 +41,7 @@ const outs = [];
 for (const [i, s] of spec.slides.entries()) {
   const pic = (s.phone || s.desk) ? `<div class="pic">${s.desk ? `<div class="desk"><img src="${file(s.desk)}"></div>` : ''}${s.phone ? `<div class="phone"><img src="${file(s.phone)}"></div>` : ''}</div>${s.caption ? `<p class="cap">${esc(s.caption)}</p>` : ''}` : '';
   const html = `<!doctype html><meta charset="utf-8"><style>${css}</style>
-<div class="top"><span class="brand"><img src="${file('assets/mark-96.png')}">NEMORA</span><span><b>${i + 1}</b> / ${n}</span></div>
+<div class="top"><span class="brand"><img src="${file('assets/mark-96.png')}">NEMORA</span>${n > 1 ? `<span><b>${i + 1}</b> / ${n}</span>` : ""}</div>
 <div class="body${(s.phone || s.desk) ? '' : ' center'}">${s.kicker ? `<p class="k">${esc(s.kicker)}</p>` : ''}<h1 class="big${s.xl ? ' xl' : ''}">${esc(s.big)}</h1>${s.text ? `<p class="txt">${esc(s.text)}</p>` : ''}${pic}${s.cta ? `<span class="cta">${esc(s.cta)}</span>` : ''}</div>
 ${i < n - 1 && !s.cta ? '<span class="swipe">Swipe</span>' : ''}`;
   const tmpf = path.join(ROOT, '.slide-' + Date.now() + '.html'); fs.writeFileSync(tmpf, html);

@@ -24,3 +24,10 @@ To scroll a real site from its source: `cd <site repo> && python3 -m http.server
 - An `error` mentioning permissions means the Page token needs `read_insights` and `instagram_manage_insights`: tell Charlie in the run's one notification.
 - The motion version of the Spitfire Comedy reel (`tools/motion-reel-example.mjs`, made at Charlie's request) is the standard for the weekly video. Videos stay silent (his choice, 1 Nov 2026).
 - Charlie is allowing the session to reach nemora.uk, the client sites and *.demositeforyou.workers.dev. Try live sites first for real scroll-throughs, and check pushed media URLs load.
+
+## Videos with background sound, and the backlog maker (added 1 Nov 2026)
+
+- `tools/motion.mjs` is now the standard video maker: a scene list (hook, desktop push-in, phone, phone scroll, list, end) timed by read time, following `video-toolkit/skills/remotion/motion-craft.md`. Example specs are in each backlog post's `idea` field.
+- Videos now have background sound, at Charlie's request (1 Nov 2026): `tools/sound.py` synthesises an original, quiet music bed (no samples, no copyrighted music, no AI), timed to the scene changes and levelled to about -20 LUFS. `motion.mjs` adds it automatically; `--silent` turns it off. Listen to at least the first video of a batch.
+- `tools/slides.mjs` is the standard for photos and carousels. Use the `desk` picture slot for screenshot crops of pages (the `phone` slot crops the sides of anything wider than 1:2).
+- Each screenshot or crop is used in one post only. Used so far: assets/work/* (all eight), and crops of nemora.uk's pricing cards, process steps, about page, "Already have a website?" card, "What we do" and "Local to you" sections and hero, plus Book a Medium Night's home and mediums pages.
