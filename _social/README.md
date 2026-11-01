@@ -15,3 +15,4 @@ node _social/tools/reel.mjs spec.json social/2026-11/spitfire-comedy.mp4
 ```
 
 To scroll a real site from its source: `cd <site repo> && python3 -m http.server 8800` and use `http://localhost:8800/` as the scene URL. Screenshots of the portfolio sites are in `assets/work/`.
+- `tools/motion-reel-example.mjs` is a worked example of a smoother reel (word-by-word captions, a camera push-in, a phone hand-off, a colour change between sections), built by following `video-toolkit/skills/remotion/motion-craft.md` with the Playwright already installed. Copy it for a new video when reel.mjs looks too plain: `node _social/tools/motion-reel-example.mjs . social/YYYY-MM/<slug>.mp4` (add a third argument such as `2,5,9` to save stills to check first).
