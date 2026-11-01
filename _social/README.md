@@ -4,6 +4,7 @@ Used by NEMORA's social media agent (a scheduled Claude task). Not published on 
 
 - `tools/card.mjs` makes on-brand 1080 x 1350 JPEG photos from real words and real screenshots.
 - `tools/reel.mjs` makes 1080 x 1920 MP4 videos (H.264, silent AAC) from title cards, real screenshots and real websites scrolled in a phone-sized browser.
+- `video-toolkit/` holds the non-AI parts of digitalsamba/claude-code-video-toolkit (Remotion, Playwright screen recording, ffmpeg know-how) for videos that need more than reel.mjs. See `video-toolkit/README.md`; the playbook's no-AI rules still apply.
 - Finished media goes in `/social/YYYY-MM/` at the repo root, which GitHub Pages serves at `https://nemora.uk/social/YYYY-MM/<file>`. The NEMORA admin publishes from those URLs to Facebook and Instagram. `/social/` is blocked in robots.txt.
 
 Rules live in the NEMORA database (`config` key `social_playbook`), shown in the admin under Settings.
