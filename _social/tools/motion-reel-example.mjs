@@ -1,11 +1,11 @@
 // Example of a motion-craft reel (see _social/video-toolkit/skills/remotion/motion-craft.md): Spitfire Comedy v2, Nov 2026. Copy and adapt for new videos.
-// usage: node spitfire-v2.mjs <repoRoot> <out.mp4> [stillsAt=comma,separated,seconds]
+// usage: node _social/tools/motion-reel-example.mjs <repoRoot> <out.mp4> [stillsAt=comma,separated,seconds]
 import { createRequire } from 'node:module';
 const { chromium } = createRequire(import.meta.url)('playwright');
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs'; import path from 'node:path'; import os from 'node:os';
 
-const [ROOT, OUT, STILLS] = process.argv.slice(2);
+const [ROOT_ARG, OUT, STILLS] = process.argv.slice(2); const ROOT = path.resolve(ROOT_ARG || '.');
 const FPS = 30, W = 1080, H = 1920;
 const u = p => 'file://' + path.join(ROOT, p);
 
