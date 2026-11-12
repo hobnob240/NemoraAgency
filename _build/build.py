@@ -5,13 +5,16 @@ import sys, os, json
 OUT = sys.argv[1]
 SITE = 'https://nemora.uk'
 EMAIL = 'daniel@nemora.uk'
-V = '7'
+PHONE = '07707 986154'
+TEL = '+447707986154'
+V = '8'
 # Microsoft Clarity project ID. Leave empty to keep it switched off; when set, visitors get a consent banner first (UK GDPR / PECR).
 CLARITY_ID = ''
 # The NEMORA inbox service (Cloudflare Worker). The contact form sends messages here; if it can't be reached the form falls back to email.
 INBOX_URL = 'https://nemora-inbox.demositeforyou.workers.dev'
 
 ICON = {
+  'phone': '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 3.5h2.6l1.4 4-2 1.4a12 12 0 0 0 6.5 6.5l1.4-2 4 1.4v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>',
   'arrow': '<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   'tick': '<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 10.5 3 3 7-7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   'mail': '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
@@ -58,7 +61,7 @@ TIERS = [
 
 ORG = {"@type": "ProfessionalService", "@id": SITE + "/#business", "name": "NEMORA", "url": SITE + "/",
   "description": "Web design studio in Stoke-on-Trent that designs, builds and looks after websites for independent businesses.",
-  "logo": SITE + "/assets/logo-320.png", "image": SITE + "/assets/og.png", "email": EMAIL,
+  "logo": SITE + "/assets/logo-320.png", "image": SITE + "/assets/og.png", "email": EMAIL, "telephone": TEL,
   "address": {"@type": "PostalAddress", "addressLocality": "Stoke-on-Trent", "addressRegion": "Staffordshire", "addressCountry": "GB"},
   "areaServed": [{"@type": "City", "name": "Stoke-on-Trent"}, {"@type": "City", "name": "Newcastle-under-Lyme"}, {"@type": "AdministrativeArea", "name": "Staffordshire"}, {"@type": "Country", "name": "United Kingdom"}],
   "priceRange": "££", "knowsAbout": ["Web design", "Website development", "Website hosting", "Local SEO"],
@@ -100,7 +103,7 @@ def shell(page, title, desc, body, robots='index, follow', schema=None, og_type=
   <div class="wrap head-in">
     <a class="brand" href="index.html" aria-label="NEMORA, home"><img src="assets/logo-h.png" alt="NEMORA" width="416" height="96"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span></button>
-    <nav id="nav" class="nav" aria-label="Main">{nav}<a class="btn btn-gold" href="contact.html"{" aria-current=\"page\"" if page == "contact.html" else ""}>Start a project</a></nav>
+    <nav id="nav" class="nav" aria-label="Main">{nav}<a class="nav-call" href="tel:{TEL}">{PHONE}</a><a class="btn btn-gold" href="contact.html"{" aria-current=\"page\"" if page == "contact.html" else ""}>Start a project</a></nav>
   </div>
 </header>
 <main id="main">
@@ -112,11 +115,12 @@ def shell(page, title, desc, body, robots='index, follow', schema=None, og_type=
       <div><img src="assets/logo-h.png" alt="NEMORA" width="416" height="96" loading="lazy"><p>A two-person web design studio in Stoke-on-Trent, Staffordshire, working with businesses across the UK.</p><p class="backstamp"><img src="assets/mark-96.png" alt="" width="99" height="96" loading="lazy"><span>Made in Stoke-on-Trent<small>Designed, built and looked after by NEMORA</small></span></p></div>
       <div><h2>Studio</h2><ul><li><a href="services.html">Services &amp; pricing</a></li><li><a href="work.html">Work</a></li><li><a href="guides/">Guides</a></li><li><a href="about.html">About</a></li></ul></div>
       <div><h2>Areas we cover</h2><ul><li>Stoke-on-Trent</li>{"".join(f'<li><a href="web-design-{k}.html">{n}</a></li>' for k, n in AREA_LINKS)}</ul></div>
-      <div><h2>Contact</h2><ul><li><a href="contact.html">Start a project</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul></div>
+      <div><h2>Contact</h2><ul><li><a href="tel:{TEL}">Call {PHONE}</a></li><li><a href="contact.html">Start a project</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul></div>
     </div>
     <div class="foot-base"><span>&copy; <span id="year">2026</span> NEMORA. All rights reserved.</span><span class="foot-links"><a href="privacy.html">Privacy</a>{'<button type="button" class="linklike" data-consent-open>Cookie settings</button>' if CLARITY_ID else ''}</span></div>
   </div>
 </footer>
+<a class="call-fab" href="tel:{TEL}" aria-label="Call NEMORA on {PHONE}">{ICON['phone']}<span>Call us</span></a>
 </body>
 </html>
 '''
@@ -127,7 +131,7 @@ def cta(title='Tell us about your business', text='A few lines about what you do
     <img class="mark reveal" src="assets/mark-96.png" alt="" width="99" height="96" loading="lazy">
     <h2 class="reveal">{title}</h2>
     <p class="reveal">{text}</p>
-    <div class="cta-row reveal"><a class="btn btn-gold" href="contact.html">Start a project {ICON['arrow']}</a><a class="btn btn-line" href="mailto:{EMAIL}">Email us</a></div>
+    <div class="cta-row reveal"><a class="btn btn-gold" href="contact.html">Start a project {ICON['arrow']}</a><a class="btn btn-line" href="tel:{TEL}">{ICON['phone']} Call {PHONE}</a></div>
   </div>
 </section>'''
 
@@ -201,7 +205,7 @@ home = f'''<section class="hero2">
       <p class="lede">We design, build and look after websites for independent businesses: fast, built for phones, and set up to turn visitors into enquiries.</p>
       <div>
         <div class="cta-row"><a class="btn btn-gold" href="contact.html">Start a project {ICON['arrow']}</a><a class="btn btn-line" href="work.html">See our work</a></div>
-        <p class="hero-note">From £400 · live in about two weeks · hosting and changes included</p>
+        <p class="hero-note">From £400 · live in about two weeks · hosting and changes included <br>Or call <a class="tel" href="tel:{TEL}">{PHONE}</a></p>
       </div>
     </div>
   </div>
@@ -408,6 +412,7 @@ contact = f'''<section class="page-head">
       <p class="form-msg" id="form-msg" role="status" hidden></p>
     </form>
     <aside class="contact-aside">
+      <a class="contact-line reveal" href="tel:{TEL}">{ICON['phone']}<span><small>Call or text</small><b>{PHONE}</b></span></a>
       <a class="contact-line reveal" href="mailto:{EMAIL}">{ICON['mail']}<span><small>Email</small><b>{EMAIL}</b></span></a>
       <div class="contact-line reveal">{ICON['pin']}<span><small>Based in</small><b>Stoke-on-Trent, Staffordshire</b></span></div>
       <div class="contact-line reveal">{ICON['clock']}<span><small>Timescales</small><b>Most websites go live in around two weeks</b></span></div>
@@ -498,7 +503,7 @@ for a in AREAS:
     work_here = [w for w in WORK if a['town'] in w['where']] or WORK[:3]
     body = f'''<section class="page-head">
   <div class="wrap"><p class="eyebrow reveal">Web design · {a['town']}</p><h1 class="reveal">Web design in {a['town']}</h1><p class="lede reveal">{a['lede']}</p>
-  <div class="cta-row reveal mt"><a class="btn btn-gold" href="contact.html">Get a free quote {ICON['arrow']}</a><a class="btn btn-line" href="services.html">See prices</a></div>
+  <div class="cta-row reveal mt"><a class="btn btn-gold" href="contact.html">Get a free quote {ICON['arrow']}</a><a class="btn btn-line" href="tel:{TEL}">{ICON['phone']} Call {PHONE}</a></div>
   <p class="hero-note reveal">From £400 · live in about two weeks · hosting and changes included</p></div>
 </section>
 <section class="section">
