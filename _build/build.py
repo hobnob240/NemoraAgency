@@ -68,6 +68,7 @@ def ld(*items):
 def crumbs(name, page):
     return {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"}, {"@type": "ListItem", "position": 2, "name": name, "item": SITE + "/" + page}]}
 
+AREA_LINKS = [('newcastle-under-lyme', 'Newcastle-under-Lyme'), ('stafford', 'Stafford'), ('stone', 'Stone'), ('leek', 'Leek'), ('crewe', 'Crewe'), ('wolverhampton', 'Wolverhampton')]
 NAV = [('index.html', 'Home'), ('services.html', 'Services'), ('work.html', 'Work'), ('guides/', 'Guides'), ('about.html', 'About')]
 
 def shell(page, title, desc, body, robots='index, follow', schema=None, og_type='website'):
@@ -110,6 +111,7 @@ def shell(page, title, desc, body, robots='index, follow', schema=None, og_type=
     <div class="foot-grid">
       <div><img src="assets/logo-h.png" alt="NEMORA" width="416" height="96" loading="lazy"><p>A two-person web design studio in Stoke-on-Trent, Staffordshire, working with businesses across the UK.</p><p class="backstamp"><img src="assets/mark-96.png" alt="" width="99" height="96" loading="lazy"><span>Made in Stoke-on-Trent<small>Designed, built and looked after by NEMORA</small></span></p></div>
       <div><h2>Studio</h2><ul><li><a href="services.html">Services &amp; pricing</a></li><li><a href="work.html">Work</a></li><li><a href="guides/">Guides</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div><h2>Areas we cover</h2><ul><li>Stoke-on-Trent</li>{"".join(f'<li><a href="web-design-{k}.html">{n}</a></li>' for k, n in AREA_LINKS)}</ul></div>
       <div><h2>Contact</h2><ul><li><a href="contact.html">Start a project</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul></div>
     </div>
     <div class="foot-base"><span>&copy; <span id="year">2026</span> NEMORA. All rights reserved.</span><span class="foot-links"><a href="privacy.html">Privacy</a>{'<button type="button" class="linklike" data-consent-open>Cookie settings</button>' if CLARITY_ID else ''}</span></div>
@@ -266,12 +268,13 @@ home = f'''<section class="hero2">
     <div>
       <p class="lede">We’re based in Stoke-on-Trent and build websites for businesses across the Potteries, Newcastle-under-Lyme and the rest of Staffordshire, including Spitfire Comedy and Staffordshire Spiritual Events.</p>
       <p class="lede">We work with clients further afield too, like Law and Son Decorators in Wolverhampton: trades, events, venues, salons and new ventures. Everything can be done by phone, email or video call.</p>
+      <p class="area-links">We also cover {", ".join(f'<a href="web-design-{k}.html">{n}</a>' for k, n in AREA_LINKS)}.</p>
       <a class="link-arrow" href="contact.html">Talk to a local web designer {ICON['arrow']}</a>
     </div>
   </div>
 </section>
 {cta()}'''
-write('index.html', shell('index.html', 'Web Design Stoke-on-Trent | NEMORA', 'NEMORA is a web design studio in Stoke-on-Trent, Staffordshire. Mobile-first websites from £400, with hosting and care plans from £25 a month.', home, schema=ld({'@type': 'WebPage', 'url': SITE + '/', 'name': 'Web Design Stoke-on-Trent | NEMORA', 'about': {'@id': SITE + '/#business'}})))
+write('index.html', shell('index.html', 'Web Design Stoke-on-Trent from £400 | Live in 2 Weeks | NEMORA', 'Local web design studio in Stoke-on-Trent. Phone-first websites from £400, live in about two weeks, with hosting and changes included. Get a free quote today.', home, schema=ld({'@type': 'WebPage', 'url': SITE + '/', 'name': 'Web Design Stoke-on-Trent from £400 | NEMORA', 'about': {'@id': SITE + '/#business'}})))
 
 # ---------------- services ----------------
 FAQ = [
@@ -328,7 +331,7 @@ services = f'''<section class="page-head">
   </div>
 </section>
 {cta()}'''
-write('services.html', shell('services.html', 'Website Design Prices & Services | Stoke-on-Trent | NEMORA', 'Website packages at £400, £795 and £1,600, with hosting and care from £25 a month. Web design for businesses in Stoke-on-Trent and Staffordshire.', services, schema=ld(crumbs('Services & pricing', 'services.html'), {'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in FAQ]})))
+write('services.html', shell('services.html', 'Website Prices Stoke-on-Trent: £400, £795 or £1,600 | NEMORA', 'Fixed website prices with nothing hidden: £400 one-page, £795 multi-page, £1,600 with bookings and payments. Hosting from £25 a month. Compare the packages.', services, schema=ld(crumbs('Services & pricing', 'services.html'), {'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in FAQ]})))
 
 # ---------------- work ----------------
 cases = ''.join(f'''<article class="case{' flip' if i % 2 else ''}" id="{w['slug']}">
@@ -347,7 +350,7 @@ work = f'''<section class="page-head">
 <section class="section pt-sm"><div class="wrap">{cases}</div></section>
 <section class="section alt"><div class="wrap split"><div><p class="eyebrow reveal">Planning your own?</p><h2 class="reveal">See what it costs and what’s included.</h2></div><div class="reveal"><p class="lede">Every project above started with a short conversation. Our pricing is fixed and published, and our guides explain what a good small business website needs.</p><div class="link-stack"><a class="link-arrow" href="services.html">Services &amp; pricing {ICON['arrow']}</a><a class="link-arrow" href="guides/what-should-a-small-business-website-include.html">What should a business website include? {ICON['arrow']}</a></div></div></div></section>
 {cta('Want a website like these for your business?')}'''
-write('work.html', shell('work.html', 'Web Design Portfolio | Stoke-on-Trent | NEMORA', 'Websites by NEMORA, including Spitfire Comedy and Staffordshire Spiritual Events in Stoke-on-Trent, Law and Son Decorators and Book a Medium Night.', work, schema=ld(crumbs('Work', 'work.html'))))
+write('work.html', shell('work.html', 'Web Design Portfolio: Real Staffordshire Websites | NEMORA', 'Websites by NEMORA, including Spitfire Comedy and Staffordshire Spiritual Events in Stoke-on-Trent, Law and Son Decorators and Book a Medium Night.', work, schema=ld(crumbs('Work', 'work.html'))))
 
 # ---------------- about ----------------
 about = f'''<section class="page-head">
@@ -412,7 +415,7 @@ contact = f'''<section class="page-head">
     </aside>
   </div>
 </section>'''
-write('contact.html', shell('contact.html', 'Contact a Web Designer in Stoke-on-Trent | NEMORA', 'Start a website project with NEMORA, a web design studio in Stoke-on-Trent. Tell us about your business and we’ll reply with honest advice and a clear price.', contact, schema=ld(crumbs('Contact', 'contact.html'))))
+write('contact.html', shell('contact.html', 'Get a Free Website Quote | Stoke-on-Trent Web Designer | NEMORA', 'Tell us about your business and get honest advice and a fixed price within one working day. No obligation. Web design in Stoke-on-Trent from £400.', contact, schema=ld(crumbs('Contact', 'contact.html'))))
 
 # ---------------- privacy ----------------
 privacy = f'''<section class="page-head"><div class="wrap"><p class="eyebrow">Privacy</p><h1>Privacy notice</h1><p class="lede">How NEMORA handles personal information on this website.</p></div></section>
@@ -428,6 +431,109 @@ privacy = f'''<section class="page-head"><div class="wrap"><p class="eyebrow">Pr
   <h2>Your rights</h2><p>You can ask to see, correct or delete the information we hold about you, or object to how we use it, by emailing us. If you’re unhappy with how we’ve handled your information, you can complain to the Information Commissioner’s Office at <a href="https://ico.org.uk/make-a-complaint/" rel="noopener">ico.org.uk</a>.</p>
 </div></section>'''
 write('privacy.html', shell('privacy.html', 'Privacy | NEMORA', 'How NEMORA handles personal information on this website.', privacy))
+
+# ---------------- areas we cover ----------------
+# One page per town. Every line here is true for that town and for NEMORA; nothing is copied between pages.
+AREAS = [
+  dict(slug='newcastle-under-lyme', town='Newcastle-under-Lyme',
+       title='Web Design Newcastle-under-Lyme from £400 | NEMORA',
+       desc='Websites for Newcastle-under-Lyme businesses from £400, live in about two weeks. Local, fixed prices, hosting and changes included. Get a free quote today.',
+       lede='Newcastle-under-Lyme sits right next door to our studio in Stoke-on-Trent. We build fast, phone-first websites for the town’s independent businesses.',
+       local=['Newcastle’s town centre is full of independents: bars, restaurants, salons, barbers and shops competing for the same people walking past and the same people searching on their phones. When someone types “near me” on the High Street, the businesses with a clear website and a good Google profile get the call.',
+              'We know the town and who your customers are: shoppers, families, office workers and the students from Keele who are always looking for somewhere to eat, drink or get their hair done. We write your website for them.'],
+       who=['Bars, pubs and restaurants', 'Hair and beauty salons, barbers', 'Live music and event venues', 'Independent shops', 'Tradespeople covering ST5'],
+       faq=[('Are you actually local to Newcastle-under-Lyme?', 'Yes. Our studio is in Stoke-on-Trent, a few minutes away. Everything can be done by phone, email or video call.'),
+            ('Can you help me show up when people search in Newcastle?', 'Every site we build is written and structured for local search, with your town, the areas you cover and your services in the right places. On the Business package we also help you set up your Google Business Profile, which is what puts you on Google Maps.')]),
+  dict(slug='stafford', town='Stafford',
+       title='Web Design Stafford | Websites from £400, Live in 2 Weeks | NEMORA',
+       desc='Affordable web design for Stafford businesses: fixed prices from £400, built for phones, live in about two weeks, with hosting and changes included. Free quote.',
+       lede='We design and build websites for businesses in Stafford, the county town, from our studio in Stoke-on-Trent. Fixed prices, published up front, and a site that works hard on phones.',
+       local=['Stafford has plenty of established firms with big marketing budgets. For a sole trader, a salon or a family-run business, you don’t need an agency retainer to compete with them online: you need a fast, clear website that answers the questions people ask and makes it easy to get in touch.',
+              'That’s what our packages do, at a price you know before we start. If you cover Stafford and the villages around it, we’ll make sure your site says so, because that’s exactly what people type into Google.'],
+       who=['Tradespeople and contractors', 'Professional services and consultants', 'Salons, clinics and wellbeing', 'Cafés, restaurants and takeaways', 'Event and wedding suppliers'],
+       faq=[('Do you work with businesses in Stafford?', 'Yes. We’re in Stoke-on-Trent, about half an hour up the road, and most projects are run by phone, email and video call, so where you’re based makes no difference to how fast we work.'),
+            ('Why choose a small studio over a big Stafford agency?', 'You deal with the two people who design and build your site, the price is fixed and published, and changes are included in your monthly plan. If a bigger agency suits you better, we’ll say so.')]),
+  dict(slug='stone', town='Stone',
+       title='Web Design Stone, Staffordshire from £400 | NEMORA',
+       desc='Websites for businesses in Stone, Staffordshire: fixed prices from £400, phone-first design, live in about two weeks. Local studio in Stoke-on-Trent. Free quote.',
+       lede='Stone is a market town with a lot of independent businesses packed into a small high street. We build websites that help them get found and get booked, from our studio just up the road in Stoke-on-Trent.',
+       local=['In a town like Stone, a lot of trade comes from people already nearby: locals, visitors walking along the canal, people driving in for the weekend. When they search for somewhere to eat, a gift, a haircut or a tradesperson, your website and Google profile are usually their first impression.',
+              'We keep it simple: a site that loads fast on a phone, says clearly what you do and when you’re open, shows your best photos and puts your phone number one tap away.'],
+       who=['Cafés, pubs and restaurants', 'Independent shops and gift shops', 'Salons and beauty', 'Tradespeople', 'Food and drink producers'],
+       faq=[('Can you build a site for a small shop or café in Stone?', 'Yes. Our Starter package (£400, then £25 a month) is one well-designed page with your opening times, location, photos and contact buttons, which is often all a small high street business needs.'),
+            ('Can I update it myself?', 'On the Business package you get your own admin area, so you can change prices, text and photos from your phone. On Starter, we make the changes for you.')]),
+  dict(slug='leek', town='Leek',
+       title='Web Design Leek, Staffordshire Moorlands | From £400 | NEMORA',
+       desc='Web design for businesses in Leek and the Staffordshire Moorlands. Phone-first websites from £400, live in about two weeks, hosting included. Get a free quote.',
+       lede='We build websites for businesses in Leek and across the Staffordshire Moorlands, from our studio in Stoke-on-Trent. Clear, fast sites that help visitors and locals find you.',
+       local=['Leek gets a lot of visitors as well as loyal locals, and visitors almost always find places on their phones: where to eat, where to shop, where to stay, what’s on. If your website is slow, hard to read on a phone or missing your opening times, they’ll pick somewhere else.',
+              'We design for that moment: a site that loads quickly even on a weak signal out in the Moorlands, shows people what you offer in seconds, and makes it easy to call, book or find you.'],
+       who=['Cafés, pubs and restaurants', 'Independent and antique shops', 'Holiday lets and B&Bs', 'Trades covering the Moorlands', 'Events and activities'],
+       faq=[('Do you cover the Staffordshire Moorlands, not just Leek?', 'Yes. We work with businesses anywhere in Staffordshire and beyond. We’ll write your site to mention the villages and areas you actually cover.'),
+            ('Can you take bookings or payments for a holiday let or event?', 'Yes. Our Premium package (£1,600, then £70 a month) includes booking request forms and card payments through your own Stripe account.')]),
+  dict(slug='crewe', town='Crewe',
+       title='Web Design Crewe | Fixed-Price Websites from £400 | NEMORA',
+       desc='Websites for Crewe and South Cheshire businesses from £400, live in about two weeks, with hosting and changes included. Friendly local studio. Free quote.',
+       lede='We build websites for businesses in Crewe and South Cheshire from our studio in Stoke-on-Trent, just over the border. Fixed prices, phone-first design and real people to talk to.',
+       local=['Plenty of Crewe businesses still rely on a Facebook page or an old website that doesn’t work properly on a phone. That costs enquiries: when someone searches for a service in Crewe, Google favours businesses with a clear, fast website that says what they do and where.',
+              'We fix that with a site built around your customers, your services and the areas you cover, with click-to-call and an enquiry form that sends leads straight to you.'],
+       who=['Tradespeople and contractors', 'Salons and barbers', 'Cafés and takeaways', 'Cleaning and home services', 'Gyms, coaches and clubs'],
+       faq=[('You’re in Staffordshire. Do you work with Crewe businesses?', 'Yes. Crewe is a short drive from our studio, and projects run by phone, email and video call wherever you are.'),
+            ('I only have a Facebook page. Do I need a website?', 'A Facebook page helps, but you don’t own it and it rarely shows up when people search Google for a service. Read our guide: <a href="guides/do-i-need-a-website-if-i-have-a-facebook-page.html">do I need a website if I have a Facebook page?</a>')]),
+  dict(slug='wolverhampton', town='Wolverhampton',
+       title='Web Design Wolverhampton from £400 | NEMORA',
+       desc='Web design for Wolverhampton businesses: fixed prices from £400, phone-first websites with enquiry inboxes and admin areas. See our Wolverhampton work. Free quote.',
+       lede='We already build for Wolverhampton businesses, including Law and Son Decorators. We design fast, phone-first websites with the tools behind them to turn visitors into enquiries.',
+       local=['For Law and Son Decorators we built a website with a quote form with a built-in enquiries inbox and an admin console to manage enquiries, photos and text, so new jobs land in one place and the site stays up to date.',
+              'Wolverhampton is a busy market for trades and services, so a website has to earn its place: it needs to say clearly what you do and where, look professional, and make getting a quote easy. That’s exactly what we build.'],
+       who=['Painters, decorators and trades', 'Home and garden services', 'Salons and barbers', 'Restaurants and takeaways', 'Local professional services'],
+       faq=[('Have you worked in Wolverhampton before?', 'Yes. Law and Son Decorators in Wolverhampton is one of our clients. <a href="work.html#law-and-son">See the project</a>.'),
+            ('Do I need to meet you in person?', 'No. Everything can be done by phone, email or video call, and you’ll see your site taking shape before it goes live.')]),
+]
+AREA_FAQ_COMMON = lambda t: [(f'How much does a website cost in {t}?', 'Our prices are the same everywhere and published up front: Starter £400 (then £25 a month), Business £795 (then £50 a month) and Premium £1,600 (then £70 a month). 12-month minimum term, half the setup fee upfront.'),
+                             ('How long will it take?', 'Most sites go live within around two weeks once we have your logo, photos and details.')]
+for a in AREAS:
+    page = f"web-design-{a['slug']}.html"
+    faq = a['faq'] + AREA_FAQ_COMMON(a['town'])
+    work_here = [w for w in WORK if a['town'] in w['where']] or WORK[:3]
+    body = f'''<section class="page-head">
+  <div class="wrap"><p class="eyebrow reveal">Web design · {a['town']}</p><h1 class="reveal">Web design in {a['town']}</h1><p class="lede reveal">{a['lede']}</p>
+  <div class="cta-row reveal mt"><a class="btn btn-gold" href="contact.html">Get a free quote {ICON['arrow']}</a><a class="btn btn-line" href="services.html">See prices</a></div>
+  <p class="hero-note reveal">From £400 · live in about two weeks · hosting and changes included</p></div>
+</section>
+<section class="section">
+  <div class="wrap split">
+    <div><p class="eyebrow">Local to you</p><h2>Websites for {a['town']} businesses</h2></div>
+    <div>{''.join(f'<p class="lede">{p}</p>' for p in a['local'])}
+      <ul class="ticks">{''.join(f'<li>{ICON["tick"]}<span>{x}</span></li>' for x in a['who'])}</ul></div>
+  </div>
+</section>
+<section class="section paper">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Pricing</p><h2>Three packages, prices published</h2></div><p>One fixed price to design and build, then a monthly plan for hosting, updates and fixes.</p></div>
+    {tier_cards(full=False)}
+    <p class="tier-foot">12-month minimum term on every plan. Half the setup fee is paid upfront to book your project.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Our work</p><h2>Recent websites</h2></div><a class="link-arrow" href="work.html">All our work {ICON['arrow']}</a></div>
+    <div class="work-grid three">{work_cards(work_here[:3])}</div>
+  </div>
+</section>
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">Questions</p><h2>Questions from {a['town']} businesses</h2></div></div>
+    <div class="faq" data-stagger>{''.join(f'<details><summary>{q}</summary><div class="ans"><p>{ans}</p></div></details>' for q, ans in faq)}</div>
+  </div>
+</section>
+{cta(f'Get your {a["town"]} business online properly')}'''
+    svc = {'@type': 'Service', 'name': f'Web design in {a["town"]}', 'serviceType': 'Web design', 'provider': {'@id': SITE + '/#business'}, 'areaServed': {'@type': 'City', 'name': a['town']}, 'url': SITE + '/' + page,
+           'offers': [{'@type': 'Offer', 'name': t['name'], 'price': str(t['price']), 'priceCurrency': 'GBP'} for t in TIERS]}
+    import re as _re
+    fq = {'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': _re.sub('<[^>]+>', '', ans)}} for q, ans in faq]}
+    write(page, shell(page, a['title'], a['desc'], body, schema=ld(crumbs(f'Web design {a["town"]}', page), svc, fq)))
+AREA_PAGES = [f"web-design-{a['slug']}.html" for a in AREAS]
 
 # ---------------- guides ----------------
 # Add a new dict to GUIDES (newest first) to publish a new guide; the hub, sitemap and schema update themselves.
@@ -461,7 +567,7 @@ print('built')
 
 LASTMOD = {f"guides/{g['slug']}.html": g['date'] for g in GUIDES}
 LASTMOD['guides/'] = max([g['date'] for g in GUIDES] + ['2026-10-29'])
-PAGES = ['', 'services.html', 'work.html', 'about.html', 'contact.html', 'guides/'] + [f"guides/{g['slug']}.html" for g in GUIDES] + ['privacy.html']
+PAGES = ['', 'services.html', 'work.html', 'about.html', 'contact.html'] + AREA_PAGES + ['guides/'] + [f"guides/{g['slug']}.html" for g in GUIDES] + ['privacy.html']
 open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{SITE}/{p}</loc><lastmod>{LASTMOD.get(p, "2026-10-29")}</lastmod></url>\n' for p in PAGES) + '</urlset>\n')
 open(os.path.join(OUT, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\nDisallow: /social/\n\nSitemap: {SITE}/sitemap.xml\n')
 print('sitemap + robots')
