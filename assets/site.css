@@ -527,13 +527,14 @@ em.g, .g { font-style: normal; color: inherit; }
 .work-grid.three .work-media { aspect-ratio: 16 / 10; }
 
 /* phone: header number and a call button on phones */
-.nav a.nav-call { color: var(--gold-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.nav a.nav-call { display: inline-flex; align-items: center; gap: 8px; margin-left: 12px; min-height: 44px; padding: 10px 18px; font-size: .92rem; white-space: nowrap; color: var(--gold-2); }
+.nav a.nav-call + .btn { margin-left: 8px; }
+@media (max-width: 900px) { .nav a.nav-call { margin: 18px 0 0; justify-content: center; min-height: 52px; border-bottom: 0; } .nav a.nav-call + .btn { margin-left: 0; margin-top: 10px; } }
 .call-fab { display: none; }
 .btn svg, .call-fab svg { width: 18px; height: 18px; flex-shrink: 0; }
 @media (max-width: 900px) {
   .call-fab { display: inline-flex; align-items: center; gap: 8px; position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 60; min-height: 52px; padding: 0 20px; border-radius: 999px; background: var(--gold-2); color: #15120b; font-weight: 700; text-decoration: none; box-shadow: 0 8px 24px rgba(0,0,0,.35); -webkit-tap-highlight-color: transparent; }
   .call-fab:active { transform: scale(.97); }
 }
-@media (min-width: 901px) and (max-width: 1180px) { .nav a.nav-call { display: none; } }
 .hero-note a.tel { white-space: nowrap; color: var(--gold-2); }
 .hero2 .hero-note { display: block; line-height: 1.6; }

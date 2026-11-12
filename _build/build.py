@@ -103,7 +103,7 @@ def shell(page, title, desc, body, robots='index, follow', schema=None, og_type=
   <div class="wrap head-in">
     <a class="brand" href="index.html" aria-label="NEMORA, home"><img src="assets/logo-h.png" alt="NEMORA" width="416" height="96"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span></button>
-    <nav id="nav" class="nav" aria-label="Main">{nav}<a class="nav-call" href="tel:{TEL}">{PHONE}</a><a class="btn btn-gold" href="contact.html"{" aria-current=\"page\"" if page == "contact.html" else ""}>Start a project</a></nav>
+    <nav id="nav" class="nav" aria-label="Main">{nav}<a class="btn btn-line nav-call" href="contact.html#call">{ICON['phone']} Call us</a><a class="btn btn-gold" href="contact.html"{" aria-current=\"page\"" if page == "contact.html" else ""}>Start a project</a></nav>
   </div>
 </header>
 <main id="main">
@@ -412,7 +412,7 @@ contact = f'''<section class="page-head">
       <p class="form-msg" id="form-msg" role="status" hidden></p>
     </form>
     <aside class="contact-aside">
-      <a class="contact-line reveal" href="tel:{TEL}">{ICON['phone']}<span><small>Call or text</small><b>{PHONE}</b></span></a>
+      <a class="contact-line reveal" id="call" href="tel:{TEL}">{ICON['phone']}<span><small>Call or text</small><b>{PHONE}</b></span></a>
       <a class="contact-line reveal" href="mailto:{EMAIL}">{ICON['mail']}<span><small>Email</small><b>{EMAIL}</b></span></a>
       <div class="contact-line reveal">{ICON['pin']}<span><small>Based in</small><b>Stoke-on-Trent, Staffordshire</b></span></div>
       <div class="contact-line reveal">{ICON['clock']}<span><small>Timescales</small><b>Most websites go live in around two weeks</b></span></div>
