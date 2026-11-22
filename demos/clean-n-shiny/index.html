@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Clean N Shiny | Window Cleaning in Stoke-on-Trent</title>
+<meta name="description" content="Clean N Shiny window cleaning, Stoke-on-Trent. Windows cleaned properly, inside and out. Regular rounds and urgent cleans within 24 hours. Rated 5.0 on Google.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F8FA">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0E13">
+<link rel="preload" href="fonts/instrument-sans.woff" as="font" type="font/woff" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Clean N Shiny Window Cleaning","description":"Window cleaning, inside and out","telephone":"+44 7428 079072","address":{"@type":"PostalAddress","addressLocality":"Stoke-on-Trent","postalCode":"ST4","addressCountry":"GB"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"12"}}</script>
+<style>
+/* Clean N Shiny: demo by NEMORA.
+   Direction: tidy, bright, straightforward. World: a terraced-house window on a clear Stoke morning.
+   Moment: a window drawn in code. Switch between "inside and out" and "outside only" and watch the inside pane.
+   Signature: the round. Every street that joins makes the next visit easier.
+   Unslop pass by unslop (Damir Sokolovsky, @heydamir, CC BY 4.0). Self-hosted OFL font, no third-party requests. */
+@font-face { font-family: "Instrument Sans"; src: url("fonts/instrument-sans.woff") format("woff"); font-weight: 400 700; font-stretch: 75% 100%; font-display: swap; }
+:root {
+  --bg: #F6F8FA; --bg-2: #EDF1F5; --card: #FFFFFF; --raised: #EEF2F6;
+  --text: #111827; --text-2: #4B5565; --muted: #6B7487; --line: rgba(17, 24, 39, .09); --line-2: rgba(17, 24, 39, .16);
+  --accent: #1559B8; --accent-hi: #0F4A9C; --on-accent: #FFFFFF; --accent-soft: rgba(21, 89, 184, .08);
+  --star: #D99A1E; --bad: #C0362C; --good: #16803C;
+  /* the window: only inside the moment */
+  --frame-1: #FFFFFF; --frame-2: #E3E7EC; --frame-3: #C9CFD7; --sky-1: #9CC6EE; --sky-2: #D8EAF8; --sky-3: #F4F9FD;
+  --brick-1: #A4553E; --brick-2: #8E4733; --mortar: #C9B8A8; --sill: #DCE1E7;
+  --grime: rgba(120, 112, 96, .55); --smudge: rgba(150, 140, 120, .42); --drip: rgba(110, 120, 130, .35);
+  --font: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B0E13; --bg-2: #11151C; --card: #141922; --raised: #1A2029;
+    --text: #EEF0F5; --text-2: #A3A9B8; --muted: #7A8296; --line: rgba(238, 240, 245, .08); --line-2: rgba(238, 240, 245, .14);
+    --accent: #5B9BF0; --accent-hi: #78AEF5; --on-accent: #081226; --accent-soft: rgba(91, 155, 240, .12);
+    --star: #F0B547; --bad: #FF8A80; --good: #4CC38A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B0E13; --bg-2: #11151C; --card: #141922; --raised: #1A2029;
+  --text: #EEF0F5; --text-2: #A3A9B8; --muted: #7A8296; --line: rgba(238, 240, 245, .08); --line-2: rgba(238, 240, 245, .14);
+  --accent: #5B9BF0; --accent-hi: #78AEF5; --on-accent: #081226; --accent-soft: rgba(91, 155, 240, .12);
+  --star: #F0B547; --bad: #FF8A80; --good: #4CC38A;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; scroll-padding-top: 80px; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 var(--font); }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; font-weight: 500; text-wrap: balance; overflow-wrap: break-word; min-width: 0; }
+p { margin: 0; }
+.wrap { width: 100%; max-width: 1160px; margin-inline: auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--accent); color: var(--on-accent); padding: 8px 12px; border-radius: 8px; z-index: 50; }
+.skip:focus { top: 12px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 20px; border-radius: 10px; font: 600 16px/1 var(--font); text-decoration: none; border: 1px solid transparent; cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; transition: transform 140ms var(--ease), background-color 160ms var(--ease), border-color 160ms var(--ease); white-space: nowrap; }
+.btn:active { transform: scale(0.98); }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-secondary { background: var(--card); color: var(--text); border-color: var(--line-2); }
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover { background: var(--accent-hi); }
+  .btn-secondary:hover { border-color: var(--text-2); }
+  .nav a:hover, .call-link:hover { color: var(--text); }
+}
+
+/* nav */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 21; }
+.top-row { display: flex; align-items: center; gap: 28px; min-height: 64px; }
+.mark { display: flex; align-items: baseline; gap: 10px; text-decoration: none; flex-shrink: 0; }
+.mark b { font-weight: 600; font-size: 19px; letter-spacing: -0.01em; }
+.mark span { font-size: 13px; color: var(--muted); }
+.nav { display: flex; gap: 24px; margin-left: auto; font-size: 15px; color: var(--text-2); }
+.nav a { text-decoration: none; transition: color 160ms var(--ease); }
+.call-link { font-size: 15px; color: var(--text-2); text-decoration: none; font-variant-numeric: tabular-nums; transition: color 160ms var(--ease); }
+.top .btn { min-height: 38px; padding: 0 16px; font-size: 15px; }
+
+/* hero */
+.hero { padding-block: 72px 96px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 56px; align-items: center; }
+.hero h1 { font-size: clamp(40px, 5.4vw, 64px); line-height: 1.03; letter-spacing: -0.03em; }
+.hero-sub { margin-top: 24px; font-size: 19px; line-height: 1.55; color: var(--text-2); max-width: 30rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.rating { display: flex; align-items: center; gap: 12px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; color: var(--text-2); }
+.stars { display: flex; gap: 2px; color: var(--star); }
+.stars svg { width: 16px; height: 16px; }
+.rating strong { color: var(--text); font-weight: 600; }
+
+/* the moment: a window, inside and out */
+.win-wrap { display: flex; flex-direction: column; gap: 16px; }
+.switch { align-self: flex-start; display: inline-flex; padding: 4px; gap: 4px; border-radius: 12px; background: var(--raised); border: 1px solid var(--line); }
+.switch button { min-height: 36px; padding: 0 14px; border: 0; border-radius: 8px; background: transparent; color: var(--text-2); font: 500 14px/1 var(--font); cursor: pointer; transition: background-color 160ms var(--ease), color 160ms var(--ease); }
+.switch button[aria-pressed="true"] { background: var(--card); color: var(--text); box-shadow: 0 1px 2px rgba(0, 0, 0, .08), 0 0 0 1px var(--line); }
+.wall { position: relative; border-radius: 20px; overflow: hidden; padding: 9% 9% 0; background:
+  linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,0) 30%),
+  repeating-linear-gradient(0deg, var(--mortar) 0 2px, transparent 2px 22px),
+  linear-gradient(90deg, var(--brick-1), var(--brick-2));
+  box-shadow: 0 0 0 1px var(--line); }
+.wall::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 46px, var(--mortar) 46px 48px); mask-image: repeating-linear-gradient(0deg, #000 0 22px, transparent 22px 44px); -webkit-mask-image: repeating-linear-gradient(0deg, #000 0 22px, transparent 22px 44px); opacity: .8; }
+.wall::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 23px, var(--mortar) 23px 25px, transparent 25px 48px); mask-image: repeating-linear-gradient(0deg, transparent 0 22px, #000 22px 44px); -webkit-mask-image: repeating-linear-gradient(0deg, transparent 0 22px, #000 22px 44px); opacity: .8; }
+.frame { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 14px; background: linear-gradient(180deg, var(--frame-1), var(--frame-2)); border-radius: 4px; box-shadow: inset 0 -2px 0 var(--frame-3), 0 6px 14px rgba(40, 20, 10, .35); }
+.pane { position: relative; aspect-ratio: 3 / 4; border-radius: 2px; overflow: hidden; box-shadow: inset 0 0 0 2px var(--frame-3), inset 3px 3px 6px rgba(0, 0, 0, .12);
+  background:
+    linear-gradient(128deg, transparent 0 30%, rgba(255,255,255,.55) 34%, rgba(255,255,255,.08) 40%, transparent 44%),
+    linear-gradient(128deg, transparent 0 48%, rgba(255,255,255,.35) 50%, transparent 53%),
+    radial-gradient(60% 30% at 70% 30%, rgba(255,255,255,.9), transparent 70%),
+    radial-gradient(40% 18% at 25% 18%, rgba(255,255,255,.8), transparent 70%),
+    linear-gradient(180deg, var(--sky-1), var(--sky-2) 60%, var(--sky-3)); }
+.pane-label { position: absolute; left: 10px; bottom: 10px; padding: 3px 8px; border-radius: 6px; font-size: 12px; line-height: 16px; background: rgba(255, 255, 255, .85); color: #1F2937; z-index: 2; }
+.dirt { position: absolute; inset: 0; opacity: 0; transition: opacity 360ms var(--ease);
+  background:
+    radial-gradient(circle at 30% 38%, transparent 0 9px, var(--smudge) 10px, transparent 14px),
+    radial-gradient(circle at 34% 41%, transparent 0 6px, var(--smudge) 7px, transparent 10px),
+    radial-gradient(circle at 62% 26%, transparent 0 8px, var(--smudge) 9px, transparent 13px),
+    radial-gradient(ellipse 34% 18% at 55% 55%, var(--smudge), transparent 70%),
+    radial-gradient(ellipse 24% 12% at 28% 70%, var(--smudge), transparent 70%),
+    linear-gradient(180deg, var(--grime), rgba(120, 112, 96, .35) 70%, var(--grime)); }
+.dirt::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 0 12%, var(--drip) 12% 13%, transparent 13% 31%, var(--drip) 31% 31.8%, transparent 31.8% 54%, var(--drip) 54% 55.2%, transparent 55.2% 77%, var(--drip) 77% 77.7%, transparent 77.7%); mask-image: linear-gradient(180deg, transparent 62%, #000 100%); -webkit-mask-image: linear-gradient(180deg, transparent 62%, #000 100%); }
+.win-wrap[data-mode="outside"] .pane-in .dirt { opacity: 1; }
+.sill { position: relative; z-index: 1; height: 22px; margin: 0 -3%; background: linear-gradient(180deg, var(--frame-1), var(--sill)); border-radius: 2px 2px 0 0; box-shadow: 0 6px 12px rgba(40, 20, 10, .35); }
+.win-cap { font-size: 14px; color: var(--muted); min-height: 22px; }
+
+/* facts */
+.facts { border-block: 1px solid var(--line); background: var(--card); }
+.facts-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.fact { padding: 24px 24px 24px 0; }
+.fact + .fact { padding-left: 24px; border-left: 1px solid var(--line); }
+.fact h3 { font-weight: 600; font-size: 16px; }
+.fact p { margin-top: 4px; font-size: 15px; color: var(--text-2); }
+
+/* sections */
+.sec { padding-block: 104px; }
+.sec-head { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 56px; align-items: end; margin-bottom: 48px; }
+.sec h2 { font-size: clamp(30px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -0.02em; }
+.lead { color: var(--text-2); font-size: 18px; max-width: 34rem; }
+
+/* round */
+.round { background: var(--bg-2); }
+.round-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 56px; align-items: start; }
+.steps { list-style: none; margin: 32px 0 0; padding: 0; border-top: 1px solid var(--line-2); }
+.steps li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.steps .n { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.steps h3 { font-weight: 600; font-size: 16px; }
+.steps p { color: var(--text-2); font-size: 15px; margin-top: 2px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 32px; box-shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 12px 32px -20px rgba(17, 24, 39, .25); }
+.card h3 { font-size: 22px; letter-spacing: -0.01em; }
+.card-sub { margin-top: 4px; color: var(--text-2); font-size: 15px; }
+.pc-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; margin-top: 20px; }
+.row2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; margin-top: 20px; }
+.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.field label, legend { font-size: 14px; color: var(--text-2); }
+.field input, .field select { width: 100%; min-height: 48px; padding: 0 14px; font: 400 16px/1 var(--font); color: var(--text); background: var(--bg); border: 1px solid var(--line-2); border-radius: 10px; appearance: none; -webkit-appearance: none; transition: border-color 160ms var(--ease); }
+.field input::placeholder { color: var(--muted); }
+.field select { background-image: linear-gradient(45deg, transparent 50%, var(--text-2) 50%), linear-gradient(135deg, var(--text-2) 50%, transparent 50%); background-position: calc(100% - 20px) 21px, calc(100% - 15px) 21px; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 36px; }
+.field input:focus, .field select:focus { border-color: var(--accent); outline: none; }
+.field [aria-invalid="true"] { border-color: var(--bad); }
+.pc-input { text-transform: uppercase; }
+.pc-input::placeholder { text-transform: none; }
+.pc-row .btn { min-height: 48px; }
+.pc-msg { margin-top: 12px; font-size: 15px; color: var(--text-2); min-height: 24px; }
+.pc-msg strong { color: var(--good); font-weight: 600; }
+fieldset { border: 0; margin: 20px 0 0; padding: 0; min-width: 0; }
+legend { padding: 0; margin-bottom: 8px; }
+.seg { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+.seg label { position: relative; display: flex; align-items: center; min-height: 48px; padding: 0 14px; border: 1px solid var(--line-2); border-radius: 10px; font-size: 15px; cursor: pointer; transition: border-color 160ms var(--ease), background-color 160ms var(--ease); }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.seg label:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+.more[hidden] { display: none; }
+.card .btn-full { width: 100%; margin-top: 24px; }
+.note { margin-top: 12px; font-size: 13px; color: var(--muted); }
+.sent { display: none; }
+.sent h3 { margin-bottom: 8px; }
+.sent p { color: var(--text-2); }
+.sent .demo { margin-top: 14px; font-size: 14px; color: var(--muted); }
+.card.is-sent form { display: none; }
+.card.is-sent .sent { display: block; }
+
+/* one-offs */
+.oneoff { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 16px; }
+.oo { border-radius: 16px; padding: 32px; background: var(--card); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 12px; }
+.oo h3 { font-size: 24px; letter-spacing: -0.01em; }
+.oo p { color: var(--text-2); }
+.oo .btn { align-self: flex-start; margin-top: 8px; }
+.oo-list { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 8px; color: var(--text-2); }
+.oo-list li { display: flex; gap: 10px; }
+.oo-list svg { width: 18px; height: 18px; color: var(--accent); flex-shrink: 0; margin-top: 4px; }
+
+/* reviews */
+.rev-score { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; font-size: 15px; color: var(--text-2); }
+.rev-score strong { color: var(--text); font-weight: 600; }
+.rev-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; align-items: start; }
+.big-quote { margin: 0; }
+.big-quote blockquote { margin: 0; font-size: clamp(24px, 2.8vw, 34px); line-height: 1.3; letter-spacing: -0.015em; font-weight: 500; }
+.big-quote figcaption, .rev-list span { margin-top: 16px; display: block; font-size: 14px; color: var(--muted); }
+.rev-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-2); }
+.rev-list li { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.rev-list blockquote { margin: 0; }
+.rev-list span { margin-top: 8px; font-size: 13px; }
+
+.foot { border-top: 1px solid var(--line); color: var(--text-2); font-size: 14px; background: var(--card); }
+.foot-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding-block: 36px calc(28px + env(safe-area-inset-bottom, 0px)); }
+.foot b { color: var(--text); font-weight: 600; }
+.callbar { display: none; }
+
+@media (max-width: 960px) {
+  .nav, .call-link, .mark span { display: none; }
+  .top .btn { margin-left: auto; }
+  .hero { padding-block: 40px 64px; }
+  .hero-grid, .sec-head, .round-grid, .rev-grid, .oneoff { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .oneoff { gap: 16px; }
+  .facts-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fact { padding: 20px 20px 20px 0; }
+  .fact + .fact { padding-left: 20px; }
+  .fact:nth-child(3) { padding-left: 0; border-left: 0; }
+  .fact:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .sec { padding-block: 72px; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .callbar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: var(--bg); border-top: 1px solid var(--line); }
+}
+@media (max-width: 600px) {
+  .facts-row, .row2 { grid-template-columns: minmax(0, 1fr); }
+  .fact, .fact + .fact { padding: 16px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .fact:last-child { border-bottom: 0; }
+  .hero-sub { font-size: 17px; }
+  .card, .oo { padding: 24px 20px; }
+  .frame { gap: 10px; padding: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn, .switch button, .dirt, .seg label, .field input, .field select { transition: none; }
+  .btn:active { transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3-4.6-4.5 6.4-.9z" fill="currentColor"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="#main"><b>Clean N Shiny</b><span>Window cleaning</span></a>
+    <nav class="nav" aria-label="Main"><a href="#round">Join the round</a><a href="#oneoff">One-off cleans</a><a href="#reviews">Reviews</a></nav>
+    <a class="call-link" href="tel:+447428079072">07428 079072</a>
+    <a class="btn btn-primary" href="#round">Get a quote</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Windows cleaned properly, inside and out</h1>
+      <p class="hero-sub">Friendly, reliable window cleaning in Stoke-on-Trent. Regular rounds, one-off cleans, and urgent jobs within 24 hours.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#round">Check my street</a>
+        <a class="btn btn-secondary" href="tel:+447428079072"><svg aria-hidden="true"><use href="#i-phone"/></svg>07428 079072</a>
+      </div>
+      <p class="rating"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span><strong>5.0</strong> on Google from 12 reviews</span></p>
+    </div>
+
+    <div class="win-wrap" data-mode="both">
+      <div class="switch" role="group" aria-label="Compare cleans">
+        <button type="button" aria-pressed="true" data-mode="both">Inside and out</button>
+        <button type="button" aria-pressed="false" data-mode="outside">Outside only</button>
+      </div>
+      <div class="wall" role="img" aria-label="A window on a brick wall, with the outside and inside of the glass shown side by side">
+        <div class="frame">
+          <div class="pane pane-out"><span class="pane-label">Outside</span></div>
+          <div class="pane pane-in"><div class="dirt"></div><span class="pane-label">Inside</span></div>
+        </div>
+        <div class="sill"></div>
+      </div>
+      <p class="win-cap" aria-live="polite">Both sides of the glass, every visit</p>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="Why customers choose Clean N Shiny">
+  <div class="wrap facts-row">
+    <div class="fact"><h3>Inside and out</h3><p>Both sides of the glass, done properly</p></div>
+    <div class="fact"><h3>Urgent cleans</h3><p>Within 24 hours when you need it fast</p></div>
+    <div class="fact"><h3>Takes his time</h3><p>Cleaned to a really high standard</p></div>
+    <div class="fact"><h3>Friendly and reliable</h3><p>A local window cleaner who cares</p></div>
+  </div>
+</section>
+
+<section class="sec round" id="round" aria-labelledby="round-h">
+  <div class="wrap round-grid">
+    <div>
+      <h2 id="round-h">Join the round</h2>
+      <p class="lead" style="margin-top:16px">Window cleaning works best in rounds. When neighbours on the same street sign up, it's easier to keep a regular day for everyone. Pop your postcode in to get started.</p>
+      <ol class="steps">
+        <li><span class="n">01</span><div><h3>Check your street</h3><p>Enter your postcode and tell us about the house.</p></div></li>
+        <li><span class="n">02</span><div><h3>Pick inside, outside or both</h3><p>Regular visits, or a single clean.</p></div></li>
+        <li><span class="n">03</span><div><h3>Get a price and a day</h3><p>You'll get a message back to confirm.</p></div></li>
+      </ol>
+    </div>
+    <div class="card">
+      <form novalidate>
+        <h3>Check your street</h3>
+        <p class="card-sub">Takes about a minute</p>
+        <div class="pc-row">
+          <div class="field"><label for="pc">Postcode</label><input id="pc" class="pc-input" name="pc" autocomplete="postal-code" placeholder="ST4 2EB" required></div>
+          <button type="button" class="btn btn-secondary" data-check style="align-self:end">Check</button>
+        </div>
+        <p class="pc-msg" aria-live="polite"></p>
+        <div class="more" hidden>
+          <fieldset>
+            <legend>Which sides?</legend>
+            <div class="seg">
+              <label><input type="radio" name="sides" value="Inside and out" checked>Inside and out</label>
+              <label><input type="radio" name="sides" value="Outside only">Outside only</label>
+            </div>
+          </fieldset>
+          <div class="row2">
+            <div class="field"><label for="house">House</label><select id="house" name="house"><option>Terraced</option><option>Semi-detached</option><option>Detached</option><option>Flat or maisonette</option></select></div>
+            <div class="field"><label for="how">How often?</label><select id="how" name="how"><option>Every 4 weeks</option><option>Every 8 weeks</option><option>Just once</option><option>Urgent, within 24 hours</option></select></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="tel">Phone number</label><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          </div>
+          <button class="btn btn-primary btn-full" type="submit">Send my details</button>
+          <p class="note">Your details are only used to arrange your window clean</p>
+        </div>
+      </form>
+      <div class="sent" role="status" aria-live="polite" tabindex="-1">
+        <h3>Thanks, <span data-name>you're on the list</span></h3>
+        <p>You'll get a message back with a price and a day for <span data-pc>your street</span>.</p>
+        <p class="demo">On your finished website, this lands straight on your phone, sorted by postcode, so you can see which streets are filling up and plan your round.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="oneoff" aria-labelledby="oo-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="oo-h">Need it done this week?</h2>
+      <p class="lead">Not everyone needs a round. Book a single clean, or an urgent one when time is short.</p>
+    </div>
+    <div class="oneoff">
+      <div class="oo">
+        <h3>Urgent cleans within 24 hours</h3>
+        <p>Selling up, moving out, or have people coming round? Call and get your windows sorted fast.</p>
+        <ul class="oo-list">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Inside and outside</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Even if we don't cover your street yet</li>
+        </ul>
+        <a class="btn btn-primary" href="tel:+447428079072">Call 07428 079072</a>
+      </div>
+      <div class="oo">
+        <h3>One-off cleans</h3>
+        <p>A single visit with no ongoing commitment. Try us once, then join the round if you like the result.</p>
+        <a class="btn btn-secondary" href="#round">Get a quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec round" id="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <h2 id="rev-h" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">What customers say</h2>
+    <p class="rev-score"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span><strong>5.0</strong> from 12 Google reviews</span></p>
+    <div class="rev-grid">
+      <figure class="big-quote"><blockquote>&ldquo;Finally I found somebody that can clean windows properly inside and outside.&rdquo;</blockquote><figcaption>Google review</figcaption></figure>
+      <ul class="rev-list">
+        <li><blockquote>&ldquo;They took their time and made sure our windows were cleaned to a really high standard.&rdquo;</blockquote><span>Google review</span></li>
+        <li><blockquote>&ldquo;Lovely guy, friendly and reliable, and the windows came up absolutely spotless.&rdquo;</blockquote><span>Google review</span></li>
+        <li><blockquote>&ldquo;Within 24 hour urgent service too. Cleaned windows well and pretty quickly too.&rdquo;</blockquote><span>Google review</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <p><b>Clean N Shiny Window Cleaning</b><br>Based in Stoke-on-Trent ST4</p>
+    <p>07428 079072<br>&copy; <span data-year>2026</span> Clean N Shiny. No cookies or tracking</p>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Quick contact">
+  <a class="btn btn-secondary" href="tel:+447428079072">Call</a>
+  <a class="btn btn-primary" href="#round">Get a quote</a>
+</div>
+
+<script>
+(function () {
+  document.querySelectorAll('[data-year]').forEach(function (y) { y.textContent = new Date().getFullYear(); });
+  /* the window */
+  var ww = document.querySelector('.win-wrap'), cap = ww.querySelector('.win-cap');
+  ww.querySelectorAll('.switch button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var m = b.getAttribute('data-mode');
+      ww.setAttribute('data-mode', m);
+      ww.querySelectorAll('.switch button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      cap.textContent = m === 'both' ? 'Both sides of the glass, every visit' : "Outside only: fingerprints, smears and condensation marks stay on the inside";
+    });
+  });
+  /* the round */
+  var card = document.querySelector('.card'), form = card.querySelector('form'), pc = form.querySelector('#pc'), msg = form.querySelector('.pc-msg'), more = form.querySelector('.more');
+  var re = /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/;
+  function check() {
+    var v = pc.value.trim().toUpperCase();
+    if (!re.test(v)) { pc.setAttribute('aria-invalid', 'true'); msg.textContent = 'Enter a full UK postcode, like ST4 2EB'; return false; }
+    pc.removeAttribute('aria-invalid');
+    var out = v.replace(/\s+/g, '').slice(0, -3);
+    msg.innerHTML = '';
+    var s = document.createElement('strong'); s.textContent = 'Got it. ';
+    msg.appendChild(s); msg.appendChild(document.createTextNode(out + '. Tell us about the house and you’ll get a message back with a price and the next free day for your street.'));
+    more.hidden = false;
+    return true;
+  }
+  form.querySelector('[data-check]').addEventListener('click', check);
+  pc.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); check(); } });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!check()) return;
+    var bad = ['name', 'tel'].filter(function (id) { var el = form.querySelector('#' + id), miss = !el.value.trim(); el.toggleAttribute('aria-invalid', miss); return miss; });
+    if (bad.length) { form.querySelector('#' + bad[0]).focus(); return; }
+    card.querySelector('[data-name]').textContent = form.querySelector('#name').value.trim().split(/\s+/)[0];
+    card.querySelector('[data-pc]').textContent = pc.value.trim().toUpperCase();
+    card.classList.add('is-sent');
+    card.querySelector('.sent').focus();
+  });
+})();
+</script>
+</body>
+</html>
