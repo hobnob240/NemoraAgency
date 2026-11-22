@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>SOS Admin | Bookings</title>
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F7F7F5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+<link rel="preload" href="fonts/instrument-sans.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="style.css">
+<style>
+body { font-size: 15px; }
+.banner { background: var(--accent-soft); border-bottom: 1px solid var(--line); font-size: 14px; color: var(--text); }
+.banner .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; min-height: 44px; padding-block: 8px; }
+.banner a { color: var(--accent); font-weight: 600; }
+.bar { background: var(--card); border-bottom: 1px solid var(--line); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--card); z-index: 21; }
+.bar .wrap { display: flex; align-items: center; gap: 24px; min-height: 60px; }
+.bar b { font-size: 17px; font-weight: 700; }
+.bar nav { display: flex; gap: 4px; margin-left: 16px; }
+.bar nav a { padding: 6px 10px; border-radius: 8px; text-decoration: none; color: var(--text-2); font-size: 14px; }
+.bar nav a[aria-current="page"] { background: var(--raised); color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
+.who { margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-2); }
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 600; font-size: 14px; }
+
+main { padding-block: 32px 64px; }
+.page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+.page-head h1 { font-size: 30px; letter-spacing: -0.02em; }
+.page-head p { color: var(--text-2); }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 24px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+.stat p { font-size: 13px; color: var(--muted); }
+.stat strong { display: block; margin-top: 6px; font-size: 30px; font-weight: 500; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.stat span { display: block; margin-top: 4px; font-size: 13px; color: var(--text-2); }
+.stat.hot strong { color: var(--accent); }
+
+.cols { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 20px; align-items: start; }
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.panel + .panel { margin-top: 20px; }
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+.panel-head h2 { font-size: 16px; font-weight: 600; }
+.panel-head p { font-size: 13px; color: var(--muted); }
+.empty { padding: 24px 20px; color: var(--muted); }
+
+.req { padding: 18px 20px; border-bottom: 1px solid var(--line); display: grid; gap: 10px; }
+.req:last-child { border-bottom: 0; }
+.req.fresh { background: var(--accent-soft); }
+.req-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.req-top h3 { font-size: 16px; font-weight: 600; }
+.tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-2); }
+.tag i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.req-meta { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 16px; font-size: 14px; }
+.req-meta dt { color: var(--muted); }
+.req-meta dd { margin: 0; overflow-wrap: anywhere; }
+.price { font-variant-numeric: tabular-nums; font-weight: 600; }
+.req-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.req-actions .btn { min-height: 36px; padding: 0 14px; font-size: 14px; }
+.state { font-size: 14px; color: var(--good); display: flex; align-items: center; gap: 6px; }
+.state svg { width: 16px; height: 16px; }
+
+.day { border-bottom: 1px solid var(--line); }
+.day:last-child { border-bottom: 0; }
+.day-h { display: flex; justify-content: space-between; padding: 12px 20px 6px; font-size: 13px; color: var(--muted); }
+.day-h b { color: var(--text); font-weight: 600; }
+.job { display: grid; grid-template-columns: 74px minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 8px 20px; font-size: 14px; }
+.job:last-child { padding-bottom: 14px; }
+.job .t { color: var(--muted); font-variant-numeric: tabular-nums; }
+.job .w { overflow-wrap: anywhere; }
+.job .w small { display: block; color: var(--muted); }
+.job .p { font-variant-numeric: tabular-nums; color: var(--text-2); }
+.free { padding: 4px 20px 14px; font-size: 13px; color: var(--muted); }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 12px 20px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th { font-weight: 500; color: var(--muted); font-size: 13px; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; }
+td .btn { min-height: 34px; padding: 0 12px; font-size: 13px; }
+.tbl { overflow-x: auto; }
+
+.prices { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; }
+.pr { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 20px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.pr input { width: 84px; min-height: 36px; padding: 0 10px; text-align: right; font: 500 15px/1 var(--font); font-variant-numeric: tabular-nums; color: var(--text); background: var(--bg); border: 1px solid var(--line-2); border-radius: 8px; }
+.pr input:focus { border-color: var(--accent); outline: none; }
+.pr label { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 12px); opacity: 0; background: var(--text); color: var(--bg); padding: 12px 16px; border-radius: 10px; font-size: 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, .2); transition: opacity 200ms var(--ease), transform 200ms var(--ease); pointer-events: none; z-index: 40; max-width: calc(100% - 32px); }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+
+@media (max-width: 960px) {
+  .bar nav { display: none; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cols { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .who span { display: none; }
+  .prices { grid-template-columns: minmax(0, 1fr); }
+  .rems td:nth-child(3), thead th:nth-child(3) { display: none; }
+  th, td, .pr, .req, .panel-head, .job, .day-h, .free { padding-left: 16px; padding-right: 16px; }
+  .job { grid-template-columns: 64px minmax(0, 1fr) auto; }
+}
+@media (prefers-reduced-motion: reduce) { .toast { transition: opacity 200ms var(--ease); transform: translate(-50%, 0); } }
+</style>
+</head>
+<body>
+<div class="banner"><div class="wrap"><span>Demo admin with sample bookings. On the real site this sits behind Gavin's own login.</span><a href="index.html#book">Make a test booking on the website</a></div></div>
+<header class="bar">
+  <div class="wrap">
+    <b>SOS</b>
+    <nav aria-label="Admin"><a href="#" aria-current="page">Bookings</a><a href="#week">This week</a><a href="#reminders">Reminders</a><a href="#prices">Prices</a></nav>
+    <div class="who"><span>Gavin</span><span class="avatar" aria-hidden="true">G</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <div><h1 class="today"></h1><p>Everything that needs you today, in one place</p></div>
+  </div>
+
+  <section class="stats" aria-label="At a glance">
+    <div class="stat hot"><p>New requests</p><strong data-stat="new">0</strong><span>Waiting for you to accept</span></div>
+    <div class="stat"><p>Jobs in the next 7 days</p><strong data-stat="week">0</strong><span data-stat="weekfree"></span></div>
+    <div class="stat"><p>Booked in the next 7 days</p><strong data-stat="value">£0</strong><span>From your price list</span></div>
+    <div class="stat"><p>Yearly reminders due</p><strong data-stat="rem">0</strong><span>Customers due a clean</span></div>
+  </section>
+
+  <div class="cols">
+    <div>
+      <section class="panel" aria-labelledby="req-h">
+        <div class="panel-head"><h2 id="req-h">New requests</h2><p>Price worked out from your price list</p></div>
+        <div class="reqs"></div>
+      </section>
+      <section class="panel" id="reminders" aria-labelledby="rem-h">
+        <div class="panel-head"><h2 id="rem-h">Yearly reminders</h2><p>Last cleaned about a year ago</p></div>
+        <div class="tbl"><table><thead><tr><th scope="col">Customer</th><th scope="col">Last clean</th><th scope="col">What</th><th scope="col"><span class="sr">Action</span></th></tr></thead><tbody class="rems"></tbody></table></div>
+      </section>
+    </div>
+    <div>
+      <section class="panel" id="week" aria-labelledby="wk-h">
+        <div class="panel-head"><h2 id="wk-h">Next 7 days</h2><p class="wk-count"></p></div>
+        <div class="days"></div>
+      </section>
+      <section class="panel" id="prices" aria-labelledby="pr-h">
+        <div class="panel-head"><h2 id="pr-h">Your prices</h2><p>Example prices, change any</p></div>
+        <div class="prices"></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="shared.js"></script>
+<script>
+(function () {
+  var S = window.SOS;
+  var D = S.DAYS, M = S.MONTHS;
+  var t0 = S.day(0);
+  document.querySelector('.today').textContent = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][t0.getDay()] + ' ' + t0.getDate() + ' ' + ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][t0.getMonth()];
+  var prices = {}; S.ITEMS.forEach(function (it) { prices[it.id] = it.price; });
+  try { var sp = JSON.parse(localStorage.getItem('sos-demo-prices') || 'null'); if (sp) prices = sp; } catch (e) {}
+  /* sample bookings, relative to today */
+  var sample = [
+    { id: 's1', name: 'Sarah Lowe', tel: '07700 900111', addr: '14 Liverpool Road', pc: 'ST7 4DN', items: { lounge: 1, sofa3: 1 }, date: S.iso(S.day(2)), slot: S.SLOTS[0], status: 'new', source: 'website', notes: 'Coffee spill on the sofa arm' },
+    { id: 's2', name: 'Mike Hollins', tel: '07700 900222', addr: '3 Chapel Street', pc: 'ST7 1JR', items: { lounge: 1, bedroom: 2, stairs: 1 }, date: S.iso(S.day(4)), slot: S.SLOTS[1], status: 'new', source: 'website', notes: '' },
+    { id: 's3', name: 'Janet Birch', addr: '27 Heathcote Road', pc: 'ST7 4AE', items: { rug: 2, sofa2: 1 }, date: S.iso(S.day(1)), slot: S.SLOTS[0], status: 'booked' },
+    { id: 's4', name: 'Dave Carter', addr: '9 Victoria Avenue', pc: 'ST6 1QX', items: { lounge: 1, hall: 1 }, date: S.iso(S.day(1)), slot: S.SLOTS[2], status: 'booked' },
+    { id: 's5', name: 'Emma Shaw', addr: '52 High Street', pc: 'ST7 1BG', items: { sofa3: 1, chair: 2 }, date: S.iso(S.day(3)), slot: S.SLOTS[1], status: 'booked' },
+    { id: 's6', name: 'Paul Rigby', addr: '6 Moorland Road', pc: 'ST6 4HE', items: { lounge: 1, bedroom: 3, stairs: 1, hall: 1 }, date: S.iso(S.day(5)), slot: S.SLOTS[0], status: 'booked' },
+    { id: 's7', name: 'Linda Moss', addr: '18 Church Street', pc: 'ST7 3EJ', items: { rug: 1 }, date: S.iso(S.day(6)), slot: S.SLOTS[2], status: 'booked' }
+  ];
+  var reminders = [
+    { name: 'Kerry Platt', when: 348, items: { lounge: 1, sofa3: 1 } },
+    { name: 'Tom Bennett', when: 356, items: { stairs: 1, bedroom: 2 } },
+    { name: 'Rachel Hughes', when: 362, items: { rug: 3, sofa3: 1 } }
+  ];
+  var stored = S.load();
+  var all = stored.slice().reverse().concat(sample);
+  function money(n) { return '£' + n.toLocaleString('en-GB'); }
+  function first(n) { return n.split(/\s+/)[0]; }
+  var toastEl = document.querySelector('.toast'), tt;
+  function toast(m) { toastEl.textContent = m; toastEl.classList.add('on'); clearTimeout(tt); tt = setTimeout(function () { toastEl.classList.remove('on'); }, 3200); }
+  function persist(b) { if (b.id.charAt(0) === 'w') { var l = S.load(); l.forEach(function (x) { if (x.id === b.id) x.status = b.status; }); S.save(l); } }
+
+  function drawReqs() {
+    var host = document.querySelector('.reqs'); host.innerHTML = '';
+    var list = all.filter(function (b) { return b.status === 'new' || b.justAccepted; });
+    if (!list.length) { host.innerHTML = '<p class="empty">All caught up. New bookings from your website appear here.</p>'; return; }
+    list.forEach(function (b) {
+      var el = document.createElement('article'); el.className = 'req' + (b.id.charAt(0) === 'w' ? ' fresh' : '');
+      el.innerHTML = '<div class="req-top"><h3></h3><span class="tag"><i></i><span class="src"></span></span></div><dl class="req-meta"></dl><div class="req-actions"></div>';
+      el.querySelector('h3').textContent = b.name;
+      el.querySelector('.src').textContent = b.id.charAt(0) === 'w' ? 'Just now, from your website' : 'From your website';
+      var dl = el.querySelector('dl');
+      [['Cleaning', S.itemsText(b.items)], ['When', S.fmt(b.date) + ', ' + b.slot.toLowerCase()], ['Where', b.addr + ', ' + b.pc], ['Notes', b.notes || 'None'], ['Price', money(S.total(b.items, prices))]].forEach(function (r) {
+        var dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = r[0]; dd.textContent = r[1]; if (r[0] === 'Price') dd.className = 'price'; dl.appendChild(dt); dl.appendChild(dd);
+      });
+      var act = el.querySelector('.req-actions');
+      if (b.justAccepted) {
+        act.innerHTML = '<p class="state"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span></span></p>';
+        act.querySelector('span').textContent = 'Accepted. ' + first(b.name) + ' has been sent a confirmation with the price, and gets a reminder the day before.';
+      } else {
+        var a = document.createElement('button'); a.type = 'button'; a.className = 'btn btn-primary'; a.textContent = 'Accept and send price';
+        var m = document.createElement('button'); m.type = 'button'; m.className = 'btn btn-secondary'; m.textContent = 'Suggest another time';
+        a.addEventListener('click', function () { b.status = 'booked'; b.justAccepted = true; persist(b); drawAll(); toast('Confirmation sent to ' + first(b.name) + ': ' + money(S.total(b.items, prices)) + ', ' + S.fmt(b.date)); });
+        m.addEventListener('click', function () { toast('Your next free slots have been sent to ' + first(b.name)); });
+        act.appendChild(a); act.appendChild(m);
+      }
+      host.appendChild(el);
+    });
+  }
+  function drawWeek() {
+    var host = document.querySelector('.days'); host.innerHTML = '';
+    var count = 0, value = 0, freeSlots = 0;
+    for (var i = 0; i < 7; i++) {
+      var d = S.day(i), id = S.iso(d);
+      var jobs = all.filter(function (b) { return b.status === 'booked' && b.date === id; }).sort(function (a, c) { return S.SLOTS.indexOf(a.slot) - S.SLOTS.indexOf(c.slot); });
+      count += jobs.length; freeSlots += S.SLOTS.length - jobs.length;
+      var sec = document.createElement('div'); sec.className = 'day';
+      var h = document.createElement('p'); h.className = 'day-h'; h.innerHTML = '<b></b><span></span>';
+      h.querySelector('b').textContent = i === 0 ? 'Today' : i === 1 ? 'Tomorrow' : S.fmt(id);
+      h.querySelector('span').textContent = jobs.length ? jobs.length + (jobs.length === 1 ? ' job' : ' jobs') : '';
+      sec.appendChild(h);
+      if (!jobs.length) { var f = document.createElement('p'); f.className = 'free'; f.textContent = 'Free all day'; sec.appendChild(f); }
+      jobs.forEach(function (b) {
+        var v = S.total(b.items, prices); value += v;
+        var j = document.createElement('div'); j.className = 'job';
+        j.innerHTML = '<span class="t"></span><span class="w"><span class="n"></span><small></small></span><span class="p"></span>';
+        j.querySelector('.t').textContent = b.slot.split(',')[0];
+        j.querySelector('.n').textContent = b.name + ', ' + b.pc;
+        j.querySelector('small').textContent = S.itemsText(b.items);
+        j.querySelector('.p').textContent = money(v);
+        sec.appendChild(j);
+      });
+      host.appendChild(sec);
+    }
+    document.querySelector('[data-stat="week"]').textContent = count;
+    document.querySelector('[data-stat="weekfree"]').textContent = freeSlots + ' free slots left';
+    document.querySelector('[data-stat="value"]').textContent = money(value);
+    document.querySelector('.wk-count').textContent = count + (count === 1 ? ' job booked' : ' jobs booked');
+  }
+  function drawRems() {
+    var host = document.querySelector('.rems'); host.innerHTML = '';
+    var due = 0;
+    reminders.forEach(function (r) {
+      var d = S.day(-r.when), tr = document.createElement('tr');
+      tr.innerHTML = '<td></td><td class="num"></td><td></td><td></td>';
+      tr.children[0].textContent = r.name;
+      tr.children[1].textContent = d.getDate() + ' ' + M[d.getMonth()] + ' ' + d.getFullYear();
+      tr.children[2].textContent = S.itemsText(r.items);
+      if (r.sent) { tr.children[3].innerHTML = '<span class="state">Sent</span>'; }
+      else {
+        due++;
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'btn btn-secondary'; b.textContent = 'Send reminder';
+        b.addEventListener('click', function () { r.sent = true; drawRems(); toast('Reminder sent to ' + first(r.name) + ' with a link to book online'); });
+        tr.children[3].appendChild(b);
+      }
+      host.appendChild(tr);
+    });
+    document.querySelector('[data-stat="rem"]').textContent = due;
+  }
+  function drawPrices() {
+    var host = document.querySelector('.prices'); host.innerHTML = '';
+    S.ITEMS.forEach(function (it) {
+      var row = document.createElement('div'); row.className = 'pr';
+      row.innerHTML = '<span></span><label><span>£</span><input type="number" min="0" step="1" inputmode="numeric"></label>';
+      row.querySelector('span').textContent = it.name;
+      var inp = row.querySelector('input'); inp.value = prices[it.id]; inp.setAttribute('aria-label', it.name + ' price in pounds');
+      inp.addEventListener('input', function () { var v = parseInt(inp.value, 10); prices[it.id] = isNaN(v) ? 0 : Math.max(0, v); try { localStorage.setItem('sos-demo-prices', JSON.stringify(prices)); } catch (e) {} drawReqs(); drawWeek(); });
+      host.appendChild(row);
+    });
+  }
+  function drawAll() {
+    drawReqs(); drawWeek();
+    document.querySelector('[data-stat="new"]').textContent = all.filter(function (b) { return b.status === 'new'; }).length;
+  }
+  drawAll(); drawRems(); drawPrices();
+})();
+</script>
+</body>
+</html>
