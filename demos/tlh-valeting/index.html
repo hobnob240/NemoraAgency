@@ -187,6 +187,56 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .card.is-sent form { display: none; }
 .card.is-sent .sent { display: block; }
 
+/* booking */
+.aside { margin-top: 24px; font-size: 14px; color: var(--muted); max-width: 26rem; }
+.prog { list-style: none; margin: 0 0 24px; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; font-size: 12px; color: var(--muted); }
+.prog li { padding-top: 8px; border-top: 2px solid var(--line-2); }
+.prog li.on { color: var(--text); border-top-color: var(--amber); }
+.prog li.did { color: var(--text-2); border-top-color: rgba(242, 177, 60, .45); }
+.step h3 { font-size: 20px; letter-spacing: -0.01em; margin-bottom: 16px; }
+.opts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+.opt { position: relative; display: flex; align-items: center; min-height: 48px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--raised); cursor: pointer; font-size: 15px; transition: border-color 160ms var(--ease); }
+.opt input { position: absolute; opacity: 0; pointer-events: none; }
+.opt:has(input:checked) { border-color: var(--amber); box-shadow: inset 0 0 0 1px var(--amber); }
+.opt:has(input:focus-visible) { outline: 2px solid var(--amber); outline-offset: 2px; }
+.nav-row { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; }
+.nav-row .btn { width: auto; margin: 0; }
+.btn[disabled] { opacity: .4; cursor: not-allowed; }
+.cal { border: 1px solid var(--line); border-radius: 12px; padding: 16px; background: var(--raised); }
+.cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.cal-title { font-weight: 600; }
+.cal-nav { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--text); font-size: 20px; line-height: 1; cursor: pointer; }
+.cal-nav:disabled { opacity: .3; cursor: default; }
+.cal-dow, .cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.cal-dow span { text-align: center; font-size: 12px; color: var(--muted); padding-bottom: 4px; }
+.day { height: 40px; border-radius: 8px; border: 1px solid transparent; background: transparent; color: var(--text); font-family: var(--body); font-weight: 500; font-size: 14px; line-height: 1; cursor: pointer; transition: background-color 160ms var(--ease), border-color 160ms var(--ease); }
+.day.free { background: rgba(242, 177, 60, .10); border-color: rgba(242, 177, 60, .28); }
+.day.full { color: var(--muted); text-decoration: line-through; text-decoration-color: rgba(122, 130, 150, .6); }
+.day.past { color: rgba(122, 130, 150, .45); cursor: default; }
+.day.sel { background: var(--amber); color: var(--on-amber); border-color: var(--amber); text-decoration: none; }
+.cal-key { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 12px; font-size: 12px; color: var(--muted); }
+.cal-key i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.k-free { background: rgba(242, 177, 60, .35); }
+.k-full { background: var(--line-2); }
+.link { margin-left: auto; background: none; border: 0; padding: 0; color: var(--amber); font: 600 13px/1 var(--body); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.full-box, .slots-box { margin-top: 16px; }
+.full-box p { color: var(--text-2); margin-bottom: 12px; }
+.full-box strong { color: var(--text); font-weight: 600; }
+.slots-title { font-size: 14px; color: var(--text-2); margin-bottom: 8px; }
+.slots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.slot { min-height: 44px; border-radius: 8px; border: 1px solid var(--line); background: var(--raised); color: var(--text); font-family: var(--body); font-weight: 500; font-size: 15px; line-height: 1; cursor: pointer; }
+.slot[aria-checked="true"] { border-color: var(--amber); box-shadow: inset 0 0 0 1px var(--amber); }
+.slot.taken { color: var(--muted); text-decoration: line-through; cursor: not-allowed; }
+.summary { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 24px; margin: 0; padding: 16px 0; border-block: 1px solid var(--line); }
+.summary dt { color: var(--muted); font-size: 14px; }
+.summary dd { margin: 0; text-align: right; overflow-wrap: anywhere; }
+.dep { margin-top: 16px; font-size: 14px; color: var(--text-2); }
+.done-title { color: var(--amber); }
+.done-text { font-size: 17px; }
+.demo-note { margin: 16px 0 24px; font-size: 14px; color: var(--muted); }
+@media (hover: hover) and (pointer: fine) { .day.free:hover, .day.full:hover { border-color: var(--line-2); } .opt:hover { border-color: var(--line-2); } }
+@media (max-width: 600px) { .opts { grid-template-columns: minmax(0, 1fr); } .slots { grid-template-columns: repeat(2, minmax(0, 1fr)); } .prog { font-size: 11px; } .nav-row .btn { padding: 0 14px; } }
+
 .foot { border-top: 1px solid var(--line); background: var(--deep); color: var(--text-2); font-size: 14px; }
 .foot-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding-block: 40px calc(32px + env(safe-area-inset-bottom, 0px)); }
 .foot strong { color: var(--text); font-weight: 600; }
@@ -236,7 +286,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     <a class="mark" href="#main">TLH <small>Mobile valeting and detailing</small></a>
     <nav class="nav" aria-label="Main"><a href="#services">Services</a><a href="#how">How it works</a><a href="#reviews">Reviews</a></nav>
     <a class="call-link" href="tel:+447312903626">07312 903626</a>
-    <a class="btn btn-primary" href="#quote">Get a quote</a>
+    <a class="btn btn-primary" href="#book">Book online</a>
   </div>
 </header>
 
@@ -247,7 +297,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
       <h1>Showroom finish, on your drive</h1>
       <p class="hero-sub">Mobile car valeting and detailing from Hartshill, Stoke-on-Trent. Inside and out, at your home or at work.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#quote">Get a quote</a>
+        <a class="btn btn-primary" href="#book">Book online</a>
         <a class="btn btn-secondary" href="tel:+447312903626"><svg aria-hidden="true"><use href="#i-phone"/></svg>07312 903626</a>
       </div>
       <p class="rating"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span><strong>5.0</strong> on Google from <strong>430</strong> reviews</span></p>
@@ -279,7 +329,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   <div class="wrap">
     <div class="sec-head">
       <h2 id="svc-h">From a quick refresh to a full detail</h2>
-      <p class="sec-lead">Tell us what the car needs and get a straight quote. No pressure to pay for anything it doesn't.</p>
+      <p class="sec-lead">Pick what the car needs and book it online. Not sure? Call and get honest advice. No pressure to pay for anything it doesn't need.</p>
     </div>
     <ul class="menu">
       <li><h3>Full valet, inside and out</h3><p>The whole car cleaned inside and out, done properly from top to bottom.</p><span class="for">Regular upkeep</span></li>
@@ -295,12 +345,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 <section class="sec" id="how" aria-labelledby="how-h" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <h2 id="how-h">Booked in four steps</h2>
-      <p class="sec-lead">Call or message any day of the week. You're kept in the loop from the first message to the finished car.</p>
+      <h2 id="how-h">Booked in a couple of minutes</h2>
+      <p class="sec-lead">Book online in a couple of minutes, or call or message any day. You're kept in the loop from booking to the finished car.</p>
     </div>
     <ol class="steps">
-      <li><span class="n">01</span><h3>Get in touch</h3><p>Send the form below or call. Tell us the car and what it needs.</p></li>
-      <li><span class="n">02</span><h3>Get your quote</h3><p>A fair, honest price and a time that suits you.</p></li>
+      <li><span class="n">01</span><h3>Pick the job</h3><p>Choose the service and tell us about the car.</p></li>
+      <li><span class="n">02</span><h3>Pick a slot</h3><p>See the free days and choose a time. Fully booked? Join the waiting list.</p></li>
       <li><span class="n">03</span><h3>We come to you</h3><p>At home or at work, on time, with everything needed.</p></li>
       <li><span class="n">04</span><h3>Showroom finish</h3><p>Your car back looking like it's just left the showroom.</p></li>
     </ol>
@@ -323,35 +373,89 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   </div>
 </section>
 
-<section class="sec" id="quote" aria-labelledby="q-h">
+<section class="sec" id="book" aria-labelledby="q-h">
   <div class="wrap quote-grid">
     <div>
-      <h2 id="q-h">Get a quote for your car</h2>
-      <p class="sec-lead" style="margin-top:16px">Fill this in and you'll get a price and a time back. Or just ring.</p>
+      <h2 id="q-h">Book your valet online</h2>
+      <p class="sec-lead" style="margin-top:16px">Pick the job, pick a slot, and secure it with a small deposit. If you'd rather talk it through, just ring.</p>
       <div class="direct"><a href="tel:+447312903626">07312 903626</a><p>Calls and messages, 7 days a week</p></div>
+      <p class="aside">Fully booked on the day you want? Join the waiting list and you'll get a message the moment a slot frees up.</p>
     </div>
-    <div class="card">
-      <form novalidate>
-        <h3>Your car</h3>
-        <p class="card-sub">Takes about a minute</p>
-        <div class="row2">
-          <div class="field"><label for="car">Make and model</label><input id="car" name="car" placeholder="Ford Focus" required></div>
-          <div class="field"><label for="svc">What it needs</label><select id="svc" name="svc"><option>Full valet, inside and out</option><option>Interior deep clean</option><option>Full detailing</option><option>Wash and wax</option><option>Ready-for-sale clean</option><option>Not sure, advise me</option></select></div>
+    <div class="card booker" data-step="1">
+      <noscript><p>Online booking needs JavaScript. Call 07312 903626 to book.</p></noscript>
+      <ol class="prog" aria-label="Booking steps"><li data-s="1">Service</li><li data-s="2">Date and time</li><li data-s="3">Your details</li><li data-s="4">Deposit</li></ol>
+
+      <div class="step" data-s="1">
+        <h3>What does the car need?</h3>
+        <div class="opts" role="radiogroup" aria-label="Service">
+          <label class="opt"><input type="radio" name="svc" value="Full valet, inside and out" checked><span>Full valet, inside and out</span></label>
+          <label class="opt"><input type="radio" name="svc" value="Interior deep clean"><span>Interior deep clean</span></label>
+          <label class="opt"><input type="radio" name="svc" value="Full detailing"><span>Full detailing</span></label>
+          <label class="opt"><input type="radio" name="svc" value="Wash and wax"><span>Wash and wax</span></label>
+          <label class="opt"><input type="radio" name="svc" value="Ready-for-sale clean"><span>Ready-for-sale clean</span></label>
+          <label class="opt"><input type="radio" name="svc" value="Neglected car rescue"><span>Neglected car rescue</span></label>
         </div>
         <div class="row2">
-          <div class="field"><label for="pc">Postcode</label><input id="pc" name="pc" autocomplete="postal-code" required></div>
-          <div class="field"><label for="when">Best day</label><input id="when" name="when" type="date"></div>
+          <div class="field"><label for="size">Vehicle size</label><select id="size"><option>Small car</option><option>Hatchback or saloon</option><option>Estate or SUV</option><option>Van or 7-seater</option></select></div>
+          <div class="field"><label for="car">Make and model</label><input id="car" placeholder="Ford Focus"></div>
+        </div>
+        <div class="nav-row"><span></span><button type="button" class="btn btn-primary" data-go="2">Choose a date</button></div>
+      </div>
+
+      <div class="step" data-s="2" hidden>
+        <h3>Pick a day</h3>
+        <div class="cal">
+          <div class="cal-head"><button type="button" class="cal-nav" data-m="-1" aria-label="Previous month">&lsaquo;</button><p class="cal-title" aria-live="polite"></p><button type="button" class="cal-nav" data-m="1" aria-label="Next month">&rsaquo;</button></div>
+          <div class="cal-dow" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+          <div class="cal-grid" role="grid"></div>
+          <div class="cal-key"><span><i class="k-free"></i>Available</span><span><i class="k-full"></i>Fully booked</span><button type="button" class="link" data-first>Jump to first free day</button></div>
+        </div>
+        <div class="full-box" hidden>
+          <p><strong class="full-date"></strong> is fully booked. Join the waiting list and you'll get a message if a slot frees up.</p>
+          <button type="button" class="btn btn-secondary" data-wait>Join the waiting list</button>
+        </div>
+        <div class="slots-box" hidden>
+          <p class="slots-title"></p>
+          <div class="slots" role="radiogroup" aria-label="Arrival time"></div>
+        </div>
+        <div class="nav-row"><button type="button" class="btn btn-secondary" data-go="1">Back</button><button type="button" class="btn btn-primary" data-go="3" disabled>Your details</button></div>
+      </div>
+
+      <div class="step" data-s="3" hidden>
+        <h3>Where and who</h3>
+        <div class="row2">
+          <div class="field"><label for="name">Your name</label><input id="name" autocomplete="name" required></div>
+          <div class="field"><label for="tel">Phone number</label><input id="tel" type="tel" inputmode="tel" autocomplete="tel" required></div>
         </div>
         <div class="row2">
-          <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
-          <div class="field"><label for="tel">Phone number</label><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="pc">Postcode</label><input id="pc" autocomplete="postal-code" required></div>
+          <div class="field"><label for="where">Where's the car?</label><select id="where"><option>At home, on the drive</option><option>At home, on the street</option><option>At work</option></select></div>
         </div>
-        <button class="btn btn-primary" type="submit">Send quote request</button>
-        <p class="note">Your details are only used to reply about your car</p>
-      </form>
-      <div class="sent" role="status" aria-live="polite">
-        <h3>Thanks, <span data-name>got it</span></h3>
-        <p>On your finished website, this lands straight on your phone with the car, the job and the postcode, ready to reply with a price.</p>
+        <div class="nav-row"><button type="button" class="btn btn-secondary" data-go="2">Back</button><button type="button" class="btn btn-primary" data-go="4">Review and pay deposit</button></div>
+      </div>
+
+      <div class="step" data-s="4" hidden>
+        <h3>Check and secure your slot</h3>
+        <dl class="summary"></dl>
+        <p class="dep">A small deposit holds your slot and comes off the final price.</p>
+        <div class="nav-row"><button type="button" class="btn btn-secondary" data-go="3">Back</button><button type="button" class="btn btn-primary" data-book>Pay deposit and book</button></div>
+      </div>
+
+      <div class="step done" data-s="5" hidden role="status" aria-live="polite" tabindex="-1">
+        <h3 class="done-title">Booked</h3>
+        <p class="done-text"></p>
+        <p class="demo-note">On your finished website, the deposit is taken by card, the booking lands in your diary, and you and your customer both get a confirmation and a reminder the day before.</p>
+        <button type="button" class="btn btn-secondary" data-restart>Make another booking</button>
+      </div>
+
+      <div class="step" data-s="w" hidden>
+        <h3>Join the waiting list</h3>
+        <p class="card-sub wait-for"></p>
+        <div class="row2">
+          <div class="field"><label for="wname">Your name</label><input id="wname" autocomplete="name"></div>
+          <div class="field"><label for="wtel">Phone number</label><input id="wtel" type="tel" inputmode="tel" autocomplete="tel"></div>
+        </div>
+        <div class="nav-row"><button type="button" class="btn btn-secondary" data-go="2">Back</button><button type="button" class="btn btn-primary" data-wjoin>Add me to the list</button></div>
       </div>
     </div>
   </div>
@@ -367,7 +471,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 <div class="callbar" aria-label="Quick contact">
   <a class="btn btn-secondary" href="tel:+447312903626">Call</a>
-  <a class="btn btn-primary" href="#quote">Get a quote</a>
+  <a class="btn btn-primary" href="#book">Book online</a>
 </div>
 
 <script>
@@ -378,16 +482,91 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   function set(v) { dirty.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)'; divider.style.left = v + '%'; }
   range.addEventListener('input', function () { set(range.value); });
   set(range.value);
-  var box = document.querySelector('.card'), form = box.querySelector('form');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var bad = Array.prototype.filter.call(form.querySelectorAll('[required]'), function (f) { return !f.value.trim(); });
-    form.querySelectorAll('input').forEach(function (f) { f.removeAttribute('aria-invalid'); });
-    if (bad.length) { bad.forEach(function (f) { f.setAttribute('aria-invalid', 'true'); }); bad[0].focus(); return; }
-    box.querySelector('[data-name]').textContent = form.elements.namedItem('name').value.trim().split(/\s+/)[0];
-    box.classList.add('is-sent');
-    var s = box.querySelector('.sent'); s.setAttribute('tabindex', '-1'); s.focus();
+  var bk = document.querySelector('.booker');
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var DAYS = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var OPEN = new Date(2027, 3, 1); /* the diary opens in April */
+  var TIMES = ['8:00', '10:30', '13:00', '15:30'];
+  var today = new Date(); today.setHours(0, 0, 0, 0);
+  var view = new Date(today.getFullYear(), today.getMonth(), 1);
+  var minView = new Date(view), maxView = new Date(OPEN.getFullYear(), OPEN.getMonth() + 3, 1);
+  var picked = null, time = null;
+  function q(s) { return bk.querySelector(s); }
+  function fmt(d) { return DAYS[d.getDay()] + ' ' + d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear(); }
+  function hash(d) { return (d.getFullYear() * 400 + d.getMonth() * 31 + d.getDate()) % 7; }
+  function show(n, quiet) {
+    bk.querySelectorAll('.step').forEach(function (el) { el.hidden = el.getAttribute('data-s') !== String(n); });
+    bk.querySelectorAll('.prog li').forEach(function (li) { var k = +li.getAttribute('data-s'); li.className = (k === +n) ? 'on' : (k < +n || n === 5 ? 'did' : ''); });
+    if (n === 2) draw();
+    if (n === 4) summary();
+    var h = bk.querySelector('.step[data-s="' + n + '"] h3'); if (h && !quiet) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+  }
+  function draw() {
+    q('.cal-title').textContent = MONTHS[view.getMonth()] + ' ' + view.getFullYear();
+    q('[data-m="-1"]').disabled = view <= minView; q('[data-m="1"]').disabled = view >= maxView;
+    var g = q('.cal-grid'); g.innerHTML = '';
+    var lead = (view.getDay() + 6) % 7;
+    for (var i = 0; i < lead; i++) g.appendChild(document.createElement('span'));
+    var last = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
+    for (var d = 1; d <= last; d++) {
+      var dt = new Date(view.getFullYear(), view.getMonth(), d), b = document.createElement('button');
+      b.type = 'button'; b.className = 'day'; b.textContent = d;
+      if (dt < today) { b.className += ' past'; b.disabled = true; b.setAttribute('aria-label', fmt(dt) + ', past'); }
+      else if (dt < OPEN) { b.className += ' full'; b.setAttribute('aria-label', fmt(dt) + ', fully booked'); }
+      else { b.className += ' free'; b.setAttribute('aria-label', fmt(dt) + ', available'); }
+      if (picked && +picked === +dt) b.className += ' sel';
+      b.dataset.t = +dt;
+      g.appendChild(b);
+    }
+  }
+  function pick(dt) {
+    picked = dt; time = null; draw();
+    q('[data-go="3"]').disabled = true;
+    if (dt < OPEN) { q('.slots-box').hidden = true; q('.full-box').hidden = false; q('.full-date').textContent = fmt(dt); return; }
+    q('.full-box').hidden = true; q('.slots-box').hidden = false;
+    q('.slots-title').textContent = 'Arrival times on ' + fmt(dt);
+    var box = q('.slots'); box.innerHTML = '';
+    TIMES.forEach(function (t, i) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'slot'; b.textContent = t; b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', 'false');
+      if ((hash(dt) + i) % 5 === 0) { b.className += ' taken'; b.disabled = true; b.setAttribute('aria-label', t + ', taken'); }
+      b.addEventListener('click', function () { box.querySelectorAll('.slot').forEach(function (x) { x.setAttribute('aria-checked', 'false'); }); b.setAttribute('aria-checked', 'true'); time = t; q('[data-go="3"]').disabled = false; });
+      box.appendChild(b);
+    });
+  }
+  function val(id) { var el = bk.querySelector('#' + id); return el ? el.value.trim() : ''; }
+  function svc() { var r = bk.querySelector('input[name="svc"]:checked'); return r ? r.value : ''; }
+  function summary() {
+    var rows = [['Service', svc()], ['Vehicle', (val('car') ? val('car') + ', ' : '') + val('size').toLowerCase()], ['When', picked ? fmt(picked) + ', ' + time : ''], ['Where', val('pc').toUpperCase() + ', ' + val('where').toLowerCase()], ['Name', val('name')], ['Phone', val('tel')]];
+    var dl = q('.summary'); dl.innerHTML = '';
+    rows.forEach(function (r) { var dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = r[0]; dd.textContent = r[1]; dl.appendChild(dt); dl.appendChild(dd); });
+  }
+  bk.addEventListener('click', function (e) {
+    var t = e.target.closest('button'); if (!t) return;
+    if (t.classList.contains('day') && !t.disabled) { pick(new Date(+t.dataset.t)); return; }
+    if (t.hasAttribute('data-m')) { view = new Date(view.getFullYear(), view.getMonth() + (+t.getAttribute('data-m')), 1); draw(); return; }
+    if (t.hasAttribute('data-first')) { view = new Date(OPEN.getFullYear(), OPEN.getMonth(), 1); pick(new Date(OPEN)); return; }
+    if (t.hasAttribute('data-wait')) { q('.wait-for').textContent = 'For ' + svc().toLowerCase() + ' on ' + fmt(picked) + ', or the next free slot'; show('w'); return; }
+    if (t.hasAttribute('data-wjoin')) {
+      var ok = val('wname') && val('wtel');
+      ['wname', 'wtel'].forEach(function (id) { bk.querySelector('#' + id).toggleAttribute('aria-invalid', !val(id)); });
+      if (!ok) return;
+      q('.done-title').textContent = "You're on the list";
+      q('.done-text').textContent = 'Thanks ' + val('wname').split(/\s+/)[0] + ". If a slot frees up on " + fmt(picked) + ", you'll get a message straight away.";
+      show(5); return;
+    }
+    if (t.hasAttribute('data-go')) {
+      var n = t.getAttribute('data-go');
+      if (n === '4') { var bad = ['name', 'tel', 'pc'].filter(function (id) { var miss = !val(id); bk.querySelector('#' + id).toggleAttribute('aria-invalid', miss); return miss; }); if (bad.length) { bk.querySelector('#' + bad[0]).focus(); return; } }
+      show(n === 'w' ? 'w' : +n); return;
+    }
+    if (t.hasAttribute('data-book')) {
+      q('.done-title').textContent = 'Booked';
+      q('.done-text').textContent = svc() + ' on ' + fmt(picked) + ', arriving ' + time + '. Thanks ' + val('name').split(/\s+/)[0] + ', see you then.';
+      show(5); return;
+    }
+    if (t.hasAttribute('data-restart')) { picked = null; time = null; q('.full-box').hidden = true; q('.slots-box').hidden = true; show(1); }
   });
+  show(1, true);
 })();
 </script>
 </body>
