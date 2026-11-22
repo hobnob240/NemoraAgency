@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Tail Wagging Trims | Dog Grooming in Bradeley, Stoke-on-Trent</title>
+<meta name="description" content="Tail Wagging Trims, a friendly dog grooming salon in Bradeley, Stoke-on-Trent. Full grooms, deshedding and nail trims, with real patience for nervous and fidgety dogs. Open 7 days. Rated 5.0 on Google.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FBF7F1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#15120F">
+<link rel="preload" href="fonts/instrument-serif.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/figtree.woff" as="font" type="font/woff" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"PetStore","additionalType":"https://schema.org/LocalBusiness","name":"Tail Wagging Trims","description":"Dog grooming salon","telephone":"+44 7832 679854","address":{"@type":"PostalAddress","streetAddress":"Joyce Avenue","addressLocality":"Bradeley, Stoke-on-Trent","postalCode":"ST6 7PF","addressCountry":"GB"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"16:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"37"}}</script>
+<style>
+/* Tail Wagging Trims: demo by NEMORA.
+   Direction: gentle, cheerful, patient. World: a bright grooming room, warm towels, a freshly brushed coat.
+   Moment: the regulars' name tags (Nala, Murphy, Stella, all from real reviews) drawn in code as brass and enamel.
+   Signature: the dog's name comes first, everywhere. Unslop pass by unslop (Damir Sokolovsky, @heydamir, CC BY 4.0).
+   Self-hosted OFL fonts, no third-party requests. */
+@font-face { font-family: "Instrument Serif"; src: url("fonts/instrument-serif.woff") format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("fonts/figtree.woff") format("woff"); font-weight: 300 900; font-display: swap; }
+:root {
+  --bg: #FBF7F1; --bg-2: #F4EDE2; --card: #FFFDF9; --raised: #EFE7DA;
+  --text: #1F1B16; --text-2: #5E554A; --muted: #7B7266; --line: rgba(31, 27, 22, .09); --line-2: rgba(31, 27, 22, .16);
+  --accent: #B8432A; --accent-hi: #A23A23; --on-accent: #FFFFFF; --accent-soft: rgba(184, 67, 42, .09);
+  --star: #D99A1E; --bad: #C0362C;
+  /* the tags: only inside the moment */
+  --brass-1: #F3D68F; --brass-2: #C9973F; --brass-3: #8E6524; --brass-ink: #6B4A18;
+  --enamel-coral: #E06A4E; --enamel-coral-2: #C24F35; --enamel-teal: #3E8C86; --enamel-teal-2: #2C6B66;
+  --steel-1: #F4F4F2; --steel-2: #B9B8B3; --steel-3: #8D8C87; --tag-shadow: rgba(60, 40, 20, .28);
+  --display: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15120F; --bg-2: #1C1814; --card: #1F1B17; --raised: #262019;
+    --text: #EFE9DE; --text-2: #AAA398; --muted: #8A847A; --line: rgba(239, 233, 222, .09); --line-2: rgba(239, 233, 222, .16);
+    --accent: #E7785B; --accent-hi: #EF8A6F; --on-accent: #1A0E09; --accent-soft: rgba(231, 120, 91, .12);
+    --star: #F0B547; --bad: #FF8A80; --tag-shadow: rgba(0, 0, 0, .5);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15120F; --bg-2: #1C1814; --card: #1F1B17; --raised: #262019;
+  --text: #EFE9DE; --text-2: #AAA398; --muted: #8A847A; --line: rgba(239, 233, 222, .09); --line-2: rgba(239, 233, 222, .16);
+  --accent: #E7785B; --accent-hi: #EF8A6F; --on-accent: #1A0E09; --accent-soft: rgba(231, 120, 91, .12);
+  --star: #F0B547; --bad: #FF8A80; --tag-shadow: rgba(0, 0, 0, .5);
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; scroll-padding-top: 80px; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 var(--body); }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; overflow-wrap: break-word; min-width: 0; }
+h1, h2 { font-family: var(--display); font-weight: 400; letter-spacing: -0.01em; }
+h3 { font-family: var(--body); font-weight: 600; }
+p { margin: 0; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.wrap { width: 100%; max-width: 1160px; margin-inline: auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--accent); color: var(--on-accent); padding: 8px 12px; border-radius: 8px; z-index: 50; }
+.skip:focus { top: 12px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 10px; font: 600 16px/1 var(--body); text-decoration: none; border: 1px solid transparent; cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; transition: transform 140ms var(--ease), background-color 160ms var(--ease), border-color 160ms var(--ease); white-space: nowrap; }
+.btn:active { transform: scale(0.98); }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-secondary { background: var(--card); color: var(--text); border-color: var(--line-2); }
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover { background: var(--accent-hi); }
+  .btn-secondary:hover { border-color: var(--text-2); }
+  .nav a:hover { color: var(--text); }
+}
+
+/* nav */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 21; }
+.top-row { display: flex; align-items: center; gap: 32px; min-height: 68px; }
+.mark { font-family: var(--display); font-size: 26px; line-height: 1; text-decoration: none; flex-shrink: 0; }
+.nav { display: flex; gap: 28px; margin-left: auto; font-size: 15px; color: var(--text-2); }
+.nav a { text-decoration: none; transition: color 160ms var(--ease); }
+.top .btn { min-height: 40px; padding: 0 16px; font-size: 15px; }
+
+/* hero */
+.hero { padding-block: 72px 96px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: 56px; align-items: center; }
+.hero h1 { font-size: clamp(44px, 6vw, 76px); line-height: 1.02; }
+.hero-sub { margin-top: 24px; font-size: 19px; line-height: 1.55; color: var(--text-2); max-width: 31rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.rating { display: flex; align-items: center; gap: 12px; margin-top: 36px; font-size: 15px; color: var(--text-2); }
+.stars { display: flex; gap: 2px; color: var(--star); }
+.stars svg { width: 16px; height: 16px; }
+.rating strong { color: var(--text); font-weight: 600; }
+
+/* the moment: name tags */
+.tags { position: relative; aspect-ratio: 6 / 5; border-radius: 24px; background:
+  radial-gradient(120% 90% at 30% 20%, var(--card), var(--bg-2) 70%); border: 1px solid var(--line); overflow: hidden; }
+.tags::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 46px, var(--line) 46px 47px); opacity: .5; mask-image: linear-gradient(180deg, transparent, #000 40%, #000 70%, transparent); -webkit-mask-image: linear-gradient(180deg, transparent, #000 40%, #000 70%, transparent); }
+.tag { position: absolute; filter: drop-shadow(0 18px 18px var(--tag-shadow)) drop-shadow(0 3px 4px var(--tag-shadow)); }
+.tag svg { width: 100%; height: auto; overflow: visible; }
+.tag-nala { width: 38%; left: 8%; top: 12%; transform: rotate(-9deg); }
+.tag-murphy { width: 52%; right: 4%; top: 30%; transform: rotate(7deg); }
+.tag-stella { width: 34%; left: 22%; bottom: 6%; transform: rotate(4deg); }
+.tags-cap { position: absolute; left: 20px; bottom: 16px; font-size: 13px; color: var(--muted); }
+.tags-cap b { color: var(--text-2); font-weight: 500; }
+
+/* sections */
+.sec { padding-block: 104px; }
+.sec-alt { background: var(--bg-2); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 56px; align-items: end; margin-bottom: 48px; }
+.sec h2 { font-size: clamp(34px, 4.2vw, 52px); line-height: 1.05; }
+.lead { color: var(--text-2); font-size: 18px; max-width: 34rem; }
+
+.menu { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-2); }
+.menu li { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 40px; padding: 28px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.menu h3 { font-family: var(--display); font-weight: 400; font-size: 30px; line-height: 1.1; }
+.menu p { color: var(--text-2); }
+
+/* patience */
+.patience { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 64px; align-items: center; }
+.patience blockquote { margin: 0; font-family: var(--display); font-size: clamp(28px, 3.2vw, 40px); line-height: 1.2; }
+.patience figcaption { margin-top: 20px; font-size: 14px; color: var(--muted); }
+.points { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 16px; }
+.points li { display: flex; gap: 12px; color: var(--text-2); }
+.points svg { width: 20px; height: 20px; color: var(--accent); flex-shrink: 0; margin-top: 3px; }
+.points strong { color: var(--text); font-weight: 600; }
+
+/* regulars */
+.regulars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.reg { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+.reg .dog { font-family: var(--display); font-size: 34px; line-height: 1; }
+.reg blockquote { margin: 0; color: var(--text-2); }
+.reg figcaption { margin-top: auto; font-size: 13px; color: var(--muted); }
+.reg.wide { grid-column: span 2; }
+.reg.wide blockquote { font-size: 19px; color: var(--text); }
+
+/* book */
+.book-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: start; }
+.direct { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
+.direct a { font-family: var(--display); font-size: 36px; line-height: 1; text-decoration: none; }
+.direct p { margin-top: 8px; font-size: 14px; color: var(--muted); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 32px; box-shadow: 0 24px 48px -32px var(--tag-shadow); }
+.card h3 { font-family: var(--display); font-weight: 400; font-size: 30px; line-height: 1.1; }
+.card-sub { margin-top: 4px; color: var(--text-2); font-size: 15px; }
+.row2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; margin-top: 20px; }
+.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.field.full { margin-top: 20px; }
+.field label, legend { font-size: 14px; color: var(--text-2); }
+.field input, .field select, .field textarea { width: 100%; min-height: 48px; padding: 0 14px; font: 400 16px/1.4 var(--body); color: var(--text); background: var(--bg); border: 1px solid var(--line-2); border-radius: 10px; appearance: none; -webkit-appearance: none; transition: border-color 160ms var(--ease); }
+.field textarea { padding: 12px 14px; min-height: 88px; resize: vertical; }
+.field select { background-image: linear-gradient(45deg, transparent 50%, var(--text-2) 50%), linear-gradient(135deg, var(--text-2) 50%, transparent 50%); background-position: calc(100% - 20px) 21px, calc(100% - 15px) 21px; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 36px; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--accent); outline: none; }
+.field [aria-invalid="true"] { border-color: var(--bad); }
+fieldset { border: 0; margin: 20px 0 0; padding: 0; min-width: 0; }
+legend { padding: 0; margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid var(--line-2); border-radius: 10px; font-size: 15px; cursor: pointer; user-select: none; -webkit-user-select: none; transition: border-color 160ms var(--ease), background-color 160ms var(--ease); }
+.chip input { position: absolute; opacity: 0; pointer-events: none; }
+.chip:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.chip:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+.card .btn { width: 100%; margin-top: 24px; }
+.note { margin-top: 12px; font-size: 13px; color: var(--muted); }
+.sent { display: none; }
+.sent h3 { margin-bottom: 10px; }
+.sent p { color: var(--text-2); }
+.sent .demo { margin-top: 14px; font-size: 14px; color: var(--muted); }
+.card.is-sent form { display: none; }
+.card.is-sent .sent { display: block; }
+
+/* visit */
+.visit-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+.addr { font-family: var(--display); font-size: 34px; line-height: 1.15; margin-top: 20px; }
+.visit .lead { margin-top: 12px; }
+.hours { width: 100%; border-collapse: collapse; }
+.hours caption { text-align: left; font-family: var(--display); font-size: 30px; padding-bottom: 12px; }
+.hours th, .hours td { padding: 12px 0; border-top: 1px solid var(--line); text-align: left; font-weight: 400; }
+.hours tr:last-child th, .hours tr:last-child td { border-bottom: 1px solid var(--line); }
+.hours td { text-align: right; color: var(--text-2); font-variant-numeric: tabular-nums; }
+.hours .is-today th, .hours .is-today td { color: var(--text); font-weight: 600; }
+.hours .is-today th::after { content: " today"; font-weight: 400; color: var(--accent); font-size: 14px; }
+
+.foot { border-top: 1px solid var(--line); color: var(--text-2); font-size: 14px; }
+.foot-row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding-block: 36px calc(28px + env(safe-area-inset-bottom, 0px)); }
+.foot .mark { font-size: 22px; color: var(--text); }
+.callbar { display: none; }
+
+@media (max-width: 960px) {
+  .nav { display: none; }
+  .top .btn { margin-left: auto; }
+  .hero { padding-block: 40px 64px; }
+  .hero-grid, .sec-head, .patience, .book-grid, .visit-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .menu li { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .regulars { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .sec { padding-block: 72px; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .callbar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); background: var(--bg); border-top: 1px solid var(--line); }
+}
+@media (max-width: 600px) {
+  .regulars, .row2 { grid-template-columns: minmax(0, 1fr); }
+  .reg.wide { grid-column: auto; }
+  .hero-sub { font-size: 17px; }
+  .card { padding: 24px 20px; }
+  .mark { font-size: 22px; }
+  .tags { aspect-ratio: 1 / 1; }
+  .tag-stella { bottom: 12%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn, .chip, .field input, .field select, .field textarea { transition: none; }
+  .btn:active { transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3-4.6-4.5 6.4-.9z" fill="currentColor"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="#main">Tail Wagging Trims</a>
+    <nav class="nav" aria-label="Main"><a href="#grooming">Grooming</a><a href="#regulars">Reviews</a><a href="#visit">Find us</a></nav>
+    <a class="btn btn-primary" href="#book">Book a groom</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Gentle grooming, even for the fidgety ones</h1>
+      <p class="hero-sub">A friendly dog grooming salon in Bradeley, Stoke-on-Trent. Full grooms, deshedding and nail trims, open seven days, with all the time your dog needs.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#book">Book a groom</a>
+        <a class="btn btn-secondary" href="tel:+447832679854"><svg aria-hidden="true"><use href="#i-phone"/></svg>07832 679854</a>
+      </div>
+      <p class="rating"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span><strong>5.0</strong> on Google from 37 reviews</span></p>
+    </div>
+
+    <div class="tags" role="img" aria-label="Three dog name tags for Nala, Murphy and Stella, regulars at Tail Wagging Trims">
+      <div class="tag tag-nala">
+        <svg viewBox="0 0 200 228" aria-hidden="true">
+          <defs>
+            <radialGradient id="brass" cx="38%" cy="32%" r="75%"><stop offset="0" style="stop-color: var(--brass-1)"/><stop offset=".55" style="stop-color: var(--brass-2)"/><stop offset="1" style="stop-color: var(--brass-3)"/></radialGradient>
+            <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color: var(--steel-1)"/><stop offset=".5" style="stop-color: var(--steel-2)"/><stop offset="1" style="stop-color: var(--steel-3)"/></linearGradient>
+          </defs>
+          <circle cx="100" cy="20" r="16" fill="none" stroke="url(#steel)" stroke-width="5"/>
+          <circle cx="100" cy="128" r="94" fill="url(#brass)"/>
+          <circle cx="100" cy="128" r="84" fill="none" style="stroke: var(--brass-3)" stroke-opacity=".35" stroke-width="2"/>
+          <circle cx="100" cy="46" r="7" style="fill: var(--brass-3)"/>
+          <text x="100" y="146" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="58" style="fill: var(--brass-ink)" fill-opacity=".85">Nala</text>
+          <text x="101" y="147.5" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="58" fill="#FFF3D0" fill-opacity=".35">Nala</text>
+        </svg>
+      </div>
+      <div class="tag tag-murphy">
+        <svg viewBox="0 0 280 150" aria-hidden="true">
+          <defs>
+            <linearGradient id="coral" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color: var(--enamel-coral)"/><stop offset="1" style="stop-color: var(--enamel-coral-2)"/></linearGradient>
+            <linearGradient id="steel2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color: var(--steel-1)"/><stop offset=".5" style="stop-color: var(--steel-2)"/><stop offset="1" style="stop-color: var(--steel-3)"/></linearGradient>
+          </defs>
+          <circle cx="140" cy="16" r="13" fill="none" stroke="url(#steel2)" stroke-width="4.5"/>
+          <g fill="url(#steel2)"><circle cx="52" cy="62" r="34"/><circle cx="52" cy="118" r="34"/><circle cx="228" cy="62" r="34"/><circle cx="228" cy="118" r="34"/><rect x="50" y="52" width="180" height="76" rx="10"/></g>
+          <g fill="url(#coral)"><circle cx="52" cy="62" r="28"/><circle cx="52" cy="118" r="28"/><circle cx="228" cy="62" r="28"/><circle cx="228" cy="118" r="28"/><rect x="50" y="58" width="180" height="64" rx="6"/></g>
+          <circle cx="140" cy="40" r="6" fill="url(#steel2)"/>
+          <path d="M60 64 q80 -14 160 0" fill="none" stroke="#FFFFFF" stroke-opacity=".28" stroke-width="5" stroke-linecap="round"/>
+          <text x="140" y="104" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="46" fill="#FFFFFF">Murphy</text>
+        </svg>
+      </div>
+      <div class="tag tag-stella">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <linearGradient id="teal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color: var(--enamel-teal)"/><stop offset="1" style="stop-color: var(--enamel-teal-2)"/></linearGradient>
+            <linearGradient id="steel3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color: var(--steel-1)"/><stop offset=".5" style="stop-color: var(--steel-2)"/><stop offset="1" style="stop-color: var(--steel-3)"/></linearGradient>
+          </defs>
+          <circle cx="100" cy="16" r="13" fill="none" stroke="url(#steel3)" stroke-width="4.5"/>
+          <path d="M100 188 C 30 138, 12 96, 38 66 C 58 44, 88 50, 100 72 C 112 50, 142 44, 162 66 C 188 96, 170 138, 100 188 Z" fill="url(#teal)" stroke="url(#steel3)" stroke-width="8" stroke-linejoin="round"/>
+          <circle cx="100" cy="40" r="6" fill="url(#steel3)"/>
+          <path d="M44 84 q12 -24 40 -18" fill="none" stroke="#FFFFFF" stroke-opacity=".3" stroke-width="5" stroke-linecap="round"/>
+          <text x="100" y="128" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="42" fill="#FFFFFF">Stella</text>
+        </svg>
+      </div>
+      <p class="tags-cap"><b>Nala, Murphy and Stella.</b> A few of the regulars</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="grooming" aria-labelledby="g-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="g-h">What we do</h2>
+      <p class="lead">Every dog gets the groom that suits their coat and their temperament, at prices owners describe as very reasonable.</p>
+    </div>
+    <ul class="menu">
+      <li><h3>Full groom</h3><p>Bath, dry, brush and trim, styled to suit your dog and their coat.</p></li>
+      <li><h3>Deshedding</h3><p>A deep treatment to lift out loose undercoat, so your dog feels lighter and your sofa stays cleaner.</p></li>
+      <li><h3>Nail trims</h3><p>Quick, calm and gentle, even for dogs who really don't like having their paws touched.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="p-h">
+  <div class="wrap patience">
+    <figure style="margin:0">
+      <blockquote>&ldquo;My little one has a very temperamental personality&hellip; she came back looking absolutely perfect.&rdquo;</blockquote>
+      <figcaption>Google review, owner of two Pomeranians</figcaption>
+    </figure>
+    <div>
+      <h2 id="p-h">Nervous dogs welcome</h2>
+      <p class="lead" style="margin-top:16px">Some dogs hate sitting still. Some hate the clippers. That's fine. Tasha and Kate take it at your dog's pace, so they come home relaxed as well as tidy.</p>
+      <ul class="points">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Patient and gentle,</strong> especially with the divas</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>Happy, comfortable dogs,</strong> so owners have peace of mind</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>A lovely clean salon,</strong> open seven days a week</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="regulars" aria-labelledby="r-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="r-h">Ask the regulars</h2>
+      <p class="lead">Real words from owners on Google, where the salon is rated 5.0 from 37 reviews.</p>
+    </div>
+    <div class="regulars">
+      <figure class="reg wide"><p class="dog">Murphy</p><blockquote>&ldquo;They cater for all of Murphy&rsquo;s needs and always make sure he is happy, comfortable and well looked after&hellip; We simply wouldn&rsquo;t take Murphy anywhere else.&rdquo;</blockquote><figcaption>Google review</figcaption></figure>
+      <figure class="reg"><p class="dog">Nala</p><blockquote>&ldquo;Lovely clean salon and very friendly staff&hellip; opening hours are great and very reasonably priced.&rdquo;</blockquote><figcaption>Google review</figcaption></figure>
+      <figure class="reg"><p class="dog">Stella</p><blockquote>&ldquo;Tasha has worked with her and shown her so much love&hellip; Stella loves it there.&rdquo;</blockquote><figcaption>Google review</figcaption></figure>
+      <figure class="reg"><p class="dog">Two Pomeranians</p><blockquote>&ldquo;You could tell how patient and gentle you were with them.&rdquo;</blockquote><figcaption>Google review</figcaption></figure>
+      <figure class="reg"><p class="dog">The whole pack</p><blockquote>&ldquo;Kate has the magic touch. The dogs have never looked so good.&rdquo;</blockquote><figcaption>Google review</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="book" aria-labelledby="b-h">
+  <div class="wrap book-grid">
+    <div>
+      <h2 id="b-h">Book a groom</h2>
+      <p class="lead" style="margin-top:16px">Tell us about your dog and when suits you, and we'll message back to confirm a time. Or just give us a ring.</p>
+      <div class="direct"><a href="tel:+447832679854">07832 679854</a><p>Open seven days a week</p></div>
+    </div>
+    <div class="card">
+      <form novalidate>
+        <h3>Your dog</h3>
+        <p class="card-sub">Takes about a minute</p>
+        <div class="row2">
+          <div class="field"><label for="dog">Dog's name</label><input id="dog" name="dog" required></div>
+          <div class="field"><label for="breed">Breed</label><input id="breed" name="breed" placeholder="Cockapoo"></div>
+        </div>
+        <fieldset>
+          <legend>What would they like?</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="svc" value="Full groom" checked>Full groom</label>
+            <label class="chip"><input type="checkbox" name="svc" value="Deshedding">Deshedding</label>
+            <label class="chip"><input type="checkbox" name="svc" value="Nail trim">Nail trim</label>
+          </div>
+        </fieldset>
+        <div class="row2">
+          <div class="field"><label for="day">Preferred day</label><input id="day" name="day" type="date"></div>
+          <div class="field"><label for="first">First visit?</label><select id="first" name="first"><option>Yes, first time</option><option>No, we've been before</option></select></div>
+        </div>
+        <div class="field full"><label for="notes">Anything we should know?</label><textarea id="notes" name="notes" placeholder="Nervous with clippers, doesn't like having paws touched"></textarea></div>
+        <div class="row2">
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="tel">Phone number</label><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Send booking request</button>
+        <p class="note">Your details are only used to arrange your dog's groom</p>
+      </form>
+      <div class="sent" role="status" aria-live="polite" tabindex="-1">
+        <h3>Thanks, we'll be in touch about <span data-dog>your dog</span></h3>
+        <p>We'll message you back to confirm a time.</p>
+        <p class="demo">On your finished website, this request arrives straight on your phone with the dog's name, breed, the groom they need and any notes, ready to reply.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt visit" id="visit" aria-labelledby="v-h">
+  <div class="wrap visit-grid">
+    <div>
+      <h2 id="v-h">Find us</h2>
+      <p class="addr">Joyce Avenue, Bradeley<br>Stoke-on-Trent ST6 7PF</p>
+      <p class="lead">Call or message for directions and parking when you book.</p>
+      <div class="actions"><a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Tail+wagging+trims+limited+Joyce+Ave+Bradeley+ST6+7PF" rel="noopener" target="_blank">Open in Google Maps</a></div>
+    </div>
+    <table class="hours">
+      <caption>Opening hours</caption>
+      <tr data-day="0"><th scope="row">Monday</th><td>9am to 5pm</td></tr>
+      <tr data-day="1"><th scope="row">Tuesday</th><td>9am to 5pm</td></tr>
+      <tr data-day="2"><th scope="row">Wednesday</th><td>9am to 5pm</td></tr>
+      <tr data-day="3"><th scope="row">Thursday</th><td>9am to 5pm</td></tr>
+      <tr data-day="4"><th scope="row">Friday</th><td>9am to 5pm</td></tr>
+      <tr data-day="5"><th scope="row">Saturday</th><td>9am to 5pm</td></tr>
+      <tr data-day="6"><th scope="row">Sunday</th><td>10am to 4pm</td></tr>
+    </table>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <p><span class="mark">Tail Wagging Trims</span><br>Dog grooming in Bradeley, Stoke-on-Trent</p>
+    <p>07832 679854<br>&copy; <span data-year>2026</span> Tail Wagging Trims Limited. No cookies or tracking</p>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Quick contact">
+  <a class="btn btn-secondary" href="tel:+447832679854">Call</a>
+  <a class="btn btn-primary" href="#book">Book a groom</a>
+</div>
+
+<script>
+(function () {
+  var d = (new Date().getDay() + 6) % 7;
+  var r = document.querySelector('.hours tr[data-day="' + d + '"]'); if (r) r.classList.add('is-today');
+  document.querySelectorAll('[data-year]').forEach(function (y) { y.textContent = new Date().getFullYear(); });
+  var box = document.querySelector('.card'), form = box.querySelector('form');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = Array.prototype.filter.call(form.querySelectorAll('[required]'), function (f) { return !f.value.trim(); });
+    form.querySelectorAll('input').forEach(function (f) { f.removeAttribute('aria-invalid'); });
+    if (bad.length) { bad.forEach(function (f) { f.setAttribute('aria-invalid', 'true'); }); bad[0].focus(); return; }
+    box.querySelector('[data-dog]').textContent = form.elements.namedItem('dog').value.trim();
+    box.classList.add('is-sent');
+    box.querySelector('.sent').focus();
+  });
+})();
+</script>
+</body>
+</html>
