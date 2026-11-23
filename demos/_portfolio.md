@@ -20,7 +20,8 @@ colour and signature detail. Add a line here after every build. (Files starting 
 | B.D Removals (Leek to Longton) | The box label: Ben rings ahead; FROM/TO label, quote form is a label you fill in | Poster on kraft cardboard, taped label card at an angle | Saira Stencil One + Nunito + Permanent Marker | Kraft, paper, stencil black, blue marker | Packing-tape strips, box symbols, 'This way up' section markers, areas as stuck-on labels |
 | Roofixer (Willaston, Nantwich) | Beat the rain: same-day call-outs, told as a dispatch log | Big grotesk type left + dark call-out log card right, white score strip | Space Grotesk + IBM Plex Sans + IBM Plex Mono | Rain grey, white, ink, tarpaulin blue | Mono log lines with review timings; blue tarp-tape underlines; job grid with response times |
 | Cal's Roofing (Longton) | Old-school roofing: a tradesman's letterpress calling card; you see it before he fixes it | Framed, centred calling card with double rule | Fraunces + Libre Franklin | Cream card, black ink, bottle green | Letterpress double rules, printer's ornaments, roman-numeral steps, tariff list with dotted leaders |
+| AT Roofing (Stafford) | Samples on the table: honest pricing, you choose with real samples | Collage of roofing material swatches drawn in code, white pitch card overlapping | Bricolage Grotesque + Source Serif 4 (serif body) | Warm white, charcoal, deep teal; swatches in material colours | Material swatch chips as markers, mark and form options |
 
 ## Rules for bulk runs
 - Before building a batch, assign each site a different hero layout and type pairing from this table so none drift into the same shape.
-- Not yet used: full-bleed photo hero, collage hero, pastel palette.
+- Not yet used: full-bleed photo hero, pastel palette.
