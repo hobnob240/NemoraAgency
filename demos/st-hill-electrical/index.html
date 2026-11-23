@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>S.T. Hill Electrical | Electrician in Stafford</title>
+<meta name="description" content="Fault finding, repairs, rewires, installations and testing in Stafford and the surrounding towns and villages. 20+ years, fully certified and insured.">
+<meta name="theme-color" content="#eceae5">
+<meta name="robots" content="noindex">
+<link rel="preload" href="fonts/sora-650.woff" as="font" type="font/woff" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Electrician","name":"S.T. Hill Electrical","telephone":"+447538469047","email":"sthill.electrical@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Stafford","addressRegion":"Staffordshire","addressCountry":"GB"},"areaServed":"Stafford and surrounding towns and villages"}</script>
+<style>
+@font-face{font-family:Sora;src:url(fonts/sora-650.woff) format('woff');font-weight:650;font-display:swap}
+@font-face{font-family:Hanken;src:url(fonts/hanken-400.woff) format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:Hanken;src:url(fonts/hanken-600.woff) format('woff');font-weight:600;font-display:swap}
+:root{--wall:#eceae5;--plastic:#fbfaf7;--ink:#1b1e22;--ink-2:#40454b;--muted:#6a6e73;--line:#d6d3cc;--blue:#1f56a8;--blue-ink:#163f7c;--brown:#7a4a26;--earth-g:#2f8a3e;--earth-y:#e6c020;--tape:#141414;--r:12px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--wall);color:var(--ink);font:400 17px/1.65 Hanken,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;font-weight:650;line-height:1.08;letter-spacing:-.02em;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:10px;font:600 1rem Hanken,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.btn:active{transform:scale(.97)}
+.btn-b{background:var(--blue);color:#fff}
+.btn-l{border-color:var(--ink);color:var(--ink)}
+@media (hover:hover){.btn-b:hover{background:var(--blue-ink)}.btn-l:hover{background:var(--ink);color:#fff}}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+/* earth stripe divider */
+.earth{height:8px;background:repeating-linear-gradient(-45deg,var(--earth-g) 0 14px,var(--earth-y) 14px 28px)}
+
+.top .wrap{display:flex;align-items:center;gap:14px;min-height:70px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:650 1.1rem Sora,sans-serif;letter-spacing:-.01em}
+.logo svg{width:28px;height:28px}
+.top .grow{flex:1}
+.top .tel{font-weight:600;text-decoration:none;display:none}
+@media (min-width:760px){.top .tel{display:inline}}
+
+/* hero */
+.hero{padding:28px 0 64px}
+.hero .wrap{display:grid;gap:36px;align-items:center}
+@media (min-width:900px){.hero .wrap{grid-template-columns:1fr 1fr}}
+.hero h1{font-size:clamp(2.4rem,6.6vw,4.4rem)}
+.hero h1 span{color:var(--blue)}
+.hero p{font-size:1.1rem;color:var(--ink-2);max-width:30rem;margin:16px 0 26px}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.where{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem;color:var(--ink-2);margin-bottom:14px}
+.where i{width:10px;height:10px;border-radius:50%;background:var(--earth-g);box-shadow:0 0 0 3px rgba(47,138,62,.18)}
+
+/* the consumer unit */
+.board{background:var(--plastic);border:1px solid #cfcbc2;border-radius:18px;padding:18px 18px 22px;box-shadow:0 1px 0 #fff inset,0 18px 40px -24px rgba(0,0,0,.35);max-width:520px;width:100%;justify-self:center}
+.board-top{display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:var(--muted);font-weight:600;margin-bottom:12px}
+.board-top b{font-family:Sora,sans-serif;color:var(--ink);font-size:.82rem;letter-spacing:.02em}
+.rail{background:linear-gradient(#d9d6cf,#cbc7bf);border-radius:10px;padding:14px 12px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.mcb{display:grid;gap:10px;justify-items:center;text-decoration:none;color:inherit}
+.mcb .body{width:100%;max-width:74px;aspect-ratio:3/5;background:#fff;border:1px solid #c4c0b7;border-radius:6px;position:relative;box-shadow:0 2px 0 #b9b5ac}
+.mcb .body::before{content:"";position:absolute;left:50%;top:18%;width:42%;height:34%;transform:translateX(-50%);background:#eae7e0;border-radius:4px;border:1px solid #d3cfc6}
+.mcb .lever{position:absolute;left:50%;top:20%;width:30%;height:16%;transform:translateX(-50%);background:var(--ink);border-radius:3px;transition:transform .2s ease}
+.mcb .rating{position:absolute;left:0;right:0;bottom:12%;text-align:center;font:650 .62rem Sora,sans-serif;color:var(--muted)}
+.mcb .rating::before{content:"";display:block;width:8px;height:8px;border-radius:50%;margin:0 auto 4px;background:#3fbf5a}
+.tape{display:inline-block;background:var(--tape);color:#f1f1f1;font:650 .62rem/1.25 Sora,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:6px 7px;border-radius:2px;text-align:center;box-shadow:0 1px 0 rgba(255,255,255,.12) inset,0 1px 2px rgba(0,0,0,.3);text-shadow:0 1px 0 rgba(0,0,0,.6),0 -1px 0 rgba(255,255,255,.15);max-width:100%}
+@media (hover:hover){.mcb:hover .lever{transform:translate(-50%,8%)}.mcb:hover .tape{background:var(--blue)}}
+.mcb:focus-visible{outline-offset:6px}
+.board-note{margin:14px 2px 0;font-size:.82rem;color:var(--muted)}
+
+/* services */
+.svc{background:var(--plastic);padding:68px 0}
+.svc h2,.revs h2,.quote h2{font-size:clamp(2rem,4.6vw,3rem)}
+.svc-head{max-width:40rem;margin-bottom:30px}
+.svc-head p{color:var(--muted);margin:10px 0 0}
+.svc-list{display:grid;gap:0;border-top:1px solid var(--line)}
+.s{display:grid;gap:8px 28px;padding:24px 0;border-bottom:1px solid var(--line);scroll-margin-top:20px}
+@media (min-width:820px){.s{grid-template-columns:230px 1fr auto;align-items:baseline}}
+.s h3{font-size:1.45rem}
+.s p{margin:0;color:var(--ink-2);max-width:38rem}
+.s .tape{justify-self:start}
+.s:target{background:linear-gradient(90deg,rgba(31,86,168,.07),transparent 70%)}
+
+/* reviews */
+.revs{padding:68px 0}
+.rev-grid{display:grid;gap:16px;margin-top:28px}
+@media (min-width:820px){.rev-grid{grid-template-columns:1.25fr 1fr 1fr}}
+blockquote{margin:0;background:var(--plastic);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:14px;align-content:space-between}
+blockquote p{margin:0;font:650 1.12rem/1.4 Sora,sans-serif;letter-spacing:-.01em}
+blockquote:first-child p{font-size:1.35rem}
+blockquote footer{font-size:.9rem;color:var(--muted)}
+blockquote footer b{color:var(--ink)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:30px;font-weight:600}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.facts span::before{content:"";width:18px;height:6px;border-radius:3px;background:repeating-linear-gradient(-45deg,var(--earth-g) 0 4px,var(--earth-y) 4px 8px)}
+
+/* quote */
+.quote{background:var(--ink);color:#e9eaec;padding:68px 0 110px}
+.quote .wrap{display:grid;gap:28px}
+@media (min-width:880px){.quote .wrap{grid-template-columns:.85fr 1.15fr}}
+.quote .side p{color:#a9aeb4}
+.quote .side a{color:#fff}
+form{background:var(--plastic);color:var(--ink);border-radius:var(--r);padding:22px;display:grid;gap:14px}
+.two{display:grid;gap:14px}
+@media (min-width:560px){.two{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:6px;font-weight:600;font-size:.92rem}
+input[type=text],input[type=tel],select,textarea{font:inherit;font-weight:400;width:100%;min-height:48px;padding:10px 12px;border:1px solid #c9c5bc;border-radius:10px;background:#fff;color:var(--ink)}
+textarea{min-height:100px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,86,168,.2)}
+.sent{display:none;padding:14px;border-radius:10px;background:#e4ecf8;font-weight:600}
+.small{font-size:.86rem;color:var(--muted);margin:0}
+.foot{background:var(--ink);color:#9a9fa5;border-top:1px solid #2f3439;padding:26px 0 96px;font-size:.9rem}
+.foot .wrap{display:grid;gap:6px}
+.foot a{color:#e9eaec;text-decoration:none}
+@media (min-width:760px){.foot{padding-bottom:26px}}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(236,234,229,.97);border-top:1px solid var(--line)}
+.bar .btn{flex:1;min-height:48px}
+@media (min-width:760px){.bar{display:none}}
+.js .fade{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.js .fade.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .fade{opacity:1;transform:none;transition:none}.btn,.mcb .lever{transition:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="2" width="24" height="24" rx="6" fill="#1b1e22"/><path d="M15.5 6 9 15.5h5l-1.5 6.5L19 12.5h-5z" fill="#e6c020"/></svg>S.T. Hill Electrical</a>
+  <span class="grow"></span>
+  <a class="tel" href="tel:+447538469047">07538 469047</a>
+  <a class="btn btn-b" href="#quote" style="min-height:42px;padding:0 16px">Get a quote</a>
+</div></header>
+<div class="earth" aria-hidden="true"></div>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <span class="where"><i aria-hidden="true"></i>Stafford and the towns and villages around it</span>
+      <h1 id="h1">Your electrics, <span>sorted and explained.</span></h1>
+      <p>Stu has been an electrician for over 20 years. Faults found, rewires done round your family, and everything tested and talked through before he leaves.</p>
+      <div class="ctas"><a class="btn btn-b" href="tel:+447538469047">Call Stu: 07538 469047</a><a class="btn btn-l" href="#quote">Get a quote</a></div>
+    </div>
+    <div class="board" role="navigation" aria-label="What Stu does">
+      <div class="board-top"><b>S.T. HILL ELECTRICAL</b><span>Tap a circuit</span></div>
+      <div class="rail">
+        <a class="mcb" href="#faults"><span class="body" aria-hidden="true"><span class="lever"></span><span class="rating">B6</span></span><span class="tape">Fault finding</span></a>
+        <a class="mcb" href="#installs"><span class="body" aria-hidden="true"><span class="lever"></span><span class="rating">B16</span></span><span class="tape">Installs</span></a>
+        <a class="mcb" href="#rewires"><span class="body" aria-hidden="true"><span class="lever"></span><span class="rating">B32</span></span><span class="tape">Rewires</span></a>
+        <a class="mcb" href="#testing"><span class="body" aria-hidden="true"><span class="lever"></span><span class="rating">B40</span></span><span class="tape">Testing</span></a>
+      </div>
+      <p class="board-note">Tap a label to see that job.</p>
+    </div>
+  </div>
+</section>
+<div class="earth" aria-hidden="true"></div>
+
+<section class="svc" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="svc-head fade"><h2 id="svc-h">What Stu does</h2><p>Small repairs to full rewires, for homes in and around Stafford.</p></div>
+    <div class="svc-list">
+      <div class="s fade" id="faults"><h3>Fault finding &amp; repairs</h3><p>Tripping switches, dead sockets, lights that flicker or won't come on. Stu finds the actual cause and fixes it.</p><span class="tape">Fault finding</span></div>
+      <div class="s fade" id="installs"><h3>Installations &amp; upgrades</h3><p>From adding to what you've got to complete new installations, done properly and left tidy.</p><span class="tape">Installs</span></div>
+      <div class="s fade" id="rewires"><h3>Rewires</h3><p>Major rewiring planned around the people living in the house, so you're not turfed out while it's done.</p><span class="tape">Rewires</span></div>
+      <div class="s fade" id="testing"><h3>Testing</h3><p>Work is tested when it's finished, and Stu explains what he's found in plain English.</p><span class="tape">Testing</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="revs" aria-labelledby="rev-h">
+  <div class="wrap">
+    <h2 id="rev-h" class="fade">What customers say</h2>
+    <div class="rev-grid">
+      <blockquote class="fade"><p>“Stu is exceptionally professional, efficient and friendly.”</p><footer><b>Susan</b>, after a major rewire</footer></blockquote>
+      <blockquote class="fade"><p>“Fantastic service from the point of quotation to completion.”</p><footer><b>Paul</b></footer></blockquote>
+      <blockquote class="fade"><p>“The quality of work was excellent and everything was tested and explained clearly.”</p><footer><b>Grace</b></footer></blockquote>
+    </div>
+    <div class="facts fade"><span>20+ years an electrician</span><span>Fully certified &amp; insured</span><span>Based in Stafford</span></div>
+  </div>
+</section>
+
+<section class="quote" id="quote" aria-labelledby="q-h">
+  <div class="wrap">
+    <div class="side fade">
+      <h2 id="q-h">Tell Stu what's going on</h2>
+      <p>A rough description is fine. He'll get back to you about a quote.</p>
+      <p>Or call <a href="tel:+447538469047">07538 469047</a>.</p>
+    </div>
+    <form id="qf" class="fade" action="#" method="post" novalidate>
+      <div class="two">
+        <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+        <label>Phone<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label>
+      </div>
+      <div class="two">
+        <label>Postcode<input type="text" name="postcode" autocomplete="postal-code" placeholder="e.g. ST16"></label>
+        <label>What's it about?<select name="job"><option>A fault or repair</option><option>An installation or upgrade</option><option>A rewire</option><option>Testing</option><option>Not sure</option></select></label>
+      </div>
+      <label>What's happening?<textarea name="msg" placeholder="e.g. the kitchen sockets keep tripping"></textarea></label>
+      <button class="btn btn-b" type="submit">Send to Stu</button>
+      <p class="sent" id="sent" role="status">Thanks. On the live site this goes straight to Stu.</p>
+      <p class="small">Or email <a href="mailto:sthill.electrical@gmail.com">sthill.electrical@gmail.com</a></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="foot"><div class="wrap">
+  <span style="color:#e9eaec">S.T. Hill Electrical</span>
+  <span>Stafford, Staffordshire · fully certified &amp; insured</span>
+  <span><a href="tel:+447538469047">07538 469047</a> · <a href="mailto:sthill.electrical@gmail.com">sthill.electrical@gmail.com</a></span>
+</div></footer>
+<nav class="bar" aria-label="Quick contact"><a class="btn btn-l" href="tel:+447538469047">Call Stu</a><a class="btn btn-b" href="#quote">Get a quote</a></nav>
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('qf').addEventListener('submit',function(e){e.preventDefault();document.getElementById('sent').style.display='block'});
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.fade').forEach(function(el){io.observe(el)})}else document.querySelectorAll('.fade').forEach(function(el){el.classList.add('in')});
+</script>
+</body>
+</html>
