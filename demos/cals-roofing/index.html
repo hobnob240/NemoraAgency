@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Cal's Roofing | Roofer in Longton, Stoke-on-Trent</title>
+<meta name="description" content="Cal's Roofing: old-school roofing from Longton, Stoke-on-Trent. Re-roofs, repairs, leadwork, fascias, soffits and gutters across Stoke, Barlaston and Newcastle-under-Lyme. Photos and video of every job. Rated 5.0 on Google.">
+<meta name="theme-color" content="#F3ECDF">
+<link rel="preload" href="fonts/fraunces.woff" as="font" type="font/woff" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RoofingContractor","name":"Cal's Roofing UK","telephone":"+44 7842 959052","url":"https://www.calsroofinguk.com/","address":{"@type":"PostalAddress","streetAddress":"Rochester Road, Longton","addressLocality":"Stoke-on-Trent","postalCode":"ST3 1AJ","addressCountry":"GB"},"geo":{"@type":"GeoCoordinates","latitude":52.9970819,"longitude":-2.1356102},"areaServed":["Stoke-on-Trent","Longton","Barlaston","Newcastle-under-Lyme"],"foundingDate":"2020","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"14"},"sameAs":["https://www.facebook.com/p/Cals-Roofing-61578208090898/"]}</script>
+<style>
+/* Cal's Roofing: demo by NEMORA.
+   Idea: old-school roofing. A customer wrote that Cal has "an old school work ethic and pride in the quality of his work",
+   so the site is a tradesman's calling card, set like letterpress: cream stock, black ink, one bottle green.
+   Thread: he films the roof and photographs the finished job, so you see it before and after.
+   Fonts: Fraunces (old-style serif) and Libre Franklin. Signature: letterpress double rules and printer's ornaments.
+   Self-hosted OFL fonts. */
+@font-face { font-family: "Fraunces"; src: url("fonts/fraunces.woff") format("woff"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Fraunces"; src: url("fonts/fraunces-italic.woff") format("woff"); font-weight: 100 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Libre Franklin"; src: url("fonts/franklin.woff") format("woff"); font-weight: 100 900; font-display: swap; }
+:root {
+  --card: #F3ECDF; --card-2: #EAE1D0; --white: #FBF8F2; --ink: #1A1816; --ink-2: #4E4840; --muted: #776F64; --rule: #1A1816; --line: rgba(26, 24, 22, .16);
+  --green: #1F4A35; --green-hi: #285C43; --on-green: #F3ECDF;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; scroll-padding-top: 76px; }
+body { margin: 0; background: var(--card); color: var(--ink); font: 17px/1.65 var(--sans); }
+img, svg { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; font-variation-settings: "SOFT" 30, "WONK" 0, "opsz" 96; margin: 0; line-height: 1.02; letter-spacing: -0.015em; text-wrap: balance; overflow-wrap: break-word; min-width: 0; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.wrap { width: 100%; max-width: 1120px; margin-inline: auto; padding-inline: max(20px, env(safe-area-inset-left, 0px)) max(20px, env(safe-area-inset-right, 0px)); }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--green); color: var(--on-green); padding: 10px 14px; z-index: 60; }
+.skip:focus { top: 12px; }
+.osf { font-variant-numeric: oldstyle-nums; }
+
+/* signature: letterpress rules and ornaments */
+.double { border-top: 3px double var(--rule); }
+.orn { display: flex; align-items: center; gap: 18px; color: var(--green); font-family: var(--serif); font-size: 1.3rem; margin-block: 0; }
+.orn::before, .orn::after { content: ""; flex: 1; height: 0; border-top: 1px solid var(--rule); }
+.smallcaps { font-family: var(--sans); font-weight: 600; font-size: .82rem; letter-spacing: .02em; color: var(--muted); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 26px; border-radius: 0; font: 600 1rem/1 var(--sans); text-decoration: none; border: 1.5px solid var(--ink); cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; white-space: nowrap; transition: transform 140ms var(--ease), background-color 160ms var(--ease), color 160ms var(--ease); }
+.btn:active { transform: scale(0.97); }
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.btn-green { background: var(--green); color: var(--on-green); border-color: var(--green); }
+.btn-line { background: transparent; color: var(--ink); }
+@media (hover: hover) and (pointer: fine) {
+  .btn-green:hover { background: var(--green-hi); border-color: var(--green-hi); }
+  .btn-line:hover { background: var(--white); }
+  .nav a:hover { color: var(--green); }
+}
+
+/* header */
+.top { position: sticky; top: 0; z-index: 40; background: var(--card); border-bottom: 3px double var(--rule); }
+.top-row { display: flex; align-items: center; gap: 28px; min-height: 68px; }
+.mark { text-decoration: none; display: flex; align-items: baseline; gap: 10px; }
+.mark b { font-family: var(--serif); font-weight: 700; font-size: 1.55rem; letter-spacing: -0.02em; font-variation-settings: "SOFT" 50, "opsz" 72; }
+.mark span { font-size: .82rem; color: var(--muted); font-weight: 600; }
+.nav { display: flex; gap: 26px; margin-left: auto; font-size: .96rem; font-weight: 500; }
+.nav a { text-decoration: none; transition: color 160ms var(--ease); }
+.top .btn { min-height: 44px; padding: 0 18px; font-size: .95rem; }
+
+/* hero: the calling card */
+.hero { padding-block: 56px 72px; }
+.calling { background: var(--white); border: 1.5px solid var(--ink); outline: 1.5px solid var(--ink); outline-offset: 6px; margin: 8px; padding: clamp(32px, 6vw, 72px) clamp(24px, 6vw, 80px); text-align: center; }
+.calling .est { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--green); }
+.calling h1 { font-size: clamp(2.8rem, 7.6vw, 6.4rem); margin-top: 14px; }
+.calling h1 em { font-style: italic; font-weight: 400; color: var(--green); }
+.calling .orn { max-width: 360px; margin: 26px auto; }
+.calling .sub { font-size: clamp(1.08rem, 1.5vw, 1.22rem); color: var(--ink-2); max-width: 34em; margin-inline: auto; }
+.calling .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.calling .meta { margin-top: 28px; display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 28px; font-size: .95rem; color: var(--ink-2); }
+.calling .meta b { color: var(--ink); }
+
+/* sections */
+.sec { padding-block: 88px; }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: end; margin-bottom: 44px; }
+.sec h2 { font-size: clamp(2.3rem, 4.8vw, 3.8rem); }
+.sec h2 em { font-style: italic; font-weight: 400; color: var(--green); }
+.lead { color: var(--ink-2); font-size: 1.1rem; max-width: 32em; }
+
+/* see it first */
+.see { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 3px double var(--rule); border-bottom: 1px solid var(--rule); }
+.see > div { padding: 32px 28px 34px 0; }
+.see > div + div { padding-left: 28px; border-left: 1px solid var(--line); }
+.see .n { font-family: var(--serif); font-style: italic; font-size: 2.6rem; line-height: 1; color: var(--green); font-variant-numeric: oldstyle-nums; }
+.see h3 { font-size: 1.6rem; margin-top: 12px; }
+.see p { color: var(--ink-2); margin-top: 8px; }
+.see q { display: block; margin-top: 14px; font-family: var(--serif); font-style: italic; color: var(--ink); quotes: "\201C" "\201D"; line-height: 1.45; }
+
+/* tariff of work */
+.tariff-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 56px; align-items: start; }
+.tariff { border-top: 3px double var(--rule); }
+.tariff div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: baseline; padding-block: 16px; border-bottom: 1px dotted var(--ink); }
+.tariff dt { font-family: var(--serif); font-weight: 600; font-size: 1.3rem; line-height: 1.2; }
+.tariff dd { margin: 0; color: var(--ink-2); font-size: .95rem; text-align: right; }
+.tariff-note { margin-top: 20px; color: var(--muted); font-size: .95rem; }
+.big-job { background: var(--green); color: var(--on-green); padding: 32px; }
+.big-job .smallcaps { color: rgba(243, 236, 223, .7); }
+.big-job h3 { font-size: 1.9rem; margin-top: 10px; }
+.big-job p { margin-top: 12px; color: rgba(243, 236, 223, .88); }
+.big-job q { display: block; margin-top: 16px; font-family: var(--serif); font-style: italic; font-size: 1.15rem; quotes: "\201C" "\201D"; line-height: 1.45; }
+
+/* references */
+.refs { background: var(--card-2); }
+.ref-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 56px; border-top: 3px double var(--rule); }
+.ref { margin: 0; padding-block: 28px; border-bottom: 1px solid var(--line); }
+.ref blockquote { margin: 0; font-family: var(--serif); font-style: italic; font-size: clamp(1.25rem, 2.1vw, 1.55rem); line-height: 1.35; font-variation-settings: "opsz" 36; }
+.ref figcaption { margin-top: 12px; font-size: .92rem; color: var(--muted); font-weight: 600; }
+
+/* contact card */
+.contact-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.card-small { background: var(--white); border: 1.5px solid var(--ink); outline: 1.5px solid var(--ink); outline-offset: 5px; margin: 6px; padding: 32px; text-align: center; }
+.card-small .tel { display: block; font-family: var(--serif); font-weight: 600; font-size: clamp(2.2rem, 4.4vw, 3rem); text-decoration: none; line-height: 1.1; margin-top: 8px; }
+.card-small p { color: var(--ink-2); }
+.card-small .orn { max-width: 220px; margin: 18px auto; }
+.form { display: grid; gap: 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0; }
+.chips legend { font-weight: 600; font-size: .95rem; margin-bottom: 8px; padding: 0; }
+.chips label { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1.5px solid var(--ink); font-weight: 500; font-size: .95rem; cursor: pointer; background: var(--white); transition: background-color 160ms var(--ease), color 160ms var(--ease); }
+.chips input { position: absolute; opacity: 0; pointer-events: none; }
+.chips label:has(input:checked) { background: var(--green); color: var(--on-green); border-color: var(--green); }
+.chips label:has(input:focus-visible) { outline: 2px solid var(--green); outline-offset: 2px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label { font-weight: 600; font-size: .93rem; }
+.field label span { font-weight: 400; color: var(--muted); }
+.field input, .field textarea { width: 100%; min-height: 50px; padding: 12px 14px; font: 400 17px/1.4 var(--sans); color: var(--ink); background: var(--white); border: 1.5px solid var(--line); border-radius: 0; }
+.field textarea { min-height: 100px; resize: vertical; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(31, 74, 53, .15); }
+.field [aria-invalid="true"] { border-color: #B3261E; }
+.row2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.form .btn { width: 100%; min-height: 56px; font-size: 1.05rem; }
+.form-note { font-size: .86rem; color: var(--muted); text-align: center; }
+.sent { display: none; }
+.form.is-sent > :not(.sent) { display: none; }
+.form.is-sent .sent { display: grid; gap: 12px; }
+.sent h3 { font-size: 2.2rem; }
+.sent p { color: var(--ink-2); }
+
+.foot { border-top: 3px double var(--rule); font-size: .92rem; color: var(--ink-2); }
+.foot .wrap { display: flex; justify-content: space-between; gap: 12px 32px; flex-wrap: wrap; padding-block: 24px calc(24px + env(safe-area-inset-bottom, 0px)); }
+.callbar { display: none; }
+
+.js .rv { opacity: 0; transform: translateY(12px); transition: opacity 480ms var(--ease), transform 480ms var(--ease); }
+.js .rv.in { opacity: 1; transform: none; }
+
+@media (max-width: 960px) {
+  .nav { display: none; }
+  .top .btn { margin-left: auto; }
+  .hero { padding-block: 28px 56px; }
+  .sec-head, .tariff-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .see { grid-template-columns: minmax(0, 1fr); }
+  .see > div, .see > div + div { padding: 24px 0; border-left: 0; }
+  .see > div + div { border-top: 1px solid var(--line); }
+  .ref-list { grid-template-columns: minmax(0, 1fr); }
+  .sec { padding-block: 64px; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .callbar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--card); border-top: 3px double var(--rule); padding: 10px max(14px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px)); }
+  .callbar .btn { min-height: 52px; }
+}
+@media (max-width: 600px) {
+  .row2 { grid-template-columns: minmax(0, 1fr); }
+  .mark span { display: none; }
+  .mark b { font-size: 1.3rem; white-space: nowrap; }
+  .top .btn { padding: 0 14px; }
+  .calling { margin: 6px; outline-offset: 4px; }
+  .calling .actions .btn { flex: 1 1 100%; }
+  .tariff div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .tariff dd { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn, .chips label { transition: none; }
+  .btn:active { transform: none; }
+  .js .rv { transition: opacity 200ms linear; transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="#main"><b>Cal's Roofing</b><span>Longton, Stoke-on-Trent</span></a>
+    <nav class="nav" aria-label="Main"><a href="#see">How Cal works</a><a href="#work">The work</a><a href="#refs">References</a><a href="#contact">Contact</a></nav>
+    <a class="btn btn-green" href="tel:+447842959052" aria-label="Call Cal on 07842 959052"><svg aria-hidden="true"><use href="#phone"/></svg>07842 959052</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <div class="calling">
+      <p class="est osf">Roofing in Stoke-on-Trent since 2020</p>
+      <h1>Old-school roofing. <em>Done properly.</em></h1>
+      <p class="orn" aria-hidden="true">&#10086;</p>
+      <p class="sub">Re-roofs, repairs, leadwork, fascias and gutters across Stoke, Barlaston and Newcastle-under-Lyme. Cal films the roof before he starts and photographs it when he's done, so you see exactly what you're paying for.</p>
+      <div class="actions">
+        <a class="btn btn-green" href="tel:+447842959052"><svg aria-hidden="true"><use href="#phone"/></svg>Call Cal, 07842 959052</a>
+        <a class="btn btn-line" href="#contact">Ask for a quote</a>
+      </div>
+      <p class="meta"><span>Rated <b>5.0</b> on Google</span><span>Homes, extensions and <b>commercial</b> roofs</span><span>Based in <b>Longton</b></span></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="see" aria-labelledby="see-h" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 id="see-h">You see it <em>before</em> he fixes it.</h2>
+      <p class="lead">No guesswork and no "trust me". Cal shows you the problem, explains it, and shows you the finished job.</p>
+    </div>
+    <div class="see rv">
+      <div><p class="n">i.</p><h3>He shows you</h3><p>Video from inside the roof, so you can see why it needs doing.</p><q>Took videos to show how bad inside the roof was, to warrant needing a new one.</q></div>
+      <div><p class="n">ii.</p><h3>He does it properly</h3><p>Sound tiles saved and reused, new felt and batten, new leadwork, the right verge.</p><q>An old school work ethic and pride in the quality of his work.</q></div>
+      <div><p class="n">iii.</p><h3>He shows you again</h3><p>Before and after photos, and the site left clean.</p><q>Provided before and after photos of the work carried out and made sure everything was cleaned up afterward.</q></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="work" aria-labelledby="work-h" style="padding-top:0">
+  <div class="wrap tariff-grid">
+    <div class="rv">
+      <h2 id="work-h">The work.</h2>
+      <p class="lead" style="margin-top:18px">Pitched and flat roofs, roofline and gutters. Every quote is free.</p>
+      <div class="big-job" style="margin-top:32px">
+        <p class="smallcaps">A recent commercial job</p>
+        <h3>A country club, re-roofed.</h3>
+        <p>Roof, gutters and fascias renovated over several weeks.</p>
+        <q>If you have a complex or large job, feel free to get details from Cal and come see their workmanship.</q>
+      </div>
+    </div>
+    <dl class="tariff rv">
+      <div><dt>Full re-roofs</dt><dd>New felt and batten, original tiles reused where sound</dd></div>
+      <div><dt>Roof repairs</dt><dd>Slipped tiles, leaks, storm damage</dd></div>
+      <div><dt>Extensions and flat roofs</dt><dd>Leaking extensions stripped and re-roofed</dd></div>
+      <div><dt>Leadwork</dt><dd>Flashing and lead around chimneys and walls</dd></div>
+      <div><dt>Verges</dt><dd>Wet and dry verge</dd></div>
+      <div><dt>Chimneys</dt><dd>Repairs and rebuilding</dd></div>
+      <div><dt>Fascias and soffits</dt><dd>uPVC and timber, replaced</dd></div>
+      <div><dt>Guttering</dt><dd>Gutters and rainwater pipes</dd></div>
+      <div><dt>Velux and skylights</dt><dd>Fitted and replaced</dd></div>
+      <div><dt>Commercial roofing</dt><dd>Larger jobs over several weeks</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec refs" id="refs" aria-labelledby="refs-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 id="refs-h">References.</h2>
+      <p class="lead">From Cal's Google reviews, where he's rated 5.0 from 14.</p>
+    </div>
+    <div class="ref-list">
+      <figure class="ref rv"><blockquote>&ldquo;Cal has an old school work ethic and pride in the quality of his work, a rare trait with modern tradesmen.&rdquo;</blockquote><figcaption>Extension re-roof, leaking from old underlay</figcaption></figure>
+      <figure class="ref rv"><blockquote>&ldquo;We were so impressed with the professionalism, work ethic and finished result.&rdquo;</blockquote><figcaption>Commercial roof, gutters and fascias at a country club</figcaption></figure>
+      <figure class="ref rv"><blockquote>&ldquo;Excellent work by Cal. Very efficient, has pride in his work and very reasonable priced.&rdquo;</blockquote><figcaption>Full roof replacement</figcaption></figure>
+      <figure class="ref rv"><blockquote>&ldquo;Professional, punctual, and did high-quality work on my roof. He kept me informed throughout.&rdquo;</blockquote><figcaption>Roof repair</figcaption></figure>
+      <figure class="ref rv"><blockquote>&ldquo;The weather wasn&rsquo;t on his side but he worked hard to get the job done.&rdquo;</blockquote><figcaption>Guttering, fascias and soffits</figcaption></figure>
+      <figure class="ref rv"><blockquote>&ldquo;Will be having him back to replace my roof.&rdquo;</blockquote><figcaption>Same customer, after their gutters and fascias</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact" aria-labelledby="c-h">
+  <div class="wrap contact-grid">
+    <div class="rv">
+      <h2 id="c-h" style="margin-bottom:28px">Get a free quote.</h2>
+      <div class="card-small">
+        <p class="smallcaps">Call Cal direct</p>
+        <a class="tel" href="tel:+447842959052">07842 959052</a>
+        <p class="orn" aria-hidden="true">&#10087;</p>
+        <p>Longton, Stoke-on-Trent. Covering Stoke, Barlaston and Newcastle-under-Lyme.</p>
+      </div>
+    </div>
+    <form class="form rv" id="qform" novalidate>
+      <fieldset class="chips">
+        <legend>What needs doing?</legend>
+        <label><input type="radio" name="job" value="reroof"> New roof</label>
+        <label><input type="radio" name="job" value="repair"> Repair or leak</label>
+        <label><input type="radio" name="job" value="lead"> Leadwork or chimney</label>
+        <label><input type="radio" name="job" value="roofline"> Fascias or gutters</label>
+        <label><input type="radio" name="job" value="commercial"> Commercial</label>
+        <label><input type="radio" name="job" value="other"> Something else</label>
+      </fieldset>
+      <div class="row2">
+        <div class="field"><label for="pc">Postcode</label><input id="pc" name="postcode" autocomplete="postal-code" required></div>
+        <div class="field"><label for="nm">Your name</label><input id="nm" name="name" autocomplete="name" required></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="ph">Phone</label><input id="ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="em">Email <span>(optional)</span></label><input id="em" name="email" type="email" inputmode="email" autocomplete="email"></div>
+      </div>
+      <div class="field"><label for="msg">Tell Cal about the roof <span>(optional)</span></label><textarea id="msg" name="message" placeholder="What's happening, house or extension, roughly how old the roof is"></textarea></div>
+      <button class="btn btn-green" type="submit">Send to Cal</button>
+      <p class="form-note">Your details only go to Cal's Roofing, to sort your quote.</p>
+      <div class="sent" role="status" aria-live="polite">
+        <h3>Thank you, <span data-name>it's sent</span>.</h3>
+        <p>On the finished website this goes straight to Cal's phone and inbox, with the job, postcode and your number ready to call back.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Cal's Roofing UK. Longton, Stoke-on-Trent ST3.</p>
+    <p><a href="https://www.facebook.com/p/Cals-Roofing-61578208090898/" rel="noopener" target="_blank">Facebook</a></p>
+    <p>&copy; <span data-year>2026</span>. No cookies or tracking on this site.</p>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Quick contact">
+  <a class="btn btn-green" href="tel:+447842959052"><svg aria-hidden="true"><use href="#phone"/></svg>Call Cal</a>
+  <a class="btn btn-line" href="#contact">Free quote</a>
+</div>
+
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+  document.querySelectorAll('[data-year]').forEach(function (y) { y.textContent = new Date().getFullYear(); });
+  var form = document.getElementById('qform');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = Array.prototype.filter.call(form.querySelectorAll('input[required]'), function (f) { return !f.value.trim(); });
+    form.querySelectorAll('input').forEach(function (f) { f.removeAttribute('aria-invalid'); });
+    if (bad.length) { bad.forEach(function (f) { f.setAttribute('aria-invalid', 'true'); }); bad[0].focus(); return; }
+    form.querySelector('[data-name]').textContent = form.elements.namedItem('name').value.trim().split(/\s+/)[0];
+    form.classList.add('is-sent');
+    var s = form.querySelector('.sent'); s.setAttribute('tabindex', '-1'); s.focus();
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+  } else document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); });
+})();
+</script>
+</body>
+</html>
