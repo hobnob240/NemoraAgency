@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Roofixer | Roof repairs in Nantwich, same-day call-outs</title>
+<meta name="description" content="Roofixer: roof repairs from Willaston, Nantwich. Storm damage, chimneys, repointing, fascias, guttering and dry verge. Chris often quotes and fixes the same day. Rated 5.0 from 41 Google reviews.">
+<meta name="theme-color" content="#E9ECEE">
+<link rel="preload" href="fonts/spacegrotesk.woff" as="font" type="font/woff" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RoofingContractor","name":"Roofixer","telephone":"+44 7513 455405","url":"https://roofixercheshire.co.uk/","address":{"@type":"PostalAddress","streetAddress":"Eastern Road, Willaston","addressLocality":"Nantwich","postalCode":"CW5 7HT","addressCountry":"GB"},"geo":{"@type":"GeoCoordinates","latitude":53.0658631,"longitude":-2.4744229},"areaServed":["Nantwich","Willaston","Cheshire"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"41"},"sameAs":["https://www.facebook.com/p/ROOFIXER-61563643238921/"]}</script>
+<style>
+/* Roofixer: demo by NEMORA.
+   Idea: beat the rain. Customers say Chris quotes the same day, fixes it the same day, once came within an hour.
+   So the site is a call-out sheet: speed, told in their words, set like a dispatch log.
+   Palette: rain grey, white, ink, one tarpaulin blue. Fonts: Space Grotesk, IBM Plex Sans, IBM Plex Mono.
+   Signature: mono log lines and blue tarp-tape underlines. Self-hosted OFL fonts. */
+@font-face { font-family: "Space Grotesk"; src: url("fonts/spacegrotesk.woff") format("woff"); font-weight: 300 700; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("fonts/plexsans.woff") format("woff"); font-weight: 100 700; font-stretch: 85% 100%; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("fonts/plexmono.woff") format("woff"); font-weight: 500; font-display: swap; }
+:root {
+  --rain: #E9ECEE; --rain-2: #DCE1E4; --white: #FFFFFF; --ink: #121820; --ink-2: #47515B; --muted: #6B7580; --line: rgba(18, 24, 32, .13); --line-2: rgba(18, 24, 32, .24);
+  --tarp: #1F5FAD; --tarp-hi: #2670C4; --on-tarp: #FFFFFF; --tarp-soft: rgba(31, 95, 173, .1); --tarp-tape: rgba(31, 95, 173, .9);
+  --head: "Space Grotesk", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; scroll-padding-top: 76px; }
+body { margin: 0; background: var(--rain); color: var(--ink); font: 17px/1.6 var(--body); }
+img, svg { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+h1, h2, h3 { font-family: var(--head); font-weight: 700; margin: 0; line-height: 1; letter-spacing: -0.03em; text-wrap: balance; overflow-wrap: break-word; min-width: 0; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--tarp); outline-offset: 3px; }
+.wrap { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: max(20px, env(safe-area-inset-left, 0px)) max(20px, env(safe-area-inset-right, 0px)); }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--tarp); color: var(--on-tarp); padding: 10px 14px; z-index: 60; }
+.skip:focus { top: 12px; }
+.mono { font-family: var(--mono); font-weight: 500; font-size: .86rem; letter-spacing: 0; }
+
+/* signature: tarp tape under the words that matter */
+.tape { background: linear-gradient(transparent 62%, var(--tarp-tape) 62%, var(--tarp-tape) 90%, transparent 90%); color: inherit; }
+.on-dark .tape { background: linear-gradient(transparent 62%, rgba(77, 148, 230, .75) 62%, rgba(77, 148, 230, .75) 90%, transparent 90%); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 24px; border-radius: 2px; font: 600 1rem/1 var(--body); text-decoration: none; border: 1.5px solid transparent; cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; white-space: nowrap; transition: transform 140ms var(--ease), background-color 160ms var(--ease), border-color 160ms var(--ease); }
+.btn:active { transform: scale(0.97); }
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.btn-tarp { background: var(--tarp); color: var(--on-tarp); }
+.btn-line { border-color: var(--ink); color: var(--ink); }
+.btn-white { background: var(--white); color: var(--ink); }
+@media (hover: hover) and (pointer: fine) {
+  .btn-tarp:hover { background: var(--tarp-hi); }
+  .btn-line:hover { background: var(--white); }
+  .nav a:hover { color: var(--ink); }
+}
+
+/* header */
+.top { position: sticky; top: 0; z-index: 40; background: var(--rain); border-bottom: 1px solid var(--line-2); }
+.top-row { display: flex; align-items: center; gap: 28px; min-height: 66px; }
+.mark { font-family: var(--head); font-weight: 700; font-size: 1.6rem; letter-spacing: -0.04em; text-decoration: none; line-height: 1; }
+.mark em { font-style: normal; color: var(--tarp); }
+.mark small { font-family: var(--mono); font-weight: 500; font-size: .72rem; letter-spacing: 0; color: var(--muted); margin-left: 10px; vertical-align: middle; }
+.nav { display: flex; gap: 26px; margin-left: auto; font-size: .96rem; color: var(--ink-2); }
+.nav a { text-decoration: none; transition: color 160ms var(--ease); }
+.top .btn { min-height: 44px; padding: 0 18px; font-size: .95rem; }
+
+/* hero: big type + call-out log */
+.hero { padding-block: 64px 80px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; align-items: start; }
+.kicker { color: var(--muted); margin-bottom: 22px; }
+.hero h1 { font-size: clamp(3rem, 7vw, 6rem); }
+.hero-sub { margin-top: 24px; font-size: clamp(1.08rem, 1.5vw, 1.22rem); color: var(--ink-2); max-width: 31em; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.hours-line { margin-top: 18px; color: var(--muted); }
+.log { background: var(--ink); color: #E8EDF1; border-radius: 4px; padding: 24px 24px 20px; font-family: var(--mono); font-weight: 500; font-size: .9rem; line-height: 1.5; }
+.log-head { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 1px dashed rgba(232, 237, 241, .25); color: #9AA6B1; font-size: .8rem; }
+.log ol { list-style: none; margin: 0; padding: 0; }
+.log li { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 14px; padding-block: 14px; border-bottom: 1px dashed rgba(232, 237, 241, .18); }
+.log li b { color: #7FB2EE; font-weight: 500; }
+.log li.done b { color: #FFFFFF; background: var(--tarp); padding: 0 6px; justify-self: start; height: fit-content; }
+.log .src { padding-top: 14px; color: #9AA6B1; font-size: .78rem; }
+
+/* score strip */
+.score { border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); background: var(--white); }
+.score .wrap { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 32px; align-items: center; padding-block: 28px; }
+.score-num { font-family: var(--head); font-weight: 700; font-size: 4rem; line-height: .9; letter-spacing: -0.04em; }
+.score p { color: var(--ink-2); max-width: 36em; }
+.score p strong { color: var(--ink); }
+
+/* section scaffolding */
+.sec { padding-block: 96px; }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: end; margin-bottom: 48px; }
+.sec h2 { font-size: clamp(2.4rem, 5vw, 4rem); }
+.sec-lead { color: var(--ink-2); font-size: 1.1rem; max-width: 32em; }
+
+/* jobs grid: what people called him out for */
+.jobs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); border-left: 1px solid var(--line-2); }
+.jobs article { padding: 28px 26px 30px; border-right: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); display: flex; flex-direction: column; gap: 10px; background: var(--rain); }
+.jobs .mono { color: var(--tarp); }
+.jobs h3 { font-size: 1.55rem; letter-spacing: -0.02em; }
+.jobs p { color: var(--ink-2); }
+
+/* reviews: dispatch notes */
+.notes { border-top: 1px solid var(--ink); }
+.note { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 32px; padding-block: 28px; border-bottom: 1px solid var(--line-2); margin: 0; }
+.note .mono { color: var(--muted); padding-top: 6px; }
+.note blockquote { margin: 0; font-family: var(--head); font-weight: 500; font-size: clamp(1.3rem, 2.3vw, 1.75rem); line-height: 1.25; letter-spacing: -0.02em; }
+.note figcaption { margin-top: 10px; color: var(--muted); font-size: .95rem; }
+
+/* hours + quote */
+.dark { background: var(--ink); color: #E8EDF1; }
+.quote-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 64px; align-items: start; }
+.quote h2 { font-size: clamp(2.4rem, 5vw, 4rem); }
+.quote .sec-lead { color: #A7B2BC; margin-top: 18px; }
+.call-big { display: inline-block; margin-top: 28px; font-family: var(--head); font-weight: 700; font-size: clamp(2.4rem, 5vw, 3.6rem); letter-spacing: -0.04em; text-decoration: none; line-height: 1; }
+.table { margin-top: 32px; font-family: var(--mono); font-weight: 500; font-size: .92rem; border-top: 1px dashed rgba(232, 237, 241, .3); }
+.table div { display: flex; justify-content: space-between; gap: 16px; padding-block: 12px; border-bottom: 1px dashed rgba(232, 237, 241, .2); }
+.table span { color: #A7B2BC; }
+.form { background: var(--white); color: var(--ink); border-radius: 4px; padding: 30px; display: grid; gap: 18px; }
+.form-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; padding-bottom: 14px; border-bottom: 1px solid var(--line-2); }
+.form-head h3 { font-size: 1.8rem; letter-spacing: -0.03em; }
+.form-head .mono { color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0; }
+.chips legend { font-weight: 600; font-size: .95rem; margin-bottom: 8px; padding: 0; }
+.chips label { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1.5px solid var(--line-2); border-radius: 2px; font-family: var(--mono); font-weight: 500; font-size: .85rem; cursor: pointer; transition: background-color 160ms var(--ease), border-color 160ms var(--ease), color 160ms var(--ease); }
+.chips input { position: absolute; opacity: 0; pointer-events: none; }
+.chips label:has(input:checked) { background: var(--tarp); border-color: var(--tarp); color: var(--on-tarp); }
+.chips label:has(input:focus-visible) { outline: 3px solid var(--tarp); outline-offset: 2px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label { font-weight: 600; font-size: .93rem; }
+.field label span { font-weight: 400; color: var(--muted); }
+.field input, .field textarea { width: 100%; min-height: 50px; padding: 12px 14px; font: 400 17px/1.4 var(--body); color: var(--ink); background: var(--rain); border: 1.5px solid transparent; border-radius: 2px; }
+.field textarea { min-height: 96px; resize: vertical; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--tarp); background: var(--white); box-shadow: 0 0 0 3px var(--tarp-soft); }
+.field [aria-invalid="true"] { border-color: #B3261E; }
+.row2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.form .btn { width: 100%; min-height: 56px; font-size: 1.05rem; }
+.form-note { font-size: .86rem; color: var(--muted); text-align: center; }
+.sent { display: none; }
+.form.is-sent > :not(.sent) { display: none; }
+.form.is-sent .sent { display: grid; gap: 12px; }
+.sent h3 { font-size: 2.2rem; }
+.sent p { color: var(--ink-2); }
+
+.foot { border-top: 1px solid rgba(232, 237, 241, .15); font-size: .92rem; color: #A7B2BC; }
+.foot .wrap { display: flex; justify-content: space-between; gap: 12px 32px; flex-wrap: wrap; padding-block: 26px calc(26px + env(safe-area-inset-bottom, 0px)); }
+.foot b { color: #E8EDF1; }
+.callbar { display: none; }
+
+.js .rv { opacity: 0; transform: translateY(12px); transition: opacity 460ms var(--ease), transform 460ms var(--ease); }
+.js .rv.in { opacity: 1; transform: none; }
+
+@media (max-width: 960px) {
+  .nav { display: none; }
+  .top .btn { margin-left: auto; }
+  .hero { padding-block: 36px 56px; }
+  .hero-grid, .sec-head, .quote-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .score .wrap { grid-template-columns: auto minmax(0, 1fr); }
+  .score .btn { grid-column: 1 / -1; }
+  .jobs { grid-template-columns: minmax(0, 1fr); }
+  .note { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .sec { padding-block: 64px; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .callbar { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--ink); padding: 10px max(14px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px)); }
+  .callbar .btn { min-height: 52px; }
+}
+@media (max-width: 600px) {
+  .row2 { grid-template-columns: minmax(0, 1fr); }
+  .log li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .form { padding: 20px; }
+  .mark small { display: none; }
+  .hero-actions .btn { flex: 1 1 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn, .chips label { transition: none; }
+  .btn:active { transform: none; }
+  .js .rv { transition: opacity 200ms linear; transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="#main">Roo<em>fixer</em><small>Willaston, Nantwich</small></a>
+    <nav class="nav" aria-label="Main"><a href="#jobs">Repairs</a><a href="#reviews">Reviews</a><a href="#quote">Hours and quotes</a></nav>
+    <a class="btn btn-tarp" href="tel:+447513455405" aria-label="Call Chris on 07513 455405"><svg aria-hidden="true"><use href="#phone"/></svg>07513 455405</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker mono">Roof repairs, Nantwich and around</p>
+      <h1>Roof letting the rain in? <span class="tape">Call Chris.</span></h1>
+      <p class="hero-sub">Roof repairs from Willaston, near Nantwich. Storm damage, chimneys, repointing, fascias and gutters. Customers say he quotes the same day, and often gets it fixed the same day too.</p>
+      <div class="hero-actions">
+        <a class="btn btn-tarp" href="tel:+447513455405"><svg aria-hidden="true"><use href="#phone"/></svg>Call 07513 455405</a>
+        <a class="btn btn-line" href="#quote">Send the details</a>
+      </div>
+      <p class="hours-line mono">Mon to Fri 08:00&ndash;17:00. Sat 08:00&ndash;12:00.</p>
+    </div>
+    <div class="log rv" role="group" aria-label="A real call-out, from a Google review">
+      <div class="log-head"><span>CALL-OUT LOG</span><span>from a Google review</span></div>
+      <ol>
+        <li><b>The call</b><span>Render fell off the chimney stack, took out roof tiles and guttering. Bad rain forecast.</span></li>
+        <li><b>Same day</b><span>Chris called round to quote.</span></li>
+        <li class="done"><b>Same day</b><span>Sorted. &ldquo;We are weatherproof for now which was a worry.&rdquo;</span></li>
+        <li><b>Next</b><span>He's coming back to finish the chimneys.</span></li>
+      </ol>
+      <p class="src">Customer review, Google</p>
+    </div>
+  </div>
+</section>
+
+<section class="score" aria-label="Google rating">
+  <div class="wrap">
+    <p class="score-num">5.0</p>
+    <p><strong>From 41 Google reviews.</strong> The same things come up again and again: on time, same-day quotes, a fair price and a friendly face.</p>
+    <a class="btn btn-line" href="https://www.google.com/maps/place/?q=place_id:ChIJ8e13Hjf1ekgRefETJG1XWvs" rel="noopener" target="_blank">Read them on Google</a>
+  </div>
+</section>
+
+<section class="sec" id="jobs" aria-labelledby="jobs-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 id="jobs-h">What people call him out for.</h2>
+      <p class="sec-lead">Real jobs from Chris's Google reviews, and how quickly they were done.</p>
+    </div>
+    <div class="jobs">
+      <article class="rv"><p class="mono">Same day</p><h3>Storm damage</h3><p>Tiles and gutters knocked out, or a temporary patch that needs doing properly.</p></article>
+      <article class="rv"><p class="mono">Same day</p><h3>Chimneys</h3><p>Fallen render, chimney stacks and the damage they cause on the way down.</p></article>
+      <article class="rv"><p class="mono">Quoted and done the same day</p><h3>Repointing</h3><p>Patch repointing, quoted and finished on the same visit.</p></article>
+      <article class="rv"><p class="mono">Quoted the same day</p><h3>Fascias</h3><p>Fallen wooden fascia boards, put back up properly.</p></article>
+      <article class="rv"><p class="mono">Within an hour of the call</p><h3>Dry verge</h3><p>Loose verge along the gable end, fixed with a permanent solution.</p></article>
+      <article class="rv"><p class="mono">Weatherproof the same day</p><h3>Tiles and gutters</h3><p>Slipped tiles, leaks and guttering, repaired so the rain stays out.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reviews" aria-labelledby="rv-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 id="rv-h">In their words.</h2>
+      <p class="sec-lead">A few of the 41 reviews on Google.</p>
+    </div>
+    <div class="notes">
+      <figure class="note rv"><p class="mono">Dry verge</p><div><blockquote>&ldquo;They came within an hour of my call and repaired my dry verge with a permanent solution.&rdquo;</blockquote><figcaption>Google review</figcaption></div></figure>
+      <figure class="note rv"><p class="mono">Storm damage</p><div><blockquote>&ldquo;Communications great throughout and arrived on time. Well pleased with the results, a competitive price and excellent service all round.&rdquo;</blockquote><figcaption>Google review</figcaption></div></figure>
+      <figure class="note rv"><p class="mono">Repointing</p><div><blockquote>&ldquo;He was really knowledgable, friendly and did a great job. Wouldn&rsquo;t hesitate to recommend him.&rdquo;</blockquote><figcaption>Google review</figcaption></div></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec quote dark on-dark" id="quote" aria-labelledby="q-h">
+  <div class="wrap quote-grid">
+    <div>
+      <h2 id="q-h">Rain on the way? <span class="tape">Don't wait.</span></h2>
+      <p class="sec-lead">Ring Chris for anything urgent. For everything else, send the details and he'll get back to you to quote.</p>
+      <a class="call-big" href="tel:+447513455405">07513 455405</a>
+      <div class="table" aria-label="Opening hours">
+        <div><span>Monday to Friday</span><b>08:00&ndash;17:00</b></div>
+        <div><span>Saturday</span><b>08:00&ndash;12:00</b></div>
+        <div><span>Sunday</span><b>Closed</b></div>
+        <div><span>Based</span><b>Willaston, Nantwich</b></div>
+      </div>
+    </div>
+    <form class="form" id="qform" novalidate>
+      <div class="form-head"><h3>Log a job</h3><span class="mono">Chris gets back to you</span></div>
+      <fieldset class="chips">
+        <legend>What's wrong?</legend>
+        <label><input type="radio" name="job" value="leak"> Leak</label>
+        <label><input type="radio" name="job" value="storm"> Storm damage</label>
+        <label><input type="radio" name="job" value="chimney"> Chimney</label>
+        <label><input type="radio" name="job" value="pointing"> Repointing</label>
+        <label><input type="radio" name="job" value="fascia"> Fascias or verge</label>
+        <label><input type="radio" name="job" value="gutter"> Gutters</label>
+        <label><input type="radio" name="job" value="other"> Other</label>
+      </fieldset>
+      <div class="row2">
+        <div class="field"><label for="pc">Postcode</label><input id="pc" name="postcode" autocomplete="postal-code" required></div>
+        <div class="field"><label for="nm">Your name</label><input id="nm" name="name" autocomplete="name" required></div>
+      </div>
+      <div class="field"><label for="ph">Phone</label><input id="ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+      <div class="field"><label for="msg">What's happened? <span>(optional)</span></label><textarea id="msg" name="message" placeholder="Where the water's getting in, and when it started"></textarea></div>
+      <button class="btn btn-tarp" type="submit">Send to Chris</button>
+      <p class="form-note">Your details only go to Roofixer, to sort your quote.</p>
+      <div class="sent" role="status" aria-live="polite">
+        <h3>Logged, <span data-name>thanks</span>.</h3>
+        <p>On the finished website this goes straight to Chris's phone, with the job, postcode and your number. If it's urgent, ring him now on 07513 455405.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot dark">
+  <div class="wrap">
+    <p><b>Roofixer</b>. Roof repairs, Willaston, Nantwich CW5.</p>
+    <p><a href="https://www.facebook.com/p/ROOFIXER-61563643238921/" rel="noopener" target="_blank">Facebook</a></p>
+    <p>&copy; <span data-year>2026</span>. No cookies or tracking on this site.</p>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Quick contact">
+  <a class="btn btn-tarp" href="tel:+447513455405"><svg aria-hidden="true"><use href="#phone"/></svg>Call Chris</a>
+  <a class="btn btn-white" href="#quote">Send details</a>
+</div>
+
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+  document.querySelectorAll('[data-year]').forEach(function (y) { y.textContent = new Date().getFullYear(); });
+  var form = document.getElementById('qform');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = Array.prototype.filter.call(form.querySelectorAll('input[required]'), function (f) { return !f.value.trim(); });
+    form.querySelectorAll('input').forEach(function (f) { f.removeAttribute('aria-invalid'); });
+    if (bad.length) { bad.forEach(function (f) { f.setAttribute('aria-invalid', 'true'); }); bad[0].focus(); return; }
+    form.querySelector('[data-name]').textContent = form.elements.namedItem('name').value.trim().split(/\s+/)[0];
+    form.classList.add('is-sent');
+    var s = form.querySelector('.sent'); s.setAttribute('tabindex', '-1'); s.focus();
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+  } else document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); });
+})();
+</script>
+</body>
+</html>
