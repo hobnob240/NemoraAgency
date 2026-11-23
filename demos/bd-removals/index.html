@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>B.D Removals | Removals in Leek, Hanley, Bucknall and north Stoke</title>
+<meta name="description" content="B.D Removals: Ben's removals service covering Leek, Cheddleton, Endon, Werrington, Abbey Hulton, Bucknall, Bentilee, Hanley, Birches Head and Longton. On time, and he rings ahead with an ETA.">
+<meta name="theme-color" content="#CDA874">
+<link rel="preload" href="fonts/saira-stencil.woff" as="font" type="font/woff" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MovingCompany","name":"B.D Removals","telephone":"+44 7951 939971","email":"ben.price15@icloud.com","areaServed":["Leek","Cheddleton","Endon","Werrington","Abbey Hulton","Bucknall","Bentilee","Townsend","Northwood","Birches Head","Hanley","Longton"],"sameAs":["https://www.facebook.com/p/BD-Removals-61556141497504/"]}</script>
+<style>
+/* B.D Removals: demo by NEMORA.
+   Idea: the box label. Ben turns up on time and rings ahead, so the site is the label on your move:
+   FROM / TO, handle with care, this way up. The quote form is a label you fill in.
+   Palette: kraft cardboard, paper, stencil-black ink, blue marker pen. Fonts: Saira Stencil One, Nunito, Permanent Marker.
+   Signature: packing-tape strips and stencilled box symbols. Self-hosted fonts (OFL / Apache 2.0). */
+@font-face { font-family: "Saira Stencil One"; src: url("fonts/saira-stencil.woff") format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Nunito"; src: url("fonts/nunito.woff") format("woff"); font-weight: 200 1000; font-display: swap; }
+@font-face { font-family: "Permanent Marker"; src: url("fonts/marker.woff") format("woff"); font-weight: 400; font-display: swap; }
+:root {
+  --kraft: #CDA874; --kraft-2: #BE955C; --kraft-3: #A97F48; --paper: #FBF8F1; --paper-2: #F3ECDD;
+  --ink: #1D1A16; --ink-2: #4A4339; --muted: #6E6556; --line: rgba(29, 26, 22, .16);
+  --marker: #1F44A8; --marker-hi: #2A55C7; --on-marker: #FFFFFF;
+  --tape: rgba(222, 196, 140, .82);
+  --stencil: "Saira Stencil One", Impact, "Arial Narrow", sans-serif;
+  --body: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --hand: "Permanent Marker", "Comic Sans MS", cursive;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; scroll-padding-top: 76px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 18px/1.6 var(--body); }
+img, svg { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+h1, h2, h3 { font-family: var(--stencil); font-weight: 400; margin: 0; line-height: .95; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; overflow-wrap: break-word; min-width: 0; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--marker); outline-offset: 3px; }
+.wrap { width: 100%; max-width: 1160px; margin-inline: auto; padding-inline: max(20px, env(safe-area-inset-left, 0px)) max(20px, env(safe-area-inset-right, 0px)); }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--ink); color: var(--paper); padding: 10px 14px; z-index: 60; font-weight: 800; }
+.skip:focus { top: 12px; }
+.hand { font-family: var(--hand); color: var(--marker); text-transform: none; letter-spacing: 0; }
+
+/* cardboard */
+.kraft { background-color: var(--kraft); background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, .035) 0 2px, transparent 2px 9px), radial-gradient(120% 80% at 20% 0%, rgba(255, 255, 255, .14), transparent 60%); }
+
+/* signature: packing tape */
+.taped { position: relative; }
+.taped::before, .taped::after { content: ""; position: absolute; width: 120px; height: 34px; background: var(--tape); box-shadow: 0 1px 2px rgba(0, 0, 0, .12); background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, .18) 0 1px, transparent 1px 6px); z-index: 2; }
+.taped::before { top: -14px; left: 18px; transform: rotate(-6deg); }
+.taped::after { top: -12px; right: 22px; transform: rotate(5deg); }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 24px; border-radius: 12px; font: 800 1.02rem/1 var(--body); text-decoration: none; border: 2.5px solid var(--ink); cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; white-space: nowrap; transition: transform 140ms var(--ease), background-color 160ms var(--ease); }
+.btn:active { transform: scale(0.97); }
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.btn-marker { background: var(--marker); color: var(--on-marker); border-color: var(--marker); }
+.btn-paper { background: var(--paper); color: var(--ink); }
+.btn-ink { background: var(--ink); color: var(--paper); }
+@media (hover: hover) and (pointer: fine) {
+  .btn-marker:hover { background: var(--marker-hi); border-color: var(--marker-hi); }
+  .btn-paper:hover { background: #fff; }
+  .nav a:hover { text-decoration: underline; }
+}
+
+/* header */
+.top { position: sticky; top: 0; z-index: 40; background: var(--paper); border-bottom: 2.5px solid var(--ink); }
+.top-row { display: flex; align-items: center; gap: 24px; min-height: 68px; }
+.mark { font-family: var(--stencil); font-size: 1.7rem; line-height: 1; text-decoration: none; text-transform: uppercase; }
+.mark small { font-family: var(--hand); text-transform: none; font-size: 1rem; color: var(--marker); margin-left: 6px; }
+.nav { display: flex; gap: 24px; margin-left: auto; font-weight: 800; font-size: .97rem; }
+.nav a { text-decoration: none; }
+.top .btn { min-height: 44px; padding: 0 16px; font-size: .97rem; }
+
+/* hero: poster on cardboard */
+.hero { padding-block: 64px 88px; border-bottom: 2.5px solid var(--ink); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 56px; align-items: center; }
+.hero h1 { font-size: clamp(3.2rem, 7.6vw, 6.4rem); color: var(--ink); }
+.hero .hand.big { display: block; line-height: 1.2; font-size: clamp(1.6rem, 3vw, 2.3rem); margin-top: 18px; transform: rotate(-2deg); transform-origin: left; }
+.hero-sub { margin-top: 22px; font-size: clamp(1.08rem, 1.5vw, 1.22rem); color: var(--ink); max-width: 31em; font-weight: 600; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+/* the label */
+.label { background: var(--paper); border: 3px solid var(--ink); border-radius: 6px; transform: rotate(1.8deg); box-shadow: 8px 10px 0 rgba(29, 26, 22, .22); }
+.label-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 3px solid var(--ink); }
+.label-top b { font-family: var(--stencil); font-weight: 400; font-size: 1.5rem; text-transform: uppercase; }
+.symbols { display: flex; gap: 10px; }
+.symbols svg { width: 30px; height: 30px; color: var(--ink); }
+.label-row { display: grid; grid-template-columns: 88px minmax(0, 1fr); border-bottom: 1.5px solid var(--ink); }
+.label-row > span { font-family: var(--stencil); font-size: 1.1rem; padding: 16px 0 16px 20px; text-transform: uppercase; }
+.label-row > p { font-family: var(--hand); color: var(--marker); font-size: clamp(1.3rem, 2.2vw, 1.65rem); line-height: 1.2; padding: 12px 20px 12px 0; }
+.label-care { background: var(--ink); color: var(--paper); text-align: center; font-family: var(--stencil); font-size: 1.35rem; padding: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.label-foot { display: flex; justify-content: space-between; gap: 12px; padding: 14px 20px; font-size: .92rem; font-weight: 700; }
+.label-foot .up { display: flex; gap: 4px; }
+.label-foot .up svg { width: 20px; height: 26px; }
+
+/* stencil section marker */
+.sec { padding-block: 96px; }
+.way { display: flex; align-items: center; gap: 10px; font-family: var(--stencil); font-size: 1rem; text-transform: uppercase; color: var(--ink-2); margin-bottom: 18px; letter-spacing: .04em; }
+.way svg { width: 16px; height: 22px; }
+.sec h2 { font-size: clamp(2.5rem, 5.4vw, 4.4rem); }
+.lead { color: var(--ink-2); font-size: 1.12rem; max-width: 34em; margin-top: 18px; }
+
+/* what to expect */
+.expect { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 64px; align-items: start; }
+.steps { list-style: none; margin: 0; padding: 0; border-top: 2.5px solid var(--ink); }
+.steps li { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 16px; padding-block: 22px; border-bottom: 1.5px dashed var(--ink); }
+.steps .num { font-family: var(--stencil); font-size: 2.2rem; line-height: 1; color: var(--marker); }
+.steps h3 { font-size: 1.6rem; }
+.steps p { color: var(--ink-2); margin-top: 6px; }
+.steps q { font-family: var(--hand); color: var(--marker); quotes: "\201C" "\201D"; display: block; margin-top: 8px; font-size: 1.15rem; line-height: 1.3; }
+
+/* the round */
+.round { border-top: 2.5px solid var(--ink); border-bottom: 2.5px solid var(--ink); }
+.round-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 56px; align-items: center; }
+.round h2 { color: var(--ink); }
+.round .lead { color: var(--ink); font-weight: 600; }
+.stickers { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 10px; }
+.stickers li { background: var(--paper); border: 2px solid var(--ink); border-radius: 4px; padding: 10px 14px; font-weight: 800; font-size: 1rem; box-shadow: 3px 3px 0 rgba(29, 26, 22, .25); }
+.stickers li:nth-child(3n+1) { transform: rotate(-1.5deg); }
+.stickers li:nth-child(3n+2) { transform: rotate(1.2deg); }
+.stickers li:nth-child(4n) { transform: rotate(-.6deg); }
+
+/* reviews: handwritten notes */
+.notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 28px; margin-top: 48px; }
+.note { margin: 0; background: #FFFDF7; border: 1.5px solid var(--line); padding: 34px 28px 26px; box-shadow: 0 10px 24px -18px rgba(29, 26, 22, .5); }
+.note:nth-child(odd) { transform: rotate(-1deg); }
+.note:nth-child(even) { transform: rotate(.8deg); margin-top: 24px; }
+.note blockquote { margin: 0; font-family: var(--hand); color: var(--marker); font-size: clamp(1.35rem, 2.4vw, 1.75rem); line-height: 1.3; }
+.note figcaption { margin-top: 16px; font-weight: 800; font-size: .95rem; }
+.note figcaption span { font-weight: 600; color: var(--muted); }
+
+/* quote: fill in the label */
+.quote { border-top: 2.5px solid var(--ink); }
+.quote-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 56px; align-items: start; }
+.direct { margin-top: 28px; display: grid; gap: 6px; }
+.direct a.tel { font-family: var(--stencil); font-size: clamp(2.4rem, 4.6vw, 3.4rem); line-height: 1; text-decoration: none; }
+.direct a.mail { color: var(--ink-2); overflow-wrap: anywhere; font-weight: 700; }
+.form { background: var(--paper); border: 3px solid var(--ink); border-radius: 6px; box-shadow: 8px 10px 0 rgba(29, 26, 22, .18); }
+.form .label-top b { font-size: 1.5rem; }
+.form-body { padding: 8px 20px 22px; display: grid; gap: 0; }
+.lrow { display: grid; grid-template-columns: 96px minmax(0, 1fr); align-items: center; border-bottom: 1.5px solid var(--ink); min-height: 60px; }
+.lrow label { font-family: var(--stencil); font-size: 1rem; text-transform: uppercase; }
+.lrow label span { font-family: var(--body); text-transform: none; font-size: .78rem; color: var(--muted); display: block; font-weight: 700; }
+.lrow input, .lrow select, .lrow textarea { width: 100%; min-height: 56px; border: 0; background: transparent; padding: 10px 4px; font-family: var(--hand); font-size: 1.3rem; color: var(--marker); border-radius: 0; appearance: none; -webkit-appearance: none; }
+.lrow textarea { min-height: 80px; resize: vertical; font-size: 1.15rem; }
+.lrow input::placeholder, .lrow textarea::placeholder { color: rgba(31, 68, 168, .35); }
+.lrow input:focus, .lrow select:focus, .lrow textarea:focus { outline: none; background: rgba(31, 68, 168, .06); }
+.lrow [aria-invalid="true"] { background: rgba(179, 38, 30, .08); }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 20px; }
+.form .btn { width: 100%; margin-top: 20px; min-height: 58px; font-size: 1.1rem; }
+.form-note { text-align: center; font-size: .86rem; color: var(--muted); margin-top: 10px; font-weight: 600; }
+.sent { display: none; padding: 28px 20px; }
+.form.is-sent .form-body, .form.is-sent .label-care { display: none; }
+.form.is-sent .sent { display: grid; gap: 12px; }
+.sent h3 { font-size: 2.2rem; }
+.sent p { color: var(--ink-2); }
+
+/* footer */
+.foot { border-top: 2.5px solid var(--ink); font-size: .93rem; font-weight: 600; color: var(--ink); }
+.foot .wrap { display: flex; justify-content: space-between; gap: 12px 32px; flex-wrap: wrap; padding-block: 26px calc(26px + env(safe-area-inset-bottom, 0px)); }
+.callbar { display: none; }
+
+.js .rv { opacity: 0; transform: translateY(12px); transition: opacity 480ms var(--ease), transform 480ms var(--ease); }
+.js .rv.in { opacity: 1; transform: none; }
+.js .note.rv.in:nth-child(odd) { transform: rotate(-1deg); }
+.js .note.rv.in:nth-child(even) { transform: rotate(.8deg); }
+
+@media (max-width: 960px) {
+  .nav { display: none; }
+  .top .btn { margin-left: auto; }
+  .hero { padding-block: 40px 64px; }
+  .hero-grid, .expect, .round-grid, .quote-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .label { transform: rotate(1deg); }
+  .notes { grid-template-columns: minmax(0, 1fr); }
+  .note:nth-child(even) { margin-top: 0; }
+  .sec { padding-block: 64px; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .callbar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--paper); border-top: 2.5px solid var(--ink); padding: 10px max(14px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px)); }
+  .callbar .btn { min-height: 52px; }
+}
+@media (max-width: 600px) {
+  .two { grid-template-columns: minmax(0, 1fr); }
+  .lrow { grid-template-columns: 78px minmax(0, 1fr); }
+  .mark small { display: none; }
+  .hero-actions .btn { flex: 1 1 100%; }
+  .taped::before, .taped::after { width: 84px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+  .btn:active { transform: none; }
+  .js .rv { transition: opacity 200ms linear; transform: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+  <symbol id="up" viewBox="0 0 16 22"><path d="M8 2v18M2 8l6-6 6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></symbol>
+  <symbol id="glass" viewBox="0 0 30 30"><path d="M9 3h12l-1 9a5 5 0 0 1-10 0z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 17v8M10 26h10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="brolly" viewBox="0 0 30 30"><path d="M3 14a12 12 0 0 1 24 0z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 14v10a3 3 0 0 1-6 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M15 2v2M9 21l-2 3M21 21l2 3M25 18l2 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="mark" href="#main">B.D Removals<small>with Ben</small></a>
+    <nav class="nav" aria-label="Main"><a href="#expect">What to expect</a><a href="#areas">Areas</a><a href="#reviews">Reviews</a><a href="#quote">Free quote</a></nav>
+    <a class="btn btn-ink" href="tel:+447951939971" aria-label="Call Ben on 07951 939971"><svg aria-hidden="true"><use href="#phone"/></svg>07951 939971</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero kraft">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Removals from Leek to Longton.</h1>
+      <span class="hand big">On time, and Ben rings ahead.</span>
+      <p class="hero-sub">A local removals service run by Ben. He turns up when he says, phones with an ETA on the way, and takes the stress out of moving day.</p>
+      <div class="hero-actions">
+        <a class="btn btn-marker" href="#quote">Get a free quote</a>
+        <a class="btn btn-paper" href="tel:+447951939971"><svg aria-hidden="true"><use href="#phone"/></svg>Call 07951 939971</a>
+      </div>
+    </div>
+    <div class="label taped" role="img" aria-label="A removals box label: from your old place, to your new place, moved by Ben, handle with care, this way up">
+      <div class="label-top"><b>B.D Removals</b><span class="symbols"><svg aria-hidden="true"><use href="#glass"/></svg><svg aria-hidden="true"><use href="#brolly"/></svg></span></div>
+      <div class="label-row"><span>From</span><p>Your old place</p></div>
+      <div class="label-row"><span>To</span><p>Your new place, in one piece</p></div>
+      <div class="label-row"><span>By</span><p>Ben. He'll ring with an ETA.</p></div>
+      <div class="label-care">Handle with care</div>
+      <div class="label-foot"><span>North Stoke and the Moorlands</span><span class="up" aria-hidden="true"><svg><use href="#up"/></svg><svg><use href="#up"/></svg></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="expect" aria-labelledby="expect-h">
+  <div class="wrap expect">
+    <div class="rv">
+      <p class="way"><svg aria-hidden="true"><use href="#up"/></svg>This way up</p>
+      <h2 id="expect-h">What moving with Ben is like.</h2>
+      <p class="lead">Moving is stressful enough. Here's what to expect on the day, told by the people he's moved.</p>
+    </div>
+    <ol class="steps">
+      <li class="rv"><span class="num">1</span><div><h3>He's on time</h3><p>Ben turns up when he says he will, and phones ahead with an ETA so you're not left waiting by the window.</p><q>Came on time, phoned to give an ETA. Prompt response to my messages.</q></div></li>
+      <li class="rv"><span class="num">2</span><div><h3>Straight and honest</h3><p>Honest, hard-working, and quick to reply when you message.</p><q>Very Professional honest, hard working, reliable &amp; swift service.</q></div></li>
+      <li class="rv"><span class="num">3</span><div><h3>Less stress on the day</h3><p>A good attitude goes a long way when you're moving. Ben keeps it friendly and gets the job done.</p><q>Great service and very friendly.</q></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec round kraft" id="areas" aria-labelledby="areas-h">
+  <div class="wrap round-grid">
+    <div class="rv">
+      <p class="way"><svg aria-hidden="true"><use href="#up"/></svg>The round</p>
+      <h2 id="areas-h">Where Ben covers.</h2>
+      <p class="lead">From Leek and the Moorlands villages down through Hanley to Longton. Not on the list? Give him a ring and ask.</p>
+    </div>
+    <ul class="stickers rv">
+      <li>Leek</li><li>Cheddleton</li><li>Endon</li><li>Werrington</li><li>Abbey Hulton</li><li>Bucknall</li><li>Bentilee and Townsend</li><li>Northwood and Birches Head</li><li>Hanley</li><li>Longton</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="reviews" aria-labelledby="rv-h">
+  <div class="wrap">
+    <div class="rv">
+      <p class="way"><svg aria-hidden="true"><use href="#up"/></svg>Notes from customers</p>
+      <h2 id="rv-h">Recommended on Facebook.</h2>
+    </div>
+    <div class="notes">
+      <figure class="note rv"><blockquote>&ldquo;Lovely guy, great service, would highly recommend.&rdquo;</blockquote><figcaption>Jessica Eardley <span>recommends B.D Removals</span></figcaption></figure>
+      <figure class="note rv"><blockquote>&ldquo;Came on time, phoned to give an ETA. Prompt response to my messages.&rdquo;</blockquote><figcaption>Karen Ann <span>recommends B.D Removals</span></figcaption></figure>
+      <figure class="note rv"><blockquote>&ldquo;Very Professional honest, hard working, reliable &amp; swift service.&rdquo;</blockquote><figcaption>Pam Mann <span>recommends B.D Removals</span></figcaption></figure>
+      <figure class="note rv"><blockquote>&ldquo;Great service and very friendly. Ben alleviated our stress with moving our items with his good attitude.&rdquo;</blockquote><figcaption>Claudia Faye <span>recommends B.D Removals</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec quote kraft" id="quote" aria-labelledby="q-h">
+  <div class="wrap quote-grid">
+    <div class="rv">
+      <p class="way"><svg aria-hidden="true"><use href="#up"/></svg>Free quote</p>
+      <h2 id="q-h">Fill in the label.</h2>
+      <p class="lead" style="color:var(--ink);font-weight:600">Tell Ben where from, where to and roughly when. He'll get back to you with a price.</p>
+      <div class="direct">
+        <a class="tel" href="tel:+447951939971">07951 939971</a>
+        <a class="mail" href="mailto:ben.price15@icloud.com">ben.price15@icloud.com</a>
+      </div>
+    </div>
+    <form class="form" id="qform" novalidate>
+      <div class="label-top"><b>Your move</b><span class="symbols" aria-hidden="true"><svg><use href="#glass"/></svg><svg><use href="#brolly"/></svg></span></div>
+      <div class="form-body">
+        <div class="two">
+          <div class="lrow"><label for="from">From<span>postcode</span></label><input id="from" name="from" autocomplete="postal-code" placeholder="ST13 ..." required></div>
+          <div class="lrow"><label for="to">To<span>postcode</span></label><input id="to" name="to" placeholder="ST2 ..." required></div>
+        </div>
+        <div class="two">
+          <div class="lrow"><label for="when">When<span>roughly</span></label><input id="when" name="when" placeholder="Next Friday"></div>
+          <div class="lrow"><label for="what">What<span>size of move</span></label><input id="what" name="what" placeholder="2 bed house"></div>
+        </div>
+        <div class="two">
+          <div class="lrow"><label for="nm">Name</label><input id="nm" name="name" autocomplete="name" required></div>
+          <div class="lrow"><label for="ph">Phone</label><input id="ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="lrow"><label for="msg">Notes<span>optional</span></label><textarea id="msg" name="message" placeholder="Stairs, parking, anything heavy"></textarea></div>
+        <button class="btn btn-marker" type="submit">Send to Ben</button>
+        <p class="form-note">Your details only go to Ben, to sort your quote.</p>
+      </div>
+      <div class="label-care">Handle with care</div>
+      <div class="sent" role="status" aria-live="polite">
+        <h3>Thanks, <span data-name>that's sent</span>.</h3>
+        <p>On the finished website this goes straight to Ben's phone and inbox, with both postcodes, the date and your number, ready for him to call back.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>B.D Removals. Leek, Hanley and north Stoke-on-Trent.</p>
+    <p><a href="https://www.facebook.com/p/BD-Removals-61556141497504/" rel="noopener" target="_blank">Facebook</a></p>
+    <p>&copy; <span data-year>2026</span>. No cookies or tracking on this site.</p>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Quick contact">
+  <a class="btn btn-ink" href="tel:+447951939971"><svg aria-hidden="true"><use href="#phone"/></svg>Call Ben</a>
+  <a class="btn btn-marker" href="#quote">Free quote</a>
+</div>
+
+<script>
+(function () {
+  document.documentElement.classList.add('js');
+  document.querySelectorAll('[data-year]').forEach(function (y) { y.textContent = new Date().getFullYear(); });
+  var form = document.getElementById('qform');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = Array.prototype.filter.call(form.querySelectorAll('input[required]'), function (f) { return !f.value.trim(); });
+    form.querySelectorAll('input').forEach(function (f) { f.removeAttribute('aria-invalid'); });
+    if (bad.length) { bad.forEach(function (f) { f.setAttribute('aria-invalid', 'true'); }); bad[0].focus(); return; }
+    form.querySelector('[data-name]').textContent = form.elements.namedItem('name').value.trim().split(/\s+/)[0];
+    form.classList.add('is-sent');
+    var s = form.querySelector('.sent'); s.setAttribute('tabindex', '-1'); s.focus();
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+  } else document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); });
+})();
+</script>
+</body>
+</html>

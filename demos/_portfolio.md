@@ -17,7 +17,8 @@ colour and signature detail. Add a line here after every build. (Files starting 
 | 5 Star Roofing (Werrington) | Point at the problem | Split, photo right | Archivo condensed + Figtree | Slate, off-white, star gold | Tap-the-house drawing that picks the quote |
 | Trentham Roofing (Trentham) | One call, Luke handles the rest | Big serif type + giant 5.0 score | Gloock + Public Sans | Paper, slate, clay-tile accent | Timeline with a real review on each step |
 | Newcastle Roofing Specialists (Silverdale) | Built from the roof: slate courses and lead; second opinion | Dark-first, full-width slate-tile hero, huge condensed type + van-livery numbers | Big Shoulders Display + Barlow | Slate, lead grey, hi-vis orange | Stepped lead-flashing dividers between sections; tiles laid in staggered courses |
+| B.D Removals (Leek to Longton) | The box label: Ben rings ahead; FROM/TO label, quote form is a label you fill in | Poster on kraft cardboard, taped label card at an angle | Saira Stencil One + Nunito + Permanent Marker | Kraft, paper, stencil black, blue marker | Packing-tape strips, box symbols, 'This way up' section markers, areas as stuck-on labels |
 
 ## Rules for bulk runs
 - Before building a batch, assign each site a different hero layout and type pairing from this table so none drift into the same shape.
-- Not yet used: rounded fonts, full-bleed photo hero, collage hero, poster/flyer layout, stamped/hand-drawn details.
+- Not yet used: full-bleed photo hero, collage hero, serif-italic editorial, monospace/technical, pastel palette.
