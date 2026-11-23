@@ -4,209 +4,234 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Newcastle Roofing Specialists | Roof repairs and second opinions, Newcastle-under-Lyme</title>
-<meta name="description" content="Told you need a new roof? Get a second opinion. Family-run roofers in Silverdale, Newcastle-under-Lyme, with 16 years' experience in repairs, leadwork, tiles, gutters and re-roofs. Free quotes.">
-<meta name="theme-color" content="#FBFAF6">
-<link rel="preload" href="fonts/zilla-bold.woff" as="font" type="font/woff" crossorigin>
+<title>Newcastle Roofing Specialists | Roof repairs, leadwork and re-roofs, Newcastle-under-Lyme</title>
+<meta name="description" content="Told you need a new roof? Get a second opinion. Family-run roofers in Silverdale, Newcastle-under-Lyme, with 16 years in repairs, leadwork, tiles, gutters and re-roofs. All work guaranteed. Free quotes.">
+<meta name="theme-color" content="#1B2228">
+<link rel="preload" href="fonts/bigshoulders.woff" as="font" type="font/woff" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"RoofingContractor","name":"Newcastle Roofing Specialists Ltd","telephone":"+44 7354 210625","email":"newcastleroofingltd@outlook.com","address":{"@type":"PostalAddress","streetAddress":"3 Crown Street, Silverdale","addressLocality":"Newcastle-under-Lyme","postalCode":"ST5 6PN","addressCountry":"GB"},"geo":{"@type":"GeoCoordinates","latitude":53.0166241,"longitude":-2.2658867},"areaServed":["Newcastle-under-Lyme","Silverdale","Stoke-on-Trent"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}],"sameAs":["https://www.facebook.com/profile.php?id=61554312042498"]}</script>
 <style>
 /* Newcastle Roofing Specialists: demo by NEMORA.
-   Idea: the site is Ben's inspection report. Their best review is a second opinion that found the real fault,
-   so the page reads like a roof report: what you were told, what we found, what we fixed.
-   Palette: report paper, black ink, one fluorescent highlighter. Fonts: Zilla Slab headings, Atkinson Hyperlegible body.
-   Signature: highlighter strokes over the words that matter, as if marked up by hand. Square, ink-black buttons.
+   Idea: built from the roof itself. Their best job was one lifted tile and new lead flashing, so the page is
+   slate courses and lead: a slate-tile hero, and stepped lead flashing where each section meets the next.
+   Palette: slate, lead grey, hi-vis orange. Fonts: Big Shoulders Display (van signwriting), Barlow body.
+   Signature: the stepped lead-flashing dividers; numbers set like van livery.
    Self-hosted OFL fonts. Photos are the company's own, from their current site. */
-@font-face { font-family: "Zilla Slab"; src: url("fonts/zilla-bold.woff") format("woff"); font-weight: 700; font-display: swap; }
-@font-face { font-family: "Zilla Slab"; src: url("fonts/zilla-medium.woff") format("woff"); font-weight: 500; font-display: swap; }
-@font-face { font-family: "Atkinson Hyperlegible"; src: url("fonts/atkinson.woff") format("woff"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Atkinson Hyperlegible"; src: url("fonts/atkinson-bold.woff") format("woff"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Big Shoulders Display"; src: url("fonts/bigshoulders.woff") format("woff"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("fonts/barlow.woff") format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("fonts/barlow-semibold.woff") format("woff"); font-weight: 600; font-display: swap; }
 :root {
-  --paper: #FBFAF6; --paper-2: #F2F0EA; --ink: #121417; --ink-2: #4A4F55; --muted: #6F757B; --rule: #121417; --line: rgba(18, 20, 23, .14);
-  --hl: #D8F55A; --hl-deep: #C3E63A;
-  --slab: "Zilla Slab", Rockwell, "Roboto Slab", Georgia, serif;
-  --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --slate: #1B2228; --slate-2: #232C33; --slate-3: #2C363E; --on-slate: #EEF0F1; --on-slate-2: #A4ADB4; --slate-line: rgba(238, 240, 241, .12);
+  --lead: #8C959C; --lead-hi: #B5BCC1; --lead-lo: #6C757C;
+  --stone: #F0EEEA; --stone-2: #E5E2DC; --ink: #1B2228; --ink-2: #4D565D; --muted: #737B82; --line: rgba(27, 34, 40, .14);
+  --vis: #FF6A13; --vis-hi: #FF7E33; --on-vis: #1B2228;
+  --sign: "Big Shoulders Display", Impact, "Arial Narrow", sans-serif;
+  --body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --courses: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='132' height='88'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.07' stroke-width='2'%3E%3Cpath d='M0 1H132M0 45H132M1 0V44M67 44V88'/%3E%3C/g%3E%3Cg fill='%23000000' fill-opacity='.10'%3E%3Crect x='2' y='38' width='64' height='6'/%3E%3Crect x='68' y='82' width='64' height='6'/%3E%3Crect x='-64' y='82' width='130' height='6'/%3E%3C/g%3E%3C/svg%3E");
   color-scheme: light;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html, body { overflow-x: clip; }
-html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; scroll-padding-top: 80px; }
-body { margin: 0; background: var(--paper); color: var(--ink); font: 17.5px/1.6 var(--body); }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; scroll-padding-top: 76px; }
+body { margin: 0; background: var(--stone); color: var(--ink); font: 18px/1.6 var(--body); }
 img, svg { max-width: 100%; height: auto; display: block; }
-a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
-h1, h2, h3 { font-family: var(--slab); font-weight: 700; margin: 0; line-height: 1; letter-spacing: -0.015em; text-wrap: balance; overflow-wrap: break-word; min-width: 0; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+h1, h2, h3 { font-family: var(--sign); font-weight: 800; margin: 0; line-height: .92; letter-spacing: .005em; text-transform: uppercase; text-wrap: balance; overflow-wrap: break-word; min-width: 0; }
 p { margin: 0; }
-:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; box-shadow: 0 0 0 7px var(--hl); }
+:focus-visible { outline: 3px solid var(--vis); outline-offset: 3px; }
 .wrap { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: max(20px, env(safe-area-inset-left, 0px)) max(20px, env(safe-area-inset-right, 0px)); }
-.skip { position: absolute; left: 12px; top: -60px; background: var(--ink); color: var(--paper); padding: 10px 14px; z-index: 60; }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--vis); color: var(--on-vis); padding: 10px 14px; z-index: 60; font-weight: 600; }
 .skip:focus { top: 12px; }
+.dark { background-color: var(--slate); color: var(--on-slate); }
+.tiles { background-image: var(--courses); background-size: 132px 88px; }
 
-/* signature: the highlighter */
-.hl { background-image: linear-gradient(100deg, transparent .2em, var(--hl) .2em, var(--hl) calc(100% - .15em), transparent calc(100% - .15em)); background-repeat: no-repeat; background-size: 100% 46%; background-position: 0 82%; padding-inline: .08em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
-.js .rv .hl { background-size: 0% 46%; transition: background-size 600ms var(--ease) 200ms; }
-.js .rv.in .hl { background-size: 100% 46%; }
+/* signature: stepped lead flashing between sections */
+.flash { height: 34px; position: relative; }
+.flash::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--lead-hi) 0 2px, var(--lead) 2px 100%);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='34'%3E%3Cpath d='M0 34V26H30V20H60V14H90V8H120V34Z'/%3E%3C/svg%3E") repeat-x 0 0 / 120px 34px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='34'%3E%3Cpath d='M0 34V26H30V20H60V14H90V8H120V34Z'/%3E%3C/svg%3E") repeat-x 0 0 / 120px 34px; }
+.flash::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--lead-lo); }
+.flash.to-dark { background: var(--stone); }
+.flash.to-light { background: var(--slate); }
+.flash.to-stone2 { background: var(--slate); }
 
-/* square ink buttons */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 26px; border-radius: 0; font: 700 1rem/1 var(--body); text-decoration: none; border: 2px solid var(--ink); cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; white-space: nowrap; transition: transform 140ms var(--ease), background-color 160ms var(--ease), color 160ms var(--ease); }
-.btn:active { transform: translate(2px, 2px); }
+/* buttons: square, workwear orange */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 26px; border-radius: 4px; font: 600 1.05rem/1 var(--body); text-decoration: none; border: 2px solid transparent; cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; white-space: nowrap; transition: transform 140ms var(--ease), background-color 160ms var(--ease), border-color 160ms var(--ease); }
+.btn:active { transform: scale(0.97); }
 .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-.btn-ink { background: var(--ink); color: var(--paper); box-shadow: 4px 4px 0 var(--hl); }
-.btn-ink:active { box-shadow: 2px 2px 0 var(--hl); }
-.btn-plain { background: transparent; color: var(--ink); }
-.btn-hl { background: var(--hl); color: var(--ink); border-color: var(--hl); }
+.btn-vis { background: var(--vis); color: var(--on-vis); }
+.btn-ghost { border-color: rgba(238, 240, 241, .4); color: var(--on-slate); }
+.btn-ink { background: var(--slate); color: var(--on-slate); }
 @media (hover: hover) and (pointer: fine) {
-  .btn-plain:hover { background: var(--hl); }
-  .btn-ink:hover { background: #2A2E33; }
-  .top a.tel:hover { background-size: 100% 46%; }
+  .btn-vis:hover { background: var(--vis-hi); }
+  .btn-ghost:hover { border-color: var(--on-slate); }
+  .btn-ink:hover { background: var(--slate-3); }
+  .nav a:hover { color: var(--on-slate); }
 }
 
-/* header: a report letterhead */
-.top { position: sticky; top: 0; z-index: 40; background: var(--paper); border-bottom: 2px solid var(--rule); }
-.top-row { display: flex; align-items: center; gap: 24px; min-height: 68px; }
-.mark { font-family: var(--slab); font-weight: 700; font-size: 1.3rem; line-height: 1.05; text-decoration: none; }
-.mark small { display: block; font-family: var(--body); font-weight: 400; font-size: .8rem; color: var(--ink-2); letter-spacing: 0; margin-top: 2px; }
-.nav { display: flex; gap: 24px; margin-left: auto; font-size: .97rem; }
-.nav a { text-decoration: none; }
-.top a.tel { font-weight: 700; text-decoration: none; white-space: nowrap; background-image: linear-gradient(var(--hl), var(--hl)); background-repeat: no-repeat; background-size: 0% 46%; background-position: 0 82%; transition: background-size 200ms var(--ease); }
-.top .btn { min-height: 44px; padding: 0 18px; font-size: .95rem; box-shadow: none; }
+/* header: van livery */
+.top { position: sticky; top: 0; z-index: 40; background: var(--slate); color: var(--on-slate); border-bottom: 1px solid var(--slate-line); }
+.top-row { display: flex; align-items: center; gap: 28px; min-height: 68px; }
+.mark { font-family: var(--sign); font-weight: 800; text-transform: uppercase; text-decoration: none; line-height: .95; font-size: 1.5rem; letter-spacing: .01em; }
+.mark span { color: var(--vis); }
+.mark small { display: block; font-family: var(--body); font-weight: 600; text-transform: none; font-size: .78rem; color: var(--on-slate-2); letter-spacing: 0; margin-top: 3px; }
+.nav { display: flex; gap: 26px; margin-left: auto; font-weight: 600; font-size: .98rem; color: var(--on-slate-2); }
+.nav a { text-decoration: none; transition: color 160ms var(--ease); }
+.top .btn { min-height: 44px; padding: 0 18px; font-size: 1rem; }
 
-/* hero: type only */
-.hero { padding-block: 72px 0; }
-.ref { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: .92rem; color: var(--ink-2); padding-bottom: 20px; border-bottom: 1px solid var(--line); }
-.ref b { color: var(--ink); }
-.hero h1 { font-size: clamp(3.2rem, 9.4vw, 8.4rem); line-height: .92; letter-spacing: -0.03em; margin-top: 40px; max-width: 11ch; }
-.hero-foot { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: end; margin-top: 40px; }
-.hero-sub { font-size: clamp(1.1rem, 1.6vw, 1.28rem); color: var(--ink-2); max-width: 34em; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+/* hero: slate courses, big signwriting */
+.hero { padding-block: 80px 88px; position: relative; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(27, 34, 40, .96) 0%, rgba(27, 34, 40, .7) 60%, rgba(27, 34, 40, .35) 100%); pointer-events: none; }
+.hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: end; }
+.hero h1 { font-size: clamp(3.4rem, 9vw, 7.4rem); }
+.hero h1 em { font-style: normal; color: var(--vis); display: block; }
+.hero-sub { margin-top: 28px; font-size: clamp(1.1rem, 1.6vw, 1.3rem); color: var(--on-slate-2); max-width: 33em; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.livery { display: grid; gap: 22px; padding-left: 28px; border-left: 3px solid var(--vis); }
+.livery div { line-height: 1; }
+.livery b { display: block; font-family: var(--sign); font-weight: 800; font-size: 3.6rem; line-height: .9; color: var(--on-slate); }
+.livery span { font-size: .95rem; color: var(--on-slate-2); font-weight: 600; }
 
-/* the report table */
-.report { margin-top: 72px; border-top: 2px solid var(--rule); border-bottom: 2px solid var(--rule); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.report > div { padding: 26px 28px 30px 0; }
-.report > div + div { padding-left: 28px; border-left: 1px solid var(--line); }
-.report dt { font-size: .86rem; color: var(--muted); margin-bottom: 10px; }
-.report dd { margin: 0; font-family: var(--slab); font-weight: 500; font-size: clamp(1.35rem, 2.2vw, 1.75rem); line-height: 1.2; }
-.report .struck { text-decoration: line-through; text-decoration-thickness: 2px; color: var(--ink-2); }
-.report-src { margin-top: 14px; font-size: .9rem; color: var(--ink-2); }
+/* told vs found */
+.vs { padding-block: 96px; }
+.vs-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 0; border: 2px solid var(--ink); border-radius: 6px; overflow: hidden; }
+.vs-col { padding: 40px; }
+.vs-col + .vs-col { border-left: 2px solid var(--ink); background: #fff; }
+.vs-label { font-weight: 600; font-size: .95rem; color: var(--muted); margin-bottom: 14px; }
+.vs-told { font-family: var(--sign); font-weight: 800; text-transform: uppercase; font-size: clamp(3rem, 6vw, 5rem); line-height: .9; color: var(--lead-lo); text-decoration: line-through; text-decoration-color: var(--vis); text-decoration-thickness: 6px; }
+.vs-col .note { margin-top: 18px; color: var(--ink-2); }
+.vs-found { font-family: var(--sign); font-weight: 800; text-transform: uppercase; line-height: .92; font-size: clamp(2.2rem, 4.4vw, 3.6rem); }
+.vs-found em { font-style: normal; color: var(--vis); }
+.fixlist { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 10px; }
+.fixlist li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; align-items: baseline; font-weight: 600; }
+.fixlist li::before { content: ""; width: 14px; height: 14px; background: var(--vis); transform: translateY(1px); }
+.vs-quote { margin: 28px 0 0; padding-top: 20px; border-top: 1px solid var(--line); font-size: 1.15rem; }
+.vs-quote cite { display: block; margin-top: 8px; font-style: normal; font-size: .92rem; color: var(--muted); }
 
-/* section rhythm: margin label + content, like a report */
-.sec { padding-block: 104px; }
-.row { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 48px; }
-.label { font-family: var(--slab); font-weight: 500; font-size: 1rem; color: var(--ink-2); padding-top: 8px; border-top: 2px solid var(--rule); align-self: start; position: sticky; top: 96px; }
-.label span { display: block; font-size: 2.4rem; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 6px; }
-.sec h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); max-width: 16ch; }
-.lead { color: var(--ink-2); font-size: 1.12rem; max-width: 36em; margin-top: 20px; }
+/* checks: a roof of tiles */
+.checks { padding-block: 96px 104px; }
+.head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: end; margin-bottom: 48px; }
+.head h2 { font-size: clamp(2.8rem, 6vw, 5rem); }
+.head h2 em { font-style: normal; color: var(--vis); }
+.head p { color: var(--on-slate-2); font-size: 1.12rem; max-width: 32em; }
+.light .head p { color: var(--ink-2); }
+.course { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.course + .course { margin-top: 8px; transform: translateX(calc((100% - 16px) / 6)); width: calc(100% - (100% - 16px) / 6); }
+.tile { background: var(--slate-3); border-radius: 3px 3px 6px 6px; padding: 26px 24px 28px; position: relative; box-shadow: inset 0 -6px 0 rgba(0, 0, 0, .25); }
+.tile::before, .tile::after { content: ""; position: absolute; top: 14px; width: 6px; height: 6px; border-radius: 50%; background: var(--slate); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15); }
+.tile::before { left: 18px; } .tile::after { right: 18px; }
+.tile h3 { font-size: 1.9rem; margin-top: 10px; }
+.tile p { color: var(--on-slate-2); margin-top: 8px; font-size: 1rem; }
+.checks-foot { margin-top: 40px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; color: var(--on-slate-2); }
 
-/* findings */
-.findings { list-style: none; margin: 48px 0 0; padding: 0; counter-reset: f; }
-.findings li { counter-increment: f; display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.2fr); gap: 24px; padding-block: 24px; border-top: 1px solid var(--line); align-items: baseline; }
-.findings li:last-child { border-bottom: 1px solid var(--line); }
-.findings li::before { content: "F" counter(f, decimal-leading-zero); font-family: var(--slab); font-weight: 700; color: var(--muted); font-size: 1rem; }
-.findings h3 { font-size: 1.45rem; }
-.findings p { color: var(--ink-2); }
+/* services: van signwriting numbers */
+.work { padding-block: 96px; }
+.jobs { border-top: 3px solid var(--ink); }
+.job { display: grid; grid-template-columns: 96px minmax(0, .9fr) minmax(0, 1.3fr) auto; gap: 24px; align-items: baseline; padding-block: 22px; border-bottom: 1px solid var(--line); }
+.job .n { font-family: var(--sign); font-weight: 800; font-size: 2.6rem; line-height: .8; color: var(--vis); }
+.job h3 { font-size: 2rem; }
+.job p { color: var(--ink-2); }
+.job a { font-weight: 600; white-space: nowrap; }
 
-/* schedule of work */
-.sched { margin-top: 48px; border-top: 2px solid var(--rule); }
-.sched > div { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.3fr) auto; gap: 28px; padding-block: 22px; border-bottom: 1px solid var(--line); align-items: baseline; }
-.sched dt { font-family: var(--slab); font-weight: 700; font-size: 1.4rem; line-height: 1.15; }
-.sched dd { margin: 0; color: var(--ink-2); }
-.sched a { font-weight: 700; white-space: nowrap; font-size: .95rem; }
+/* about */
+.about { padding-block: 96px; }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+.about h2 { font-size: clamp(2.8rem, 6vw, 5rem); }
+.about p { color: var(--on-slate-2); font-size: 1.12rem; max-width: 32em; margin-top: 20px; }
+.about-livery { display: flex; flex-wrap: wrap; gap: 28px 40px; margin-top: 36px; }
+.about-livery b { display: block; font-family: var(--sign); font-weight: 800; font-size: 2.8rem; line-height: .9; color: var(--vis); }
+.about-livery span { color: var(--on-slate-2); font-weight: 600; font-size: .95rem; }
+.pics { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 12px; align-items: end; }
+.pics img { width: 100%; object-fit: cover; border-radius: 4px; background: var(--slate-3); border: 3px solid var(--lead); }
+.pics img:first-child { aspect-ratio: 4 / 5; }
+.pics img:last-child { aspect-ratio: 3 / 4; }
 
-/* about: photos attached to the report */
-.about { background: var(--paper-2); }
-.about-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: 48px; align-items: start; }
-.attach { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
-.attach figure { margin: 0; background: var(--paper); padding: 10px 10px 14px; border: 1px solid var(--line); }
-.attach img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #E3E1DA; }
-.attach figcaption { font-size: .82rem; color: var(--muted); margin-top: 10px; }
-.attach figure:nth-child(2) { transform: translateY(32px); }
-.facts { margin: 32px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 2px solid var(--rule); }
-.facts div { padding: 18px 18px 18px 0; border-bottom: 1px solid var(--line); }
-.facts dt { font-size: .86rem; color: var(--muted); }
-.facts dd { margin: 4px 0 0; font-family: var(--slab); font-weight: 700; font-size: 1.5rem; line-height: 1.1; }
+/* reviews */
+.reviews { padding-block: 96px; background: var(--stone-2); }
+.quotes { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 20px; }
+.q { margin: 0; background: #fff; border-radius: 6px; padding: 32px; border-top: 6px solid var(--vis); display: flex; flex-direction: column; gap: 14px; }
+.q.big { grid-row: span 2; }
+.q blockquote { margin: 0; font-family: var(--sign); font-weight: 700; text-transform: uppercase; font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1; }
+.q.big blockquote { font-size: clamp(2.6rem, 5vw, 4rem); }
+.q p { color: var(--ink-2); }
+.q figcaption { margin-top: auto; font-weight: 600; }
 
-/* sign-offs */
-.signoffs { margin-top: 48px; display: grid; gap: 0; border-top: 2px solid var(--rule); }
-.signoff { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, .5fr); gap: 32px; padding-block: 30px; border-bottom: 1px solid var(--line); margin: 0; align-items: end; }
-.signoff blockquote { margin: 0; font-family: var(--slab); font-weight: 500; font-size: clamp(1.35rem, 2.4vw, 1.9rem); line-height: 1.22; }
-.signoff p { color: var(--ink-2); margin-top: 10px; font-size: 1rem; }
-.signoff figcaption { border-top: 1px solid var(--ink); padding-top: 8px; font-size: .92rem; }
-.signoff figcaption b { display: block; font-family: var(--slab); font-size: 1.15rem; }
-
-/* request form */
-.request { border-top: 2px solid var(--rule); }
-.req-body { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 64px; align-items: start; margin-top: 40px; }
-.form { display: grid; gap: 28px; }
-.ticks { border: 0; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
-.ticks legend { font-weight: 700; margin-bottom: 10px; padding: 0; }
-.ticks label { display: flex; align-items: center; gap: 12px; min-height: 48px; border-bottom: 1px solid var(--line); cursor: pointer; }
-.ticks input { appearance: none; -webkit-appearance: none; width: 22px; height: 22px; border: 2px solid var(--ink); margin: 0; flex-shrink: 0; display: grid; place-items: center; background: var(--paper); cursor: pointer; }
-.ticks input:checked { background: var(--hl); }
-.ticks input:checked::after { content: ""; width: 10px; height: 6px; border-left: 2.5px solid var(--ink); border-bottom: 2.5px solid var(--ink); transform: translateY(-1px) rotate(-45deg); }
-.lines { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 28px; }
-.field { display: grid; gap: 4px; min-width: 0; }
-.field.full { grid-column: 1 / -1; }
-.field label { font-size: .9rem; color: var(--ink-2); }
-.field label span { color: var(--muted); }
-.field input, .field textarea { width: 100%; min-height: 48px; padding: 8px 0; font: 400 17px/1.4 var(--body); color: var(--ink); background: transparent; border: 0; border-bottom: 2px solid var(--ink); border-radius: 0; }
-.field textarea { min-height: 88px; resize: vertical; }
-.field input:focus, .field textarea:focus { outline: none; background: linear-gradient(transparent 70%, rgba(216, 245, 90, .55) 70%); }
-.field [aria-invalid="true"] { border-bottom-color: #B3261E; }
-.form .btn { justify-self: start; }
-.form-note { font-size: .88rem; color: var(--muted); }
+/* quote */
+.quote { padding-block: 96px; }
+.quote-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 64px; align-items: start; }
+.quote h2 { font-size: clamp(2.8rem, 6vw, 5rem); }
+.quote h2 em { font-style: normal; color: var(--vis); }
+.quote .lead { color: var(--on-slate-2); font-size: 1.12rem; margin-top: 20px; max-width: 30em; }
+.direct { margin-top: 32px; display: grid; gap: 8px; }
+.direct a.tel { font-family: var(--sign); font-weight: 800; font-size: clamp(2.6rem, 5vw, 3.6rem); line-height: 1; text-decoration: none; color: var(--vis); }
+.direct a.mail { color: var(--on-slate-2); overflow-wrap: anywhere; }
+.direct p { color: var(--on-slate-2); }
+.form { background: var(--stone); color: var(--ink); border-radius: 6px; padding: 30px; display: grid; gap: 18px; }
+.form h3 { font-size: 2.2rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0; }
+.chips legend { font-weight: 600; font-size: .95rem; margin-bottom: 8px; padding: 0; }
+.chips label { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 2px solid var(--ink); border-radius: 4px; font-weight: 600; font-size: .98rem; cursor: pointer; background: #fff; transition: background-color 160ms var(--ease); }
+.chips input { position: absolute; opacity: 0; pointer-events: none; }
+.chips label:has(input:checked) { background: var(--vis); }
+.chips label:has(input:focus-visible) { outline: 3px solid var(--vis); outline-offset: 2px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label { font-weight: 600; font-size: .95rem; }
+.field label span { font-weight: 400; color: var(--muted); }
+.field input, .field textarea { width: 100%; min-height: 50px; padding: 12px 14px; font: 400 17px/1.4 var(--body); color: var(--ink); background: #fff; border: 2px solid var(--line); border-radius: 4px; }
+.field textarea { min-height: 96px; resize: vertical; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(255, 106, 19, .35); }
+.field [aria-invalid="true"] { border-color: #B3261E; }
+.row2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.form .btn { width: 100%; min-height: 58px; font-size: 1.1rem; }
+.form-note { font-size: .88rem; color: var(--muted); text-align: center; }
 .sent { display: none; }
 .form.is-sent > :not(.sent) { display: none; }
 .form.is-sent .sent { display: grid; gap: 12px; }
-.sent h3 { font-size: 2.4rem; }
-.sent p { color: var(--ink-2); max-width: 32em; }
-.direct { border-top: 2px solid var(--rule); padding-top: 18px; display: grid; gap: 18px; }
-.direct dt { font-size: .86rem; color: var(--muted); }
-.direct dd { margin: 2px 0 0; font-family: var(--slab); font-weight: 700; font-size: 1.5rem; line-height: 1.2; overflow-wrap: anywhere; }
-.direct dd a { text-decoration: none; }
-.direct dd.small { font-family: var(--body); font-weight: 400; font-size: 1rem; }
+.sent h3 { font-size: 2.6rem; }
+.sent p { color: var(--ink-2); }
 
 /* footer */
-.foot { border-top: 2px solid var(--rule); font-size: .93rem; color: var(--ink-2); }
-.foot .wrap { display: flex; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap; padding-block: 28px calc(28px + env(safe-area-inset-bottom, 0px)); }
-.foot b { color: var(--ink); font-family: var(--slab); }
+.foot { font-size: .93rem; color: var(--on-slate-2); border-top: 1px solid var(--slate-line); }
+.foot .wrap { display: flex; justify-content: space-between; gap: 12px 32px; flex-wrap: wrap; padding-block: 28px calc(28px + env(safe-area-inset-bottom, 0px)); }
+.foot b { color: var(--on-slate); }
 .callbar { display: none; }
 
 .js .rv { opacity: 0; transform: translateY(12px); transition: opacity 480ms var(--ease), transform 480ms var(--ease); }
 .js .rv.in { opacity: 1; transform: none; }
 
 @media (max-width: 960px) {
-  .nav, .top a.tel { display: none; }
+  .nav { display: none; }
   .top .btn { margin-left: auto; }
-  .hero { padding-top: 40px; }
-  .hero h1 { margin-top: 28px; }
-  .hero-foot, .about-body, .req-body { grid-template-columns: minmax(0, 1fr); }
-  .report { grid-template-columns: minmax(0, 1fr); }
-  .report > div, .report > div + div { padding: 20px 0; border-left: 0; }
-  .report > div + div { border-top: 1px solid var(--line); }
-  .row { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-  .label { position: static; display: flex; align-items: baseline; gap: 12px; }
-  .label span { font-size: 1.6rem; margin: 0; }
-  .sec { padding-block: 72px; }
-  .findings li { grid-template-columns: 48px minmax(0, 1fr); }
-  .findings li p { grid-column: 2; }
-  .sched > div { grid-template-columns: minmax(0, 1fr); gap: 6px; }
-  .signoff { grid-template-columns: minmax(0, 1fr); gap: 16px; }
-  body { padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
-  .callbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--ink); padding-bottom: env(safe-area-inset-bottom, 0px); }
-  .callbar a { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 62px; padding: 0 20px; font-weight: 700; text-decoration: none; color: var(--paper); }
-  .callbar a svg { width: 18px; height: 18px; }
-  .callbar a.q { background: var(--hl); color: var(--ink); }
+  .hero { padding-block: 48px 64px; }
+  .hero .wrap, .head, .about-grid, .quote-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .livery { grid-template-columns: repeat(3, minmax(0, 1fr)); padding-left: 0; border-left: 0; border-top: 3px solid var(--vis); padding-top: 20px; gap: 12px; }
+  .livery b { font-size: 2.6rem; }
+  .vs-grid { grid-template-columns: minmax(0, 1fr); }
+  .vs-col + .vs-col { border-left: 0; border-top: 2px solid var(--ink); }
+  .vs-col { padding: 28px 22px; }
+  .course { grid-template-columns: minmax(0, 1fr); }
+  .course + .course { transform: none; width: 100%; }
+  .job { grid-template-columns: 56px minmax(0, 1fr); gap: 6px 16px; }
+  .job p, .job a { grid-column: 2; }
+  .job .n { font-size: 2rem; grid-row: span 3; }
+  .quotes { grid-template-columns: minmax(0, 1fr); }
+  .q.big { grid-row: auto; }
+  .vs, .checks, .work, .about, .reviews, .quote { padding-block: 64px; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .callbar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--slate); padding: 10px max(14px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(14px, env(safe-area-inset-left, 0px)); border-top: 3px solid var(--lead); }
+  .callbar .btn { min-height: 52px; }
 }
 @media (max-width: 600px) {
-  .lines, .ticks, .facts { grid-template-columns: minmax(0, 1fr); }
-  .attach figure:nth-child(2) { transform: none; }
-  .hero-actions .btn { flex: 1 1 100%; }
+  .row2 { grid-template-columns: minmax(0, 1fr); }
+  .form { padding: 20px; }
+  .mark { font-size: 1.25rem; }
   .mark small { display: none; }
+  .hero-actions .btn { flex: 1 1 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .top a.tel { transition: none; }
+  .btn, .chips label { transition: none; }
   .btn:active { transform: none; }
   .js .rv { transition: opacity 200ms linear; transform: none; }
-  .js .rv .hl { background-size: 100% 46%; transition: none; }
 }
 </style>
 </head>
@@ -218,150 +243,172 @@ p { margin: 0; }
 
 <header class="top">
   <div class="wrap top-row">
-    <a class="mark" href="#main">Newcastle Roofing Specialists<small>Silverdale, Newcastle-under-Lyme</small></a>
-    <nav class="nav" aria-label="Main"><a href="#checks">What we check</a><a href="#work">Work we do</a><a href="#about">About</a></nav>
-    <a class="tel" href="tel:+447354210625">07354 210625</a>
-    <a class="btn btn-ink" href="#request">Free quote</a>
+    <a class="mark" href="#main">Newcastle Roofing <span>Specialists</span><small>Silverdale, Newcastle-under-Lyme</small></a>
+    <nav class="nav" aria-label="Main"><a href="#checks">What we check</a><a href="#work">Work we do</a><a href="#about">About</a><a href="#quote">Free quote</a></nav>
+    <a class="btn btn-vis" href="tel:+447354210625" aria-label="Call 07354 210625"><svg aria-hidden="true"><use href="#phone"/></svg>07354 210625</a>
   </div>
 </header>
 
 <main id="main">
-<section class="hero">
+<section class="hero dark tiles">
   <div class="wrap">
-    <p class="ref"><span>Roofers in <b>Newcastle-under-Lyme</b></span><span>Family-run, <b>16 years</b> in the trade</span><span>All work <b>guaranteed</b></span></p>
-    <h1>Told you need a new roof? Get a <span class="hl">second opinion.</span></h1>
-    <div class="hero-foot">
-      <p class="hero-sub">Most leaks start somewhere small. We find the actual fault and fix that first. If your roof really does need replacing, we'll tell you straight and show you why.</p>
+    <div>
+      <h1>Told you need a new roof? <em>Get a second opinion.</em></h1>
+      <p class="hero-sub">Family-run roofers in Silverdale, Newcastle-under-Lyme. We find the actual fault and fix that first. If it really is time for a new roof, we'll tell you straight.</p>
       <div class="hero-actions">
-        <a class="btn btn-ink" href="#request">Book a second opinion</a>
-        <a class="btn btn-plain" href="tel:+447354210625"><svg aria-hidden="true"><use href="#phone"/></svg>07354 210625</a>
+        <a class="btn btn-vis" href="#quote">Book a free quote</a>
+        <a class="btn btn-ghost" href="tel:+447354210625"><svg aria-hidden="true"><use href="#phone"/></svg>Call 07354 210625</a>
       </div>
     </div>
-
-    <dl class="report rv" aria-label="A real job, from a Google review">
-      <div><dt>What they were told, twice</dt><dd class="struck">A new roof</dd></div>
-      <div><dt>What Ben found</dt><dd>&ldquo;Ben moved one tile and could see straight away where it was raining in.&rdquo;</dd></div>
-      <div><dt>What it needed</dt><dd>New lead flashing, a soaker and the old cement replaced. <span class="hl">Now dry.</span></dd></div>
-    </dl>
-    <p class="report-src">From a Google review of a roof repair in Newcastle-under-Lyme. &ldquo;It has poured down all night and most of the day and it no longer rains in.&rdquo;</p>
+    <div class="livery" aria-label="About the firm">
+      <div><b>16</b><span>Years on roofs</span></div>
+      <div><b>All</b><span>Work guaranteed</span></div>
+      <div><b>Free</b><span>Quotes, no obligation</span></div>
+    </div>
   </div>
 </section>
+<div class="flash to-light" aria-hidden="true"></div>
 
-<section class="sec" id="checks" aria-labelledby="checks-h">
-  <div class="wrap row">
-    <p class="label"><span>01</span>Inspection</p>
+<section class="vs" aria-labelledby="vs-h">
+  <div class="wrap">
+    <h2 id="vs-h" class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">A real job</h2>
+    <div class="vs-grid rv">
+      <div class="vs-col">
+        <p class="vs-label">What two other roofers said</p>
+        <p class="vs-told">New roof</p>
+        <p class="note">A customer in Newcastle-under-Lyme had rain coming in and two quotes for a full replacement.</p>
+      </div>
+      <div class="vs-col">
+        <p class="vs-label">What Ben found</p>
+        <p class="vs-found h">One tile moved. <em>Fault found.</em></p>
+        <ul class="fixlist">
+          <li>New lead flashing</li>
+          <li>A new soaker</li>
+          <li>The old cement taken out and replaced</li>
+        </ul>
+        <blockquote class="vs-quote">&ldquo;It has poured down all night and most of the day and it no longer rains in.&rdquo;<cite>From the customer's Google review</cite></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="flash to-dark" aria-hidden="true"></div>
+
+<section class="checks dark" id="checks" aria-labelledby="checks-h">
+  <div class="wrap">
+    <div class="head rv">
+      <h2 id="checks-h">Repair first. <em>Replace when it's needed.</em></h2>
+      <p>Most leaks start somewhere small. Before anyone talks about a new roof, these are the parts we check.</p>
+    </div>
+    <div class="course rv">
+      <div class="tile"><h3>Tiles</h3><p>Slipped, cracked or missing. Often one or two is all it takes.</p></div>
+      <div class="tile"><h3>Lead flashing</h3><p>Where the roof meets a chimney or wall. A common cause of leaks.</p></div>
+      <div class="tile"><h3>Soakers</h3><p>The lead pieces under the tiles along a wall. When they go, water runs in.</p></div>
+    </div>
+    <div class="course rv">
+      <div class="tile"><h3>Cement</h3><p>Ridge and verge cement cracks and drops out. We take it out and redo it.</p></div>
+      <div class="tile"><h3>Gutters</h3><p>Blocked or leaking gutters push water where it shouldn't go.</p></div>
+      <div class="tile"><h3>Barge boards</h3><p>Along the gable edge. We'll source ones that match the originals.</p></div>
+    </div>
+    <div class="checks-foot rv"><a class="btn btn-vis" href="#quote">Get your roof checked</a><p>Free quotes. No obligation.</p></div>
+  </div>
+</section>
+<div class="flash to-light" aria-hidden="true"></div>
+
+<section class="work light" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="head rv">
+      <h2 id="work-h">From one tile to the whole roof.</h2>
+      <p>Across Newcastle-under-Lyme, Silverdale and Stoke-on-Trent. Every job guaranteed.</p>
+    </div>
+    <div class="jobs">
+      <div class="job rv"><span class="n">01</span><h3>Roof repairs</h3><p>Leaks traced to the cause and fixed properly, not patched over.</p><a href="#quote" data-pick="repair">Get a quote</a></div>
+      <div class="job rv"><span class="n">02</span><h3>Tile replacement</h3><p>Slipped, cracked and missing tiles replaced to match.</p><a href="#quote" data-pick="repair">Get a quote</a></div>
+      <div class="job rv"><span class="n">03</span><h3>Leadwork</h3><p>New flashing and soakers around chimneys and walls.</p><a href="#quote" data-pick="lead">Get a quote</a></div>
+      <div class="job rv"><span class="n">04</span><h3>Full re-roofs</h3><p>When a roof is past saving, a complete re-roof to a high standard.</p><a href="#quote" data-pick="reroof">Get a quote</a></div>
+      <div class="job rv"><span class="n">05</span><h3>Waterproofing</h3><p>Options to suit the roof and the budget.</p><a href="#quote" data-pick="other">Get a quote</a></div>
+      <div class="job rv"><span class="n">06</span><h3>Gutters and barge boards</h3><p>New gutters fitted, barge boards matched to the originals.</p><a href="#quote" data-pick="gutter">Get a quote</a></div>
+    </div>
+  </div>
+</section>
+<div class="flash to-dark" aria-hidden="true"></div>
+
+<section class="about dark tiles" id="about" aria-labelledby="about-h">
+  <div class="wrap about-grid">
+    <div class="rv">
+      <h2 id="about-h">A family firm from Silverdale.</h2>
+      <p>Sixteen years on roofs, from one loose tile to full re-roofs. We turn up when we say we will, keep you updated, and leave the place tidy.</p>
+      <div class="about-livery">
+        <div><b>16 yrs</b><span>In the trade</span></div>
+        <div><b>Ltd</b><span>Registered company</span></div>
+        <div><b>7 days</b><span>A week</span></div>
+      </div>
+    </div>
+    <div class="pics rv">
+      <img src="https://static.wixstatic.com/media/a15fc5_1aecba39d9e14ed09f9a46cbc8717d4e~mv2.jpeg/v1/fill/w_720,h_900,al_c,q_85/newcastle-roofing-1.jpeg" alt="Roofing work by Newcastle Roofing Specialists" loading="lazy" width="720" height="900">
+      <img src="https://static.wixstatic.com/media/a15fc5_d04cf1411f10435d97ea407971e5e6e3~mv2.jpeg/v1/fill/w_540,h_720,al_c,q_85/newcastle-roofing-2.jpeg" alt="Newcastle Roofing Specialists at work" loading="lazy" width="540" height="720">
+    </div>
+  </div>
+</section>
+<div class="flash to-stone2" aria-hidden="true"></div>
+
+<section class="reviews" aria-labelledby="rv-h">
+  <div class="wrap">
+    <div class="head light rv">
+      <h2 id="rv-h">What customers said.</h2>
+      <p>Friendly, on time and tidy, in their own words.</p>
+    </div>
+    <div class="quotes">
+      <figure class="q big rv"><blockquote>&ldquo;Our roof is beautiful!&rdquo;</blockquote><p>Lorna said the team were friendly and on time, kept her updated, sourced barge boards to match the originals and cleaned up afterwards.</p><figcaption>Lorna Lakin</figcaption></figure>
+      <figure class="q rv"><blockquote>&ldquo;A thoroughly professional team that went above &amp; beyond.&rdquo;</blockquote><figcaption>Alex Thompson</figcaption></figure>
+      <figure class="q rv"><blockquote>&ldquo;I would 100% recommend!&rdquo;</blockquote><p>&ldquo;An amazing team, and an amazing job done.&rdquo;</p><figcaption>Danni Bebbington</figcaption></figure>
+    </div>
+  </div>
+</section>
+<div class="flash to-dark" aria-hidden="true" style="background:var(--stone-2)"></div>
+
+<section class="quote dark" id="quote" aria-labelledby="q-h">
+  <div class="wrap quote-grid">
     <div>
-      <h2 id="checks-h" class="rv">What we check before anyone says <span class="hl">&ldquo;new roof&rdquo;.</span></h2>
-      <p class="lead rv">A roof is a lot of small parts. When one fails, water finds its way in. These are the usual suspects, and each one is a repair, not a replacement.</p>
-      <ol class="findings">
-        <li class="rv"><h3>Slipped or cracked tiles</h3><p>One or two out of place is often all it takes. Replaced and matched.</p></li>
-        <li class="rv"><h3>Lead flashing</h3><p>Where the roof meets a chimney or wall. Worn lead is one of the most common causes of a leak.</p></li>
-        <li class="rv"><h3>Soakers</h3><p>The small pieces of lead tucked under the tiles along a wall. When they go, water runs inside.</p></li>
-        <li class="rv"><h3>Old cement</h3><p>Ridge and verge cement cracks and drops out over the years. We take it out and redo it.</p></li>
-        <li class="rv"><h3>Gutters</h3><p>Blocked or leaking gutters push water where it shouldn't go. Repaired or replaced.</p></li>
-        <li class="rv"><h3>Barge boards</h3><p>The boards along the gable edge. We'll source ones that match the originals.</p></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="work" aria-labelledby="work-h" style="padding-top:0">
-  <div class="wrap row">
-    <p class="label"><span>02</span>Work we do</p>
-    <div>
-      <h2 id="work-h" class="rv">From one tile to the whole roof.</h2>
-      <p class="lead rv">Across Newcastle-under-Lyme, Silverdale and Stoke-on-Trent. Free quotes, and every job guaranteed.</p>
-      <dl class="sched">
-        <div class="rv"><dt>Roof repairs</dt><dd>Leaks traced to the cause and fixed properly, not patched over.</dd><a href="#request" data-pick="leak">Quote</a></div>
-        <div class="rv"><dt>Tile replacement</dt><dd>Slipped, cracked and missing tiles replaced to match.</dd><a href="#request" data-pick="tiles">Quote</a></div>
-        <div class="rv"><dt>Leadwork</dt><dd>New flashing and soakers around chimneys, walls and dormers.</dd><a href="#request" data-pick="lead">Quote</a></div>
-        <div class="rv"><dt>Full re-roofs</dt><dd>When a roof is past saving, a complete re-roof done to a high standard.</dd><a href="#request" data-pick="reroof">Quote</a></div>
-        <div class="rv"><dt>Waterproofing</dt><dd>Options to suit the roof and the budget.</dd><a href="#request" data-pick="other">Quote</a></div>
-        <div class="rv"><dt>Gutters and barge boards</dt><dd>New gutters fitted, and barge boards matched to the originals.</dd><a href="#request" data-pick="gutter">Quote</a></div>
-      </dl>
-    </div>
-  </div>
-</section>
-
-<section class="sec about" id="about" aria-labelledby="about-h">
-  <div class="wrap row">
-    <p class="label"><span>03</span>About</p>
-    <div class="about-body">
-      <div class="rv">
-        <h2 id="about-h">A family firm in Silverdale.</h2>
-        <p class="lead">Sixteen years on roofs, from one loose tile to full re-roofs. We turn up when we say we will, keep you updated, and leave the place tidy.</p>
-        <dl class="facts">
-          <div><dt>In the trade</dt><dd>16 years</dd></div>
-          <div><dt>Our work</dt><dd>Guaranteed</dd></div>
-          <div><dt>Run by</dt><dd>A local family</dd></div>
-          <div><dt>Quotes</dt><dd>Free</dd></div>
-        </dl>
-      </div>
-      <div class="attach rv">
-        <figure><img src="https://static.wixstatic.com/media/a15fc5_1aecba39d9e14ed09f9a46cbc8717d4e~mv2.jpeg/v1/fill/w_640,h_800,al_c,q_85/newcastle-roofing-1.jpeg" alt="Roofing work by Newcastle Roofing Specialists" loading="lazy" width="640" height="800"><figcaption>From the job file</figcaption></figure>
-        <figure><img src="https://static.wixstatic.com/media/a15fc5_d04cf1411f10435d97ea407971e5e6e3~mv2.jpeg/v1/fill/w_640,h_800,al_c,q_85/newcastle-roofing-2.jpeg" alt="Newcastle Roofing Specialists at work" loading="lazy" width="640" height="800"><figcaption>From the job file</figcaption></figure>
+      <h2 id="q-h">Get a free quote. <em>Or a second opinion.</em></h2>
+      <p class="lead">Tell us what's happening and where. We'll come out, find the cause, and tell you honestly what it needs.</p>
+      <div class="direct">
+        <a class="tel" href="tel:+447354210625">07354 210625</a>
+        <a class="mail" href="mailto:newcastleroofingltd@outlook.com">newcastleroofingltd@outlook.com</a>
+        <p>Silverdale, Newcastle-under-Lyme. Open 7 days.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="sec" aria-labelledby="sign-h">
-  <div class="wrap row">
-    <p class="label"><span>04</span>Signed off</p>
-    <div>
-      <h2 id="sign-h" class="rv">What customers said when the job was done.</h2>
-      <div class="signoffs">
-        <figure class="signoff rv"><div><blockquote>&ldquo;Our roof is <span class="hl">beautiful!</span>&rdquo;</blockquote><p>Friendly and on time, kept her updated, sourced barge boards to match the originals and cleaned up afterwards.</p></div><figcaption><b>Lorna Lakin</b>Customer</figcaption></figure>
-        <figure class="signoff rv"><div><blockquote>&ldquo;Absolutely fantastic service &amp; a thoroughly professional team that went above &amp; beyond.&rdquo;</blockquote></div><figcaption><b>Alex Thompson</b>Customer</figcaption></figure>
-        <figure class="signoff rv"><div><blockquote>&ldquo;I would 100% recommend! An amazing team, and an amazing job done.&rdquo;</blockquote></div><figcaption><b>Danni Bebbington</b>Customer</figcaption></figure>
+    <form class="form" id="qform" novalidate>
+      <h3>What's the problem?</h3>
+      <fieldset class="chips">
+        <legend>Pick the closest</legend>
+        <label><input type="radio" name="job" value="repair"> Leak or repair</label>
+        <label><input type="radio" name="job" value="second"> Told I need a new roof</label>
+        <label><input type="radio" name="job" value="lead"> Leadwork</label>
+        <label><input type="radio" name="job" value="reroof"> Full re-roof</label>
+        <label><input type="radio" name="job" value="gutter"> Gutters or boards</label>
+        <label><input type="radio" name="job" value="other"> Something else</label>
+      </fieldset>
+      <div class="row2">
+        <div class="field"><label for="pc">Postcode</label><input id="pc" name="postcode" autocomplete="postal-code" required></div>
+        <div class="field"><label for="nm">Your name</label><input id="nm" name="name" autocomplete="name" required></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec request" id="request" aria-labelledby="req-h">
-  <div class="wrap row">
-    <p class="label"><span>05</span>Request</p>
-    <div>
-      <h2 id="req-h" class="rv">Book a free quote or <span class="hl">second opinion.</span></h2>
-      <div class="req-body">
-        <form class="form" id="qform" novalidate>
-          <fieldset class="ticks">
-            <legend>Tick what applies</legend>
-            <label><input type="checkbox" name="job" value="leak"> Water coming in</label>
-            <label><input type="checkbox" name="job" value="second"> Told I need a new roof</label>
-            <label><input type="checkbox" name="job" value="tiles"> Slipped or broken tiles</label>
-            <label><input type="checkbox" name="job" value="lead"> Lead flashing or chimney</label>
-            <label><input type="checkbox" name="job" value="gutter"> Gutters or barge boards</label>
-            <label><input type="checkbox" name="job" value="reroof"> Full re-roof</label>
-            <label><input type="checkbox" name="job" value="other"> Something else</label>
-          </fieldset>
-          <div class="lines">
-            <div class="field"><label for="nm">Your name</label><input id="nm" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="pc">Postcode</label><input id="pc" name="postcode" autocomplete="postal-code" required></div>
-            <div class="field"><label for="ph">Phone</label><input id="ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
-            <div class="field"><label for="em">Email <span>(optional)</span></label><input id="em" name="email" type="email" inputmode="email" autocomplete="email"></div>
-            <div class="field full"><label for="msg">What's happening? <span>(optional)</span></label><textarea id="msg" name="message" placeholder="Where the water's coming in, or what another roofer told you"></textarea></div>
-          </div>
-          <button class="btn btn-ink" type="submit">Send request</button>
-          <p class="form-note">Your details only go to Newcastle Roofing Specialists, to arrange your quote.</p>
-          <div class="sent" role="status" aria-live="polite">
-            <h3>Thanks, <span data-name>that's in</span>.</h3>
-            <p>On the finished website this lands straight on their phone and in their inbox, with what you ticked, your postcode and your number.</p>
-          </div>
-        </form>
-        <dl class="direct rv">
-          <div><dt>Call</dt><dd><a href="tel:+447354210625">07354 210625</a></dd></div>
-          <div><dt>Email</dt><dd class="small"><a href="mailto:newcastleroofingltd@outlook.com">newcastleroofingltd@outlook.com</a></dd></div>
-          <div><dt>Based</dt><dd class="small">Silverdale, Newcastle-under-Lyme. Open 7 days.</dd></div>
-        </dl>
+      <div class="row2">
+        <div class="field"><label for="ph">Phone</label><input id="ph" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="em">Email <span>(optional)</span></label><input id="em" name="email" type="email" inputmode="email" autocomplete="email"></div>
       </div>
-    </div>
+      <div class="field"><label for="msg">Anything else? <span>(optional)</span></label><textarea id="msg" name="message" placeholder="Where the water's coming in, or what another roofer told you"></textarea></div>
+      <button class="btn btn-vis" type="submit">Send</button>
+      <p class="form-note">Your details only go to Newcastle Roofing Specialists, to sort your quote.</p>
+      <div class="sent" role="status" aria-live="polite">
+        <h3>Thanks, <span data-name>that's sent</span>.</h3>
+        <p>On the finished website this goes straight to their phone and inbox, with the job, postcode and your number ready to call back.</p>
+      </div>
+    </form>
   </div>
 </section>
 </main>
 
-<footer class="foot">
+<footer class="foot dark">
   <div class="wrap">
     <p><b>Newcastle Roofing Specialists Ltd</b>. Registered in England and Wales, no. 15435900.</p>
     <p><a href="https://www.facebook.com/profile.php?id=61554312042498" rel="noopener" target="_blank">Facebook</a></p>
@@ -370,8 +417,8 @@ p { margin: 0; }
 </footer>
 
 <div class="callbar" aria-label="Quick contact">
-  <a href="tel:+447354210625"><svg aria-hidden="true"><use href="#phone"/></svg>Call 07354 210625</a>
-  <a class="q" href="#request">Quote</a>
+  <a class="btn btn-ghost" href="tel:+447354210625"><svg aria-hidden="true"><use href="#phone"/></svg>Call</a>
+  <a class="btn btn-vis" href="#quote">Free quote</a>
 </div>
 
 <script>
@@ -391,9 +438,8 @@ p { margin: 0; }
     form.classList.add('is-sent');
     var s = form.querySelector('.sent'); s.setAttribute('tabindex', '-1'); s.focus();
   });
-  // soft reveal; the highlighter strokes draw in as each line arrives
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -10% 0px' });
+    var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
   } else document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); });
 })();

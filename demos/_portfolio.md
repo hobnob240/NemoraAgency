@@ -16,8 +16,8 @@ colour and signature detail. Add a line here after every build. (Files starting 
 | SOS Carpet Cleaning | Booking as a job sheet + admin | Booking-led | Instrument Sans | Fresh green on light | Room steppers, admin panel |
 | 5 Star Roofing (Werrington) | Point at the problem | Split, photo right | Archivo condensed + Figtree | Slate, off-white, star gold | Tap-the-house drawing that picks the quote |
 | Trentham Roofing (Trentham) | One call, Luke handles the rest | Big serif type + giant 5.0 score | Gloock + Public Sans | Paper, slate, clay-tile accent | Timeline with a real review on each step |
-| Newcastle Roofing Specialists (Silverdale) | The site is an inspection report: second opinion | Type only, huge slab headline + report table | Zilla Slab + Atkinson Hyperlegible | Report paper, black ink, fluorescent highlighter | Highlighter strokes; square ink buttons; margin labels 01–05; underline form fields |
+| Newcastle Roofing Specialists (Silverdale) | Built from the roof: slate courses and lead; second opinion | Dark-first, full-width slate-tile hero, huge condensed type + van-livery numbers | Big Shoulders Display + Barlow | Slate, lead grey, hi-vis orange | Stepped lead-flashing dividers between sections; tiles laid in staggered courses |
 
 ## Rules for bulk runs
 - Before building a batch, assign each site a different hero layout and type pairing from this table so none drift into the same shape.
-- Not yet used: rounded fonts, condensed grotesk as body, full-bleed photo hero, collage hero, dark-first page, poster/flyer layout, stamped/hand-drawn details.
+- Not yet used: rounded fonts, full-bleed photo hero, collage hero, poster/flyer layout, stamped/hand-drawn details.
