@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name Barbers | Barbers in Staffordshire (concept)</title>
+<meta name="description" content="A concept website for a barber by NEMORA: a live chair board shows the wait before you walk in.">
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:"Caslon";src:url(fonts/caslon.woff) format("woff");font-display:swap}
+@font-face{font-family:"Chivo";src:url(fonts/chivo-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Chivo";src:url(fonts/chivo-700.woff) format("woff");font-weight:700;font-display:swap}
+@font-face{font-family:"Chivo Mono";src:url(fonts/chivomono-600.woff) format("woff");font-weight:600;font-display:swap}
+:root{--black:#121110;--coal:#1d1b19;--cream:#f1e9da;--muted:#b3a994;--red:#c8312b;--blue:#25407a;--amber:#ffc44d;--green:#7ed492;--line:rgba(241,233,218,.14);--ease:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:400 17px/1.6 "Chivo",system-ui,sans-serif;color:var(--cream);background:var(--black);overflow-x:clip}
+h1,h2,h3{font-family:"Caslon",Georgia,serif;font-weight:400;line-height:1}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:6px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:1rem;transition:transform 140ms var(--ease),background-color 160ms}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff}
+.btn-line{border-color:var(--cream);color:var(--cream);background:transparent}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.pole{height:10px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,var(--cream) 14px 28px,var(--blue) 28px 42px,var(--cream) 42px 56px)}
+.head .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{font-family:"Caslon",serif;font-size:1.6rem;text-decoration:none}
+.head-r{display:flex;gap:14px;align-items:center}
+.head-r .tel{font-weight:700;text-decoration:none}
+.hero{padding:48px 0 32px}
+.hero h1{font-size:clamp(3rem,9vw,8rem);letter-spacing:-.02em;max-width:11ch}
+.hero h1 em{font-style:italic;color:var(--amber)}
+.hero .sub{display:flex;justify-content:space-between;gap:24px;align-items:end;flex-wrap:wrap;margin-top:22px}
+.hero .sub p{max-width:42ch;color:var(--muted);font-size:1.1rem}
+/* the board */
+.board{margin-top:36px;background:var(--coal);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:inset 0 0 0 6px #0c0b0a}
+.board-top{display:flex;justify-content:space-between;align-items:center;font:600 13px/1 "Chivo Mono",monospace;color:var(--muted);letter-spacing:.06em;margin-bottom:14px}
+.live{display:inline-flex;align-items:center;gap:8px;color:var(--green)}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--green)}
+.row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr) minmax(0,2fr) auto;gap:12px;align-items:center;padding:12px 0;border-top:1px solid rgba(241,233,218,.08)}
+.cells{display:flex;gap:3px}
+.cell{display:inline-grid;place-items:center;min-width:1.05em;height:1.6em;padding:0 .12em;background:#0b0a09;border-radius:3px;font:600 clamp(15px,2.2vw,26px)/1 "Chivo Mono",monospace;color:var(--amber);position:relative;overflow:hidden}
+.cell::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.6)}
+.cell.flip{animation:flip 260ms var(--ease)}
+@keyframes flip{0%{transform:scaleY(.15);opacity:.4}100%{transform:none;opacity:1}}
+.row.free .wait .cell{color:var(--green)}
+.row .who{font:600 clamp(15px,2vw,22px)/1.2 "Chivo Mono",monospace;color:var(--cream)}
+.row .act{font-size:.92rem;min-height:42px;padding:0 16px}
+.board small{display:block;margin-top:14px;color:var(--muted);font-size:.86rem}
+section.s{padding:96px 0}
+.kick{font:600 13px/1 "Chivo Mono",monospace;letter-spacing:.08em;color:var(--amber);margin-bottom:14px;text-transform:uppercase}
+h2{font-size:clamp(2.2rem,5vw,3.8rem);max-width:15ch}
+.menu{margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px}
+.menu div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px dashed var(--line)}
+.menu h3{font-size:1.6rem}
+.menu p{color:var(--muted);font-size:.95rem}
+.menu b{font:600 15px/1 "Chivo Mono",monospace;color:var(--amber);white-space:nowrap}
+.guard{background:var(--cream);color:var(--black)}
+.guard .kick{color:var(--red)}
+.gwrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center}
+.gp{color:#4a453d;margin-top:14px;max-width:40ch}
+.gsel{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.gsel button{font:600 16px/1 "Chivo Mono",monospace;padding:12px 14px;border:2px solid var(--black);background:transparent;border-radius:6px;cursor:pointer;color:var(--black);transition:background-color 160ms,color 160ms,transform 140ms var(--ease)}
+.gsel button:active{transform:scale(.96)}
+.gsel button[aria-pressed=true]{background:var(--black);color:var(--cream)}
+.gvis{background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,0,0,.1)}
+.bars{display:flex;align-items:end;gap:14px;height:200px;border-bottom:3px solid var(--black)}
+.bars span{flex:1;background:#d8cfbe;border-radius:4px 4px 0 0;transition:background-color 200ms}
+.bars span.on{background:var(--red)}
+.glab{display:flex;gap:14px;margin-top:8px}
+.glab span{flex:1;text-align:center;font:600 13px/1 "Chivo Mono",monospace}
+.gout{margin-top:20px;font-family:"Caslon",serif;font-size:2rem}
+.gout small{display:block;font:400 15px/1.5 "Chivo",sans-serif;color:#4a453d;margin-top:4px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+form{background:var(--coal);border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;gap:16px}
+label{font-weight:700;display:grid;gap:6px;font-size:.95rem}
+input,select{font:inherit;padding:13px 14px;border:1px solid rgba(241,233,218,.25);border-radius:8px;width:100%;background:#0f0e0d;color:var(--cream)}
+.sent{background:#203a28;padding:14px;border-radius:8px;font-weight:700}
+.side p{color:var(--muted);margin-top:14px}
+.side .tel{font-family:"Caslon",serif;font-size:2.4rem;text-decoration:none;display:inline-block;margin-top:16px}
+footer{padding:40px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.concept{font-weight:700;color:var(--cream)}
+.bar{display:none}
+.reveal{transition:opacity 520ms var(--ease),transform 520ms var(--ease)}
+.js .reveal:not(.in){opacity:0;transform:translateY(12px)}
+@media (prefers-reduced-motion:reduce){.js .reveal:not(.in){transform:none}.cell.flip{animation:none}.btn,.gsel button{transition:none}}
+@media (max-width:860px){
+ .head-r .tel{display:none}
+ .row{grid-template-columns:minmax(0,1fr) auto;row-gap:8px}
+ .row .stat{grid-column:1/-1;order:3}
+ .row .act{grid-column:2;grid-row:1}
+ .row .wait{grid-column:1/-1;order:4}
+ .menu,.gwrap,.split{grid-template-columns:minmax(0,1fr)}
+ section.s{padding:72px 0}
+ .bar{display:flex;gap:10px;position:fixed;z-index:9;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(18,17,16,.96);border-top:1px solid var(--line)}
+ .bar .btn{flex:1}
+}
+@media (max-width:560px){.head-r .btn{display:none}.logo{font-size:1.2rem}}
+</style>
+</head>
+<body>
+<div class="pole" aria-hidden="true"></div>
+<header class="head"><div class="wrap">
+ <a class="logo" href="#">Your Name Barbers</a>
+ <div class="head-r"><a class="tel" href="#book">07700 900123</a><a class="btn btn-red" href="#book">Book a chair</a></div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <h1>Know the wait <em>before</em> you walk in.</h1>
+ <div class="sub"><p>Fades, scissor cuts and beard work in Staffordshire. Check the chair board, then walk in or book.</p><a class="btn btn-line" href="#menu">See the cuts</a></div>
+
+ <div class="board" id="board">
+  <div class="board-top"><span>THE CHAIR BOARD</span><span class="live"><i></i>LIVE</span></div>
+  <div class="row" data-who="CHAIR 1  SAM"><span class="who">CHAIR 1 · SAM</span><span class="stat cells" data-len="12"></span><span class="wait cells" data-len="6"></span><a class="btn btn-red act" href="#book">Book</a></div>
+  <div class="row" data-who="CHAIR 2  JAY"><span class="who">CHAIR 2 · JAY</span><span class="stat cells" data-len="12"></span><span class="wait cells" data-len="6"></span><a class="btn btn-red act" href="#book">Book</a></div>
+  <div class="row" data-who="CHAIR 3  KEL"><span class="who">CHAIR 3 · KEL</span><span class="stat cells" data-len="12"></span><span class="wait cells" data-len="6"></span><a class="btn btn-red act" href="#book">Book</a></div>
+  <small>Concept demo: on the live site, each barber updates their chair from their phone in one tap.</small>
+ </div>
+</div></section>
+
+<section class="s" id="menu"><div class="wrap">
+ <p class="kick reveal">The cuts</p>
+ <h2 class="reveal">Sharp work, no rush.</h2>
+ <div class="menu">
+  <div class="reveal"><span><h3>Skin fade</h3><p>Taken right down to the skin and blended up.</p></span><b>~45 MIN</b></div>
+  <div class="reveal"><span><h3>Scissor cut</h3><p>Cut with scissors for length and shape on top.</p></span><b>~40 MIN</b></div>
+  <div class="reveal"><span><h3>Beard trim &amp; line-up</h3><p>Shaped, lined up and finished with a hot towel.</p></span><b>~20 MIN</b></div>
+  <div class="reveal"><span><h3>Kids' cut</h3><p>Patient, quick and no fuss, for under-12s.</p></span><b>~25 MIN</b></div>
+ </div>
+</div></section>
+
+<section class="s guard"><div class="wrap gwrap">
+ <div>
+  <p class="kick">Know your number</p>
+  <h2>Not sure what grade to ask for?</h2>
+  <p class="gp">Tap a guard to see how much length it leaves. Show your barber the number and get the cut you pictured.</p>
+  <div class="gsel" id="gsel">
+   <button type="button" data-i="0" aria-pressed="false">#0.5</button><button type="button" data-i="1" aria-pressed="false">#1</button><button type="button" data-i="2" aria-pressed="true">#2</button><button type="button" data-i="3" aria-pressed="false">#3</button><button type="button" data-i="4" aria-pressed="false">#4</button>
+  </div>
+ </div>
+ <div class="gvis" aria-live="polite">
+  <div class="bars" aria-hidden="true"><span style="height:12%"></span><span style="height:25%"></span><span style="height:50%"></span><span style="height:75%"></span><span style="height:100%"></span></div>
+  <div class="glab" aria-hidden="true"><span>#0.5</span><span>#1</span><span>#2</span><span>#3</span><span>#4</span></div>
+  <p class="gout" id="gout">#2 · 6mm<small>A short, even cut. Popular on the sides with more length on top.</small></p>
+ </div>
+</div></section>
+
+<section class="s" id="book"><div class="wrap split">
+ <div class="side">
+  <p class="kick">Book a chair</p>
+  <h2>Rather not wait at all?</h2>
+  <p>Pick a cut and a time that suits. You'll get a message to confirm it.</p>
+  <a class="tel" href="#book">07700 900123</a>
+ </div>
+ <form id="f" novalidate>
+  <label>Your name<input name="n" autocomplete="name" required></label>
+  <label>Phone<input name="p" type="tel" autocomplete="tel" required></label>
+  <label>Cut<select name="c"><option>Skin fade</option><option>Scissor cut</option><option>Beard trim &amp; line-up</option><option>Kids' cut</option></select></label>
+  <label>Barber<select name="b"><option>Whoever's free first</option><option>Sam</option><option>Jay</option><option>Kel</option></select></label>
+  <label>When<select name="w"><option>Today</option><option>Tomorrow</option><option>This week</option></select></label>
+  <button class="btn btn-red" type="submit">Request my chair</button>
+  <p class="sent" id="sent" hidden>Thanks. On the live site this books you straight in.</p>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>Your Name Barbers · Staffordshire · 07700 900123</span><span class="concept">Concept design by NEMORA · nemora.uk</span></div></footer>
+<div class="bar"><a class="btn btn-line" href="#board">Check the wait</a><a class="btn btn-red" href="#book">Book</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var states=[[['FREE NOW','0 MIN',1],['IN THE CHAIR','15 MIN',0],['IN THE CHAIR','30 MIN',0]],[['IN THE CHAIR','10 MIN',0],['FREE NOW','0 MIN',1],['ON A FADE','25 MIN',0]],[['ON A BEARD','5 MIN',0],['IN THE CHAIR','20 MIN',0],['FREE NOW','0 MIN',1]]];
+ var rows=document.querySelectorAll('.row');
+ function set(el,txt){var n=+el.dataset.len,t=(txt+' '.repeat(n)).slice(0,n);
+  if(!el.children.length){for(var i=0;i<n;i++){var c=document.createElement('span');c.className='cell';el.appendChild(c);}}
+  for(var j=0;j<n;j++){var c=el.children[j],ch=t[j]===' '?' ':t[j];if(c.textContent!==ch){c.textContent=ch;if(!reduce){c.classList.remove('flip');void c.offsetWidth;c.style.animationDelay=(j*22)+'ms';c.classList.add('flip');}}}
+  el.setAttribute('aria-label',txt);}
+ var k=0;function tick(){var s=states[k%states.length];rows.forEach(function(r,i){set(r.querySelector('.stat'),s[i][0]);set(r.querySelector('.wait'),s[i][1]);r.classList.toggle('free',!!s[i][2]);r.querySelector('.act').textContent=s[i][2]?'Walk in':'Book';});k++;}
+ tick();if(!reduce)setInterval(tick,4000);
+ var G=[['#0.5 · 1.5mm','Barely there. Close to the skin without a bare blade.'],['#1 · 3mm','Very short. The usual starting point for the bottom of a fade.'],['#2 · 6mm','A short, even cut. Popular on the sides with more length on top.'],['#3 · 9mm','Short but soft. Covers the scalp and keeps some texture.'],['#4 · 12mm','The longest standard guard. A tidy short cut all over.']];
+ var bars=document.querySelectorAll('.bars span'),out=document.getElementById('gout');
+ function g(i){bars.forEach(function(b,j){b.classList.toggle('on',j===i)});out.innerHTML=G[i][0]+'<small>'+G[i][1]+'</small>';}
+ document.getElementById('gsel').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});g(+b.dataset.i);});
+ g(2);
+ var f=document.getElementById('f');f.addEventListener('submit',function(e){e.preventDefault();if(!f.reportValidity())return;document.getElementById('sent').hidden=false;});
+ var els=document.querySelectorAll('.reveal');
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+ var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.1});
+ els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

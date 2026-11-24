@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name Grooming | Dog grooming in Staffordshire (concept)</title>
+<meta name="description" content="A concept website for a dog groomer by NEMORA: pick your dog's size and coat to see the right groom.">
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:"Fredoka";src:url(fonts/fredoka-600.woff) format("woff");font-weight:600;font-display:swap}
+@font-face{font-family:"Atkinson";src:url(fonts/atkinson-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Atkinson";src:url(fonts/atkinson-700.woff) format("woff");font-weight:700;font-display:swap}
+:root{--mint:#d8f0e6;--mint-d:#2f7a62;--peach:#ffd9c7;--peach-d:#c2552c;--lilac:#e6dcf6;--cream:#fffaf4;--ink:#2a2433;--muted:#625a6e;--line:rgba(42,36,51,.12);--ease:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:400 17px/1.6 "Atkinson",system-ui,sans-serif;color:var(--ink);background:var(--cream);overflow-x:clip}
+h1,h2,h3{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;line-height:1.05}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:1rem;transition:transform 140ms var(--ease),background-color 160ms}
+.btn:active{transform:scale(.97)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-line{border-color:var(--ink);background:transparent}
+:focus-visible{outline:3px solid var(--peach-d);outline-offset:3px}
+.head .wrap{display:flex;justify-content:space-between;align-items:center;height:78px}
+.logo{font-family:"Fredoka",sans-serif;font-size:1.4rem;text-decoration:none}
+.logo i{font-style:normal;display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--peach-d);margin-left:4px}
+.head-r{display:flex;gap:14px;align-items:center}
+.head-r .tel{font-weight:700;text-decoration:none}
+.hero{padding:40px 0 72px}
+.hero h1{font-size:clamp(2.7rem,6.6vw,5.6rem);max-width:14ch}
+.hero h1 span{background:var(--peach);border-radius:16px;padding:0 .14em}
+.hero .sub{max-width:44ch;margin-top:16px;color:var(--muted);font-size:1.1rem}
+/* the picker */
+.picker{margin-top:40px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,5fr);background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden}
+.opts{padding:28px;background:var(--lilac);display:grid;gap:22px;align-content:start}
+.opts h2{font-size:1.5rem}
+.grp p{font-weight:700;margin-bottom:8px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:700 15px/1 "Atkinson",sans-serif;padding:12px 16px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;transition:background-color 160ms,color 160ms,transform 140ms var(--ease)}
+.seg button:active{transform:scale(.96)}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+.stage{background:var(--mint);display:grid;place-items:end center;padding:24px 16px 0;min-height:340px;position:relative}
+.stage svg{width:100%;max-width:340px;height:auto;transform-origin:50% 100%;transition:transform 420ms var(--ease)}
+.stage .floor{position:absolute;left:0;right:0;bottom:0;height:28px;background:#bfe6d6}
+.res{padding:28px;display:grid;gap:14px;align-content:start}
+.res .name{font-family:"Fredoka",sans-serif;font-size:2rem;line-height:1.1}
+.res .time{display:inline-block;background:var(--peach);padding:6px 12px;border-radius:999px;font-weight:700}
+.res ul{list-style:none;padding:0;display:grid;gap:6px}
+.res li::before{content:"✓";color:var(--mint-d);font-weight:700;margin-right:8px}
+.res small{color:var(--muted)}
+section.s{padding:96px 0}
+h2.big{font-size:clamp(2rem,4.4vw,3.2rem);max-width:16ch}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:44px}
+.card{border-radius:24px;padding:30px}
+.card:nth-child(1){background:var(--peach)}.card:nth-child(2){background:var(--mint)}.card:nth-child(3){background:var(--lilac)}
+.card h3{font-size:1.5rem}
+.card p{margin-top:8px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:16px}
+label{font-weight:700;display:grid;gap:6px;font-size:.95rem}
+input,select{font:inherit;padding:13px 14px;border:1px solid rgba(42,36,51,.25);border-radius:12px;width:100%;background:var(--cream)}
+.sent{background:var(--mint);padding:14px;border-radius:12px;font-weight:700}
+.side p{color:var(--muted);margin-top:14px}
+.side .tel{font-family:"Fredoka",sans-serif;font-size:2rem;text-decoration:none;display:inline-block;margin-top:16px}
+footer{padding:40px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.concept{font-weight:700;color:var(--ink)}
+.bar{display:none}
+.reveal{transition:opacity 520ms var(--ease),transform 520ms var(--ease)}
+.js .reveal:not(.in){opacity:0;transform:translateY(12px)}
+@media (prefers-reduced-motion:reduce){.js .reveal:not(.in){transform:none}.stage svg,.btn,.seg button{transition:none}}
+@media (max-width:900px){
+ .picker{grid-template-columns:minmax(0,1fr)}
+ .stage{min-height:260px}
+ .cards,.split{grid-template-columns:minmax(0,1fr)}
+ .head-r .tel{display:none}
+ section.s{padding:72px 0}
+ .bar{display:flex;gap:10px;position:fixed;z-index:9;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,250,244,.96);border-top:1px solid var(--line)}
+ .bar .btn{flex:1}
+}
+@media (max-width:560px){.head-r .btn{display:none}.logo{font-size:1.2rem}}
+</style>
+</head>
+<body>
+<header class="head"><div class="wrap">
+ <a class="logo" href="#">Your Name Grooming<i></i></a>
+ <div class="head-r"><a class="tel" href="#book">07700 900123</a><a class="btn btn-ink" href="#book">Book a groom</a></div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <h1>Pick your pup. We'll do the <span>rest</span>.</h1>
+ <p class="sub">Calm, one-dog-at-a-time grooming in Staffordshire. Tap your dog's size and coat to see the groom that suits them.</p>
+
+ <div class="picker" id="picker">
+  <div class="opts">
+   <h2>Your dog</h2>
+   <div class="grp"><p id="l-size">Size</p><div class="seg" role="group" aria-labelledby="l-size" data-k="size">
+    <button type="button" data-v="s" aria-pressed="false">Small</button><button type="button" data-v="m" aria-pressed="true">Medium</button><button type="button" data-v="l" aria-pressed="false">Large</button></div></div>
+   <div class="grp"><p id="l-coat">Coat</p><div class="seg" role="group" aria-labelledby="l-coat" data-k="coat">
+    <button type="button" data-v="short" aria-pressed="false">Short</button><button type="button" data-v="curly" aria-pressed="true">Curly</button><button type="button" data-v="long" aria-pressed="false">Long or double</button></div></div>
+  </div>
+  <div class="stage" aria-hidden="true">
+   <div class="floor"></div>
+   <svg id="dog" viewBox="0 0 320 240">
+    <defs>
+     <pattern id="curl" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#f3e1c8"/><circle cx="9" cy="9" r="6" fill="none" stroke="#e2c9a6" stroke-width="3"/></pattern>
+     <pattern id="fluff" width="14" height="20" patternUnits="userSpaceOnUse"><rect width="14" height="20" fill="#d9a56d"/><path d="M2 2 q5 8 0 16 M9 0 q5 10 0 20" stroke="#c78f57" stroke-width="2.4" fill="none"/></pattern>
+    </defs>
+    <g id="body" fill="#e7b47f">
+     <ellipse cx="160" cy="140" rx="92" ry="52"/>
+     <rect x="88" y="150" width="26" height="74" rx="12"/><rect x="128" y="160" width="24" height="64" rx="12"/><rect x="176" y="160" width="24" height="64" rx="12"/><rect x="210" y="150" width="26" height="74" rx="12"/>
+     <path d="M246 120 q40 -30 46 -70 q4 -14 -8 -10 q-18 30 -48 54z"/>
+     <circle cx="92" cy="92" r="46"/>
+     <ellipse cx="56" cy="112" rx="26" ry="20"/>
+    </g>
+    <path id="ear" d="M110 58 q34 6 26 64 q-26 -8 -26 -64z" fill="#c98f55"/>
+    <circle cx="80" cy="84" r="6" fill="#2a2433"/><circle cx="36" cy="106" r="9" fill="#2a2433"/>
+    <path d="M44 124 q12 8 24 0" stroke="#2a2433" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <rect x="96" y="128" width="40" height="10" rx="5" fill="#c2552c"/>
+   </svg>
+  </div>
+  <div class="res" aria-live="polite">
+   <span class="name" id="r-name">Full groom &amp; clip</span>
+   <span class="time" id="r-time">About 2½ hours</span>
+   <ul id="r-list"></ul>
+   <small>Times are a guide. Every dog is different, and we never rush a nervous one.</small>
+   <a class="btn btn-ink" href="#book">Book this groom</a>
+  </div>
+ </div>
+</div></section>
+
+<section class="s"><div class="wrap">
+ <h2 class="big reveal">A groom they'll actually enjoy.</h2>
+ <div class="cards">
+  <div class="card reveal"><h3>One dog at a time</h3><p>No cages full of barking. Your dog has the room, and us, to themselves.</p></div>
+  <div class="card reveal"><h3>Nervous? We go slow</h3><p>Breaks when they need them and a gentle approach, so the next visit is easier.</p></div>
+  <div class="card reveal"><h3>Puppy first visits</h3><p>A short, happy intro to the table, the dryer and the brush before their first full groom.</p></div>
+ </div>
+</div></section>
+
+<section class="s" id="book" style="background:var(--mint)"><div class="wrap split">
+ <div class="side">
+  <h2 class="big">Book a groom.</h2>
+  <p>Tell us about your dog and when suits you. We'll message you back to confirm a time.</p>
+  <a class="tel" href="#book">07700 900123</a>
+ </div>
+ <form id="f" novalidate>
+  <label>Your name<input name="n" autocomplete="name" required></label>
+  <label>Phone<input name="p" type="tel" autocomplete="tel" required></label>
+  <label>Dog's name<input name="d"></label>
+  <label>Breed<input name="b" placeholder="e.g. Cockapoo"></label>
+  <label>Which groom?<select name="g" id="g"><option>Bath &amp; tidy</option><option selected>Full groom &amp; clip</option><option>De-shed &amp; groom</option><option>Puppy first visit</option><option>Not sure</option></select></label>
+  <button class="btn btn-ink" type="submit">Request a booking</button>
+  <p class="sent" id="sent" hidden>Thanks. On the live site this goes straight to your phone.</p>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>Your Name Grooming · Staffordshire · 07700 900123</span><span class="concept">Concept design by NEMORA · nemora.uk</span></div></footer>
+<div class="bar"><a class="btn btn-line" href="#book">Call</a><a class="btn btn-ink" href="#book">Book a groom</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var st={size:'m',coat:'curly'};
+ var G={short:{n:'Bath & tidy',g:'Bath & tidy',t:{s:'About 1 hour',m:'About 1½ hours',l:'About 2 hours'},i:['Warm bath and blow-dry','Nails clipped','Ears cleaned','A brush-out and a tidy-up']},
+  curly:{n:'Full groom & clip',g:'Full groom & clip',t:{s:'About 2 hours',m:'About 2½ hours',l:'About 3 hours'},i:['Bath and fluff-dry','Clipped to the style you choose','Face, feet and hygiene trim','Nails and ears done']},
+  long:{n:'De-shed & groom',g:'De-shed & groom',t:{s:'About 1½ hours',m:'About 2½ hours',l:'About 3 hours'},i:['Bath and de-shedding treatment','High-velocity blow-out','Feet and trousers tidied','Nails and ears done']}};
+ var scale={s:.66,m:.84,l:1},fill={short:'#e7b47f',curly:'url(#curl)',long:'url(#fluff)'},ear={short:'#c98f55',curly:'#e2c9a6',long:'#b97a42'};
+ var dog=document.getElementById('dog'),body=document.getElementById('body'),earEl=document.getElementById('ear'),sel=document.getElementById('g');
+ function draw(){var g=G[st.coat];document.getElementById('r-name').textContent=g.n;document.getElementById('r-time').textContent=g.t[st.size];
+  document.getElementById('r-list').innerHTML=g.i.map(function(x){return '<li>'+x+'</li>'}).join('');
+  dog.style.transform='scale('+scale[st.size]+')';body.setAttribute('fill',fill[st.coat]);earEl.setAttribute('fill',ear[st.coat]);
+  for(var k=0;k<sel.options.length;k++)if(sel.options[k].text===g.g)sel.selectedIndex=k;}
+ document.querySelectorAll('.seg').forEach(function(grp){grp.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+  grp.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});st[grp.dataset.k]=b.dataset.v;draw();});});
+ draw();
+ var f=document.getElementById('f');f.addEventListener('submit',function(e){e.preventDefault();if(!f.reportValidity())return;document.getElementById('sent').hidden=false;});
+ var els=document.querySelectorAll('.reveal');
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+ var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.1});
+ els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

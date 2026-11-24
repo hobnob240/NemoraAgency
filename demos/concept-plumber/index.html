@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name Plumbing &amp; Heating | Plumber in Staffordshire (concept)</title>
+<meta name="description" content="A concept website for a plumber by NEMORA: tap what your boiler or pipes are doing and see how urgent it is.">
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:"Zilla Slab";src:url(fonts/zilla-700.woff) format("woff");font-weight:700;font-display:swap}
+@font-face{font-family:"Public Sans";src:url(fonts/publicsans-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Public Sans";src:url(fonts/publicsans-700.woff) format("woff");font-weight:700;font-display:swap}
+:root{--enamel:#f7f6f2;--white:#fff;--ink:#14202b;--muted:#566370;--copper:#b8652d;--copper-l:#e0955c;--copper-d:#8a4519;--water:#1f6f9f;--ok:#2f8a4f;--warn:#d99412;--bad:#c33a2c;--line:rgba(20,32,43,.12);--ease:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:400 17px/1.6 "Public Sans",system-ui,sans-serif;color:var(--ink);background:var(--enamel);overflow-x:clip}
+h1,h2,h3{font-family:"Zilla Slab",Georgia,serif;font-weight:700;line-height:1.02}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:8px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:1rem;transition:transform 140ms var(--ease),background-color 160ms}
+.btn:active{transform:scale(.97)}
+.btn-copper{background:var(--copper);color:#fff}
+.btn-copper:hover{background:var(--copper-d)}
+.btn-line{border-color:var(--ink);background:transparent}
+:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+.head{background:var(--ink);color:#fff}
+.head .wrap{display:flex;justify-content:space-between;align-items:center;height:74px}
+.logo{font-family:"Zilla Slab",serif;font-size:1.4rem;text-decoration:none}
+.logo span{color:var(--copper-l)}
+.head-r{display:flex;gap:14px;align-items:center}
+.head-r .tel{font-weight:700;text-decoration:none}
+.pipe{height:14px;background:linear-gradient(180deg,var(--copper-l),var(--copper) 45%,var(--copper-d));position:relative}
+.pipe::before,.pipe::after{content:"";position:absolute;top:-4px;width:22px;height:22px;border-radius:3px;background:linear-gradient(180deg,#d7d2c6,#a39d90)}
+.pipe::before{left:18%}.pipe::after{right:22%}
+.hero{padding:64px 0 40px;text-align:left}
+.hero h1{font-size:clamp(2.8rem,7vw,6rem);max-width:13ch}
+.hero p.sub{max-width:46ch;margin-top:16px;color:var(--muted);font-size:1.1rem}
+/* diagnostic panel */
+.panel{margin-top:40px;background:var(--white);border:1px solid var(--line);border-radius:22px;padding:32px;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:32px;align-items:center}
+.gauge{max-width:420px;width:100%;margin:0 auto}
+.gauge svg{width:100%;height:auto;display:block}
+#needle{transform-origin:200px 200px;transition:transform 700ms cubic-bezier(.34,1.4,.5,1)}
+.symptoms p{font-weight:700;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:700 15px/1.2 "Public Sans",sans-serif;padding:12px 14px;border-radius:8px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;text-align:left;transition:background-color 160ms,color 160ms,transform 140ms var(--ease)}
+.chips button:active{transform:scale(.97)}
+.chips button[aria-pressed=true]{background:var(--ink);color:#fff}
+.verdict{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center}
+.badge{font:700 14px/1 "Public Sans",sans-serif;color:#fff;padding:10px 14px;border-radius:999px;white-space:nowrap}
+.v h3{font-size:1.6rem}
+.v p{color:var(--muted);margin-top:4px}
+.v .em{color:var(--bad);font-weight:700}
+section.s{padding:96px 0}
+h2{font-size:clamp(2rem,4.6vw,3.4rem);max-width:16ch}
+.lead{color:var(--muted);max-width:50ch;margin-top:14px}
+.jobs{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.jobs div{background:var(--white);padding:28px}
+.jobs h3{font-size:1.4rem}
+.jobs p{color:var(--muted);margin-top:6px}
+.jobs i{display:block;width:34px;height:8px;border-radius:4px;background:var(--copper);margin-bottom:14px}
+.dark{background:var(--ink);color:#fff}
+.dark .lead{color:#b9c3cc}
+.promise{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.promise div{border-left:4px solid var(--copper);padding-left:18px}
+.promise h3{font-size:1.4rem}
+.promise p{color:#b9c3cc;margin-top:4px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+form{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px;display:grid;gap:16px}
+label{font-weight:700;display:grid;gap:6px;font-size:.95rem}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid rgba(20,32,43,.25);border-radius:8px;width:100%;background:var(--enamel)}
+.sent{background:#e6f2ea;padding:14px;border-radius:8px;font-weight:700}
+.side p{color:var(--muted);margin-top:14px}
+.side .tel{font-family:"Zilla Slab",serif;font-size:2.4rem;text-decoration:none;display:inline-block;margin-top:16px}
+footer{padding:40px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.concept{font-weight:700;color:var(--ink)}
+.bar{display:none}
+.reveal{transition:opacity 520ms var(--ease),transform 520ms var(--ease)}
+.js .reveal:not(.in){opacity:0;transform:translateY(12px)}
+@media (prefers-reduced-motion:reduce){.js .reveal:not(.in){transform:none}#needle{transition:none}.btn,.chips button{transition:none}}
+@media (max-width:860px){
+ .head-r .tel{display:none}
+ .panel{grid-template-columns:minmax(0,1fr);padding:22px}
+ .verdict{grid-template-columns:minmax(0,1fr)}
+ .jobs,.promise,.split{grid-template-columns:minmax(0,1fr)}
+ section.s{padding:72px 0}
+ .bar{display:flex;gap:10px;position:fixed;z-index:9;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(247,246,242,.96);border-top:1px solid var(--line)}
+ .bar .btn{flex:1}
+}
+@media (max-width:560px){.head-r .btn{display:none}.logo{font-size:1.2rem}}
+</style>
+</head>
+<body>
+<header class="head"><div class="wrap">
+ <a class="logo" href="#">Your Name <span>Plumbing &amp; Heating</span></a>
+ <div class="head-r"><a class="tel" href="#book">07700 900123</a><a class="btn btn-copper" href="#book">Book a visit</a></div>
+</div></header>
+<div class="pipe" aria-hidden="true"></div>
+
+<section class="hero"><div class="wrap">
+ <h1>What's your boiler telling you?</h1>
+ <p class="sub">Plumbing and heating across Staffordshire. Tap what's happening and see straight away whether it can wait.</p>
+
+ <div class="panel" id="panel">
+  <div class="gauge" aria-hidden="true">
+   <svg viewBox="0 0 400 250">
+    <path d="M40 200 A160 160 0 0 1 120 61.4" fill="none" stroke="#2f8a4f" stroke-width="26"/>
+    <path d="M120 61.4 A160 160 0 0 1 280 61.4" fill="none" stroke="#d99412" stroke-width="26"/>
+    <path d="M280 61.4 A160 160 0 0 1 360 200" fill="none" stroke="#c33a2c" stroke-width="26"/>
+    <g font-family="Public Sans,sans-serif" font-weight="700" font-size="13" fill="#14202b" text-anchor="middle">
+     <text x="78" y="96" transform="rotate(-48 78 96)">TRY THIS FIRST</text>
+     <text x="200" y="74">BOOK SOON</text>
+     <text x="322" y="96" transform="rotate(48 322 96)">CALL NOW</text>
+    </g>
+    <g id="needle"><path d="M196 200 L200 64 L204 200Z" fill="#14202b"/></g>
+    <circle cx="200" cy="200" r="18" fill="#b8652d"/><circle cx="200" cy="200" r="7" fill="#f7f6f2"/>
+    <rect x="150" y="226" width="100" height="22" rx="4" fill="#14202b"/>
+    <text x="200" y="242" text-anchor="middle" font-family="Public Sans,sans-serif" font-weight="700" font-size="12" fill="#e0955c">HOW URGENT?</text>
+   </svg>
+  </div>
+  <div class="symptoms">
+   <p id="sl">What's it doing?</p>
+   <div class="chips" role="group" aria-labelledby="sl" id="chips">
+    <button type="button" data-k="cold" aria-pressed="false">Radiators cold at the top</button>
+    <button type="button" data-k="pressure" aria-pressed="false">Pressure keeps dropping</button>
+    <button type="button" data-k="bang" aria-pressed="true">Banging or kettling</button>
+    <button type="button" data-k="nohot" aria-pressed="false">No hot water</button>
+    <button type="button" data-k="leak" aria-pressed="false">Water leaking</button>
+    <button type="button" data-k="gas" aria-pressed="false">I can smell gas</button>
+   </div>
+  </div>
+  <div class="verdict" aria-live="polite">
+   <span class="badge" id="vb">Book soon</span>
+   <div class="v"><h3 id="vt">Usually limescale or sludge</h3><p id="vp">Build-up in the boiler makes water boil in pockets. It won't fix itself and makes the boiler work harder, so get it booked in.</p></div>
+   <a class="btn btn-copper" href="#book" id="vc">Book a visit</a>
+  </div>
+ </div>
+</div></section>
+
+<section class="s"><div class="wrap">
+ <h2 class="reveal">The jobs we're called out for most.</h2>
+ <div class="jobs">
+  <div class="reveal"><i></i><h3>Boiler repairs</h3><p>Faults found and fixed, with the cause explained in plain English.</p></div>
+  <div class="reveal"><i></i><h3>Boiler servicing</h3><p>A yearly check to keep it safe, efficient and running through winter.</p></div>
+  <div class="reveal"><i></i><h3>Leaks &amp; bursts</h3><p>Traced, stopped and repaired, with the water back on as fast as possible.</p></div>
+  <div class="reveal"><i></i><h3>Radiators</h3><p>New radiators, valves, balancing and power flushing.</p></div>
+  <div class="reveal"><i></i><h3>Bathrooms</h3><p>Taps, toilets, showers and full bathroom plumbing.</p></div>
+  <div class="reveal"><i></i><h3>Blockages</h3><p>Sinks, toilets and drains cleared and left running freely.</p></div>
+ </div>
+</div></section>
+
+<section class="s dark"><div class="wrap">
+ <h2 class="reveal">No mystery, no mess.</h2>
+ <p class="lead reveal">What you can expect from every visit.</p>
+ <div class="promise">
+  <div class="reveal"><h3>A price before we start</h3><p>You'll know the cost before any work begins.</p></div>
+  <div class="reveal"><h3>Told what we found</h3><p>What was wrong and what we did, without the jargon.</p></div>
+  <div class="reveal"><h3>Left how we found it</h3><p>Dust sheets down, and everything cleaned up after.</p></div>
+ </div>
+</div></section>
+
+<section class="s" id="book"><div class="wrap split">
+ <div class="side">
+  <h2>Book a visit.</h2>
+  <p>Tell us what's happening. We'll come back to you to arrange a time. If you smell gas, leave the house and call the National Gas Emergency line on 0800 111 999 first.</p>
+  <a class="tel" href="#book">07700 900123</a>
+ </div>
+ <form id="f" novalidate>
+  <label>Your name<input name="n" autocomplete="name" required></label>
+  <label>Phone<input name="p" type="tel" autocomplete="tel" required></label>
+  <label>Postcode<input name="pc" autocomplete="postal-code"></label>
+  <label>What's the problem?<select name="k" id="k"><option>Radiators cold at the top</option><option>Pressure keeps dropping</option><option selected>Banging or kettling</option><option>No hot water</option><option>Water leaking</option><option>Boiler service</option><option>Something else</option></select></label>
+  <button class="btn btn-copper" type="submit">Send</button>
+  <p class="sent" id="sent" hidden>Thanks. On the live site this goes straight to your phone.</p>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>Your Name Plumbing &amp; Heating · Staffordshire · 07700 900123</span><span class="concept">Concept design by NEMORA · nemora.uk</span></div></footer>
+<div class="bar"><a class="btn btn-line" href="#book">Call</a><a class="btn btn-copper" href="#book">Book a visit</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var Z={ok:[-58,'Try this first','var(--ok)'],warn:[0,'Book soon','var(--warn)'],bad:[58,'Call now','var(--bad)']};
+ var S={cold:['ok','Air trapped in the radiator','Bleed it with a radiator key until water comes out, then check the boiler pressure. If they go cold again quickly, book a visit.','Book a visit','Radiators cold at the top'],
+  pressure:['ok','Top it up, then watch it','Repressurise using the filling loop as your boiler manual shows. If it keeps dropping, there may be a leak, so book a visit.','Book a visit','Pressure keeps dropping'],
+  bang:['warn','Usually limescale or sludge','Build-up in the boiler makes water boil in pockets. It won’t fix itself and makes the boiler work harder, so get it booked in.','Book a visit','Banging or kettling'],
+  nohot:['warn','Check the simple things first','Look at the pressure, the timer and the thermostat, and try a reset. Still nothing? Book a visit and we’ll find the fault.','Book a visit','No hot water'],
+  leak:['bad','Turn off the water at the stopcock','Then call us straight away. Catching a leak early saves ceilings, floors and a lot of money.','Call now','Water leaking'],
+  gas:['bad','Leave the house and call 0800 111 999','That’s the National Gas Emergency line, free and open 24 hours. Don’t use switches or flames. Once it’s safe, we can help with the repair.','Call 0800 111 999','Something else']};
+ var needle=document.getElementById('needle'),vb=document.getElementById('vb'),vt=document.getElementById('vt'),vp=document.getElementById('vp'),vc=document.getElementById('vc'),k=document.getElementById('k');
+ function show(key){var s=S[key],z=Z[s[0]];needle.style.transform='rotate('+z[0]+'deg)';vb.textContent=z[1];vb.style.background=z[2];vt.textContent=s[1];vp.textContent=s[2];vc.textContent=s[3];
+  for(var i=0;i<k.options.length;i++)if(k.options[i].text===s[4])k.selectedIndex=i;}
+ document.getElementById('chips').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});show(b.dataset.k);});
+ needle.style.transform='rotate(-90deg)';requestAnimationFrame(function(){requestAnimationFrame(function(){show('bang')})});
+ var f=document.getElementById('f');f.addEventListener('submit',function(e){e.preventDefault();if(!f.reportValidity())return;document.getElementById('sent').hidden=false;});
+ var els=document.querySelectorAll('.reveal');
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+ var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.1});
+ els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
