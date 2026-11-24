@@ -538,3 +538,27 @@ em.g, .g { font-style: normal; color: inherit; }
 }
 .hero-note a.tel { white-space: nowrap; color: var(--gold-2); }
 .hero2 .hero-note { display: block; line-height: 1.6; }
+
+/* ===================================================================
+   Interaction polish (24 Nov 2026): CSS-first, no libraries.
+   Everything below is motion-only and switches off for reduced motion.
+   =================================================================== */
+html { scroll-padding-top: 88px; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+
+  /* sections ease in once as they reach the screen (content is visible without JS) */
+  .js .reveal { opacity: 0; transform: translateY(12px); transition: opacity 520ms var(--ease-out), transform 520ms var(--ease-out); transition-delay: calc(var(--i, 0) * 50ms); }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  /* screenshots fade in when loaded instead of popping in */
+  .work-media img, .frame img { transition: opacity 420ms ease, transform 500ms var(--ease-out); }
+  .js img.img-wait { opacity: 0; }
+
+  /* link arrows nudge forward on hover */
+  @media (hover: hover) and (pointer: fine) {
+    .link-arrow:hover svg { transform: translateX(3px); }
+    .nav a:not(.btn) { background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-position: 14px calc(100% - 8px); background-repeat: no-repeat; transition: color 160ms ease, background-size 220ms var(--ease-out); }
+    .nav a:not(.btn):hover { background-size: calc(100% - 28px) 1px; }
+  }
+}

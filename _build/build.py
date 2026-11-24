@@ -7,7 +7,7 @@ SITE = 'https://nemora.uk'
 EMAIL = 'daniel@nemora.uk'
 PHONE = '07707 986154'
 TEL = '+447707986154'
-V = '8'
+V = '9'
 # Microsoft Clarity project ID. Leave empty to keep it switched off; when set, visitors get a consent banner first (UK GDPR / PECR).
 CLARITY_ID = ''
 # The NEMORA inbox service (Cloudflare Worker). The contact form sends messages here; if it can't be reached the form falls back to email.

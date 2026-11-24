@@ -35,6 +35,15 @@ window.NEMORA = 1;
     items.forEach(function (el) { io.observe(el); });
   }
 
+  // screenshots: fade in once loaded (only images not loaded yet; errors still show)
+  document.querySelectorAll('.work-media img, .frame img').forEach(function (img) {
+    if (img.complete) return;
+    img.classList.add('img-wait');
+    var done = function () { img.classList.remove('img-wait'); };
+    img.addEventListener('load', done, { once: true });
+    img.addEventListener('error', done, { once: true });
+  });
+
   // contact form: sends straight to the NEMORA inbox. If the inbox can't be reached, it falls back to opening the email app.
   var form = document.getElementById('contact-form');
   if (form) {
