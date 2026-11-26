@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name Nails &amp; Lashes | Nail and lash studio (concept)</title>
+<meta name="description" content="A concept website for a nail and lash tech by NEMORA: build your set and watch the nails change before you book.">
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:"Bodoni";src:url(fonts/bodoni-500.woff) format("woff");font-weight:500;font-display:swap}
+@font-face{font-family:"Bodoni";src:url(fonts/bodoni-500i.woff) format("woff");font-weight:500;font-style:italic;font-display:swap}
+@font-face{font-family:"Urbanist";src:url(fonts/urbanist-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Urbanist";src:url(fonts/urbanist-700.woff) format("woff");font-weight:700;font-display:swap}
+:root{--milk:#f7ece8;--blush:#efd6cf;--rose:#b5675a;--rose-d:#8f4a3f;--esp:#2b1d19;--muted:#7a6660;--white:#fffaf8;--line:rgba(43,29,25,.12);--ease:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:400 17px/1.6 "Urbanist",system-ui,sans-serif;color:var(--esp);background:var(--milk);overflow-x:clip}
+h1,h2,h3{font-family:"Bodoni",Didot,serif;font-weight:500;line-height:1}
+em{font-style:italic}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-size:1rem;transition:transform 140ms var(--ease),background-color 160ms}
+.btn:active{transform:scale(.97)}
+.btn-esp{background:var(--esp);color:var(--white)}
+.btn-esp:hover{background:#45302a}
+.btn-line{border-color:var(--esp);background:transparent}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.head .wrap{display:flex;justify-content:space-between;align-items:center;height:80px}
+.logo{font-family:"Bodoni",serif;font-size:1.5rem;text-decoration:none}
+.logo em{color:var(--rose)}
+.head-r{display:flex;gap:14px;align-items:center}
+.head-r .tel{font-weight:700;text-decoration:none}
+.hero{padding:24px 0 56px}
+.hero .top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:32px;align-items:end}
+.hero h1{font-size:clamp(3.2rem,8vw,6.8rem);letter-spacing:-.02em}
+.hero h1 em{color:var(--rose)}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:34ch}
+.issue{font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:28px;display:flex;justify-content:space-between}
+/* studio */
+.studio{margin-top:36px;background:var(--white);border-radius:28px;border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);overflow:hidden}
+.preview{background:var(--blush);display:grid;place-items:end center;padding:24px 16px 0;min-height:420px}
+.preview svg{width:100%;max-width:380px;height:auto;display:block}
+.nail{transition:d 380ms var(--ease),fill 300ms}
+.controls{padding:28px;display:grid;gap:22px;align-content:start}
+.controls h2{font-size:2.2rem}
+.grp p{font-weight:700;margin-bottom:10px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:700 15px "Urbanist",sans-serif;padding:11px 16px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--esp);cursor:pointer;transition:background-color 160ms,color 160ms,border-color 160ms,transform 140ms var(--ease)}
+.seg button:active{transform:scale(.96)}
+.seg button[aria-pressed=true]{background:var(--esp);color:var(--white);border-color:var(--esp)}
+.bottles{display:flex;gap:12px;flex-wrap:wrap}
+.bottles button{width:46px;height:62px;border:0;background:none;padding:0;cursor:pointer;position:relative;transition:transform 140ms var(--ease)}
+.bottles button:active{transform:scale(.94)}
+.bottles button i{position:absolute;left:14px;top:0;width:18px;height:20px;border-radius:3px 3px 0 0;background:var(--esp)}
+.bottles button b{position:absolute;left:4px;right:4px;top:18px;bottom:0;border-radius:10px;background:var(--c);box-shadow:inset -6px 0 0 rgba(255,255,255,.18)}
+.bottles button[aria-pressed=true] b{outline:2.5px solid var(--esp);outline-offset:3px}
+.bottles span{position:absolute;left:-9999px}
+.summary{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.summary strong{font-family:"Bodoni",serif;font-size:1.6rem;font-weight:500;font-style:italic}
+.summary small{display:block;color:var(--muted);font-size:.95rem}
+section.s{padding:96px 0}
+h2.big{font-size:clamp(2.4rem,5.4vw,4.2rem);max-width:15ch}
+h2.big em{color:var(--rose)}
+.lash{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:center}
+.lash p.lead{color:var(--muted);margin-top:14px;max-width:40ch}
+.eye{background:var(--white);border-radius:28px;border:1px solid var(--line);padding:32px}
+.eye svg{width:100%;height:auto;display:block}
+.eye .seg{margin-top:20px;justify-content:center}
+.eye .note{text-align:center;color:var(--muted);margin-top:12px}
+.menu{margin-top:40px;border-top:1px solid var(--esp)}
+.menu div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.menu h3{font-size:1.8rem}
+.menu p{color:var(--muted);grid-column:1/-1;margin-top:-8px}
+.menu b{font-size:.95rem;letter-spacing:.08em;text-transform:uppercase}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+form{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:16px}
+label{font-weight:700;display:grid;gap:6px;font-size:.95rem}
+input,select{font:inherit;padding:13px 14px;border:1px solid rgba(43,29,25,.22);border-radius:12px;width:100%;background:var(--milk)}
+.sent{background:var(--blush);padding:14px;border-radius:12px;font-weight:700}
+.side p{color:var(--muted);margin-top:14px}
+.side .tel{font-family:"Bodoni",serif;font-size:2.2rem;text-decoration:none;display:inline-block;margin-top:16px}
+footer{padding:40px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.concept{font-weight:700;color:var(--esp)}
+.bar{display:none}
+.reveal{transition:opacity 520ms var(--ease),transform 520ms var(--ease)}
+.js .reveal:not(.in){opacity:0;transform:translateY(12px)}
+@media (prefers-reduced-motion:reduce){.js .reveal:not(.in){transform:none}.nail,.btn,.seg button{transition:none}}
+@media (max-width:860px){
+ .hero .top,.studio,.lash,.split{grid-template-columns:minmax(0,1fr)}
+ .preview{min-height:300px}
+ .head-r .tel{display:none}
+ section.s{padding:72px 0}
+ .bar{display:flex;gap:10px;position:fixed;z-index:9;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(247,236,232,.96);border-top:1px solid var(--line)}
+ .bar .btn{flex:1}
+}
+@media (max-width:560px){.head-r .btn{display:none}.logo{font-size:1.25rem}}
+</style>
+</head>
+<body>
+<header class="head"><div class="wrap">
+ <a class="logo" href="#">Your Name <em>Nails &amp; Lashes</em></a>
+ <div class="head-r"><a class="tel" href="#book">07700 900123</a><a class="btn btn-esp" href="#book">Book</a></div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <div class="issue"><span>The set edit</span><span>Nails · Lashes · Brows</span></div>
+ <div class="top">
+  <h1>Design your set <em>before</em> you sit down.</h1>
+  <p>Pick the shape, length and colour, watch your nails change, then book the exact set you want.</p>
+ </div>
+
+ <div class="studio">
+  <div class="preview" aria-hidden="true">
+   <svg viewBox="0 0 360 380">
+    <defs>
+     <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f4f6"/><stop offset=".45" stop-color="#b9bcc4"/><stop offset=".6" stop-color="#e9eaee"/><stop offset="1" stop-color="#8d919b"/></linearGradient>
+    </defs>
+    <g id="fingers" fill="#e7b89f"></g>
+    <path d="M40 380 C40 300 60 270 90 262 H290 C320 270 330 300 330 380Z" fill="#e7b89f"/>
+    <g id="nails"></g>
+   </svg>
+  </div>
+  <div class="controls">
+   <h2>Build your <em>set</em></h2>
+   <div class="grp"><p id="l-shape">Shape</p><div class="seg" role="group" aria-labelledby="l-shape" data-k="shape">
+    <button type="button" data-v="square" aria-pressed="false">Square</button><button type="button" data-v="almond" aria-pressed="true">Almond</button><button type="button" data-v="coffin" aria-pressed="false">Coffin</button><button type="button" data-v="stiletto" aria-pressed="false">Stiletto</button></div></div>
+   <div class="grp"><p id="l-len">Length</p><div class="seg" role="group" aria-labelledby="l-len" data-k="len">
+    <button type="button" data-v="short" aria-pressed="false">Short</button><button type="button" data-v="medium" aria-pressed="true">Medium</button><button type="button" data-v="long" aria-pressed="false">Long</button></div></div>
+   <div class="grp"><p id="l-col">Colour</p><div class="bottles" role="group" aria-labelledby="l-col" data-k="col">
+    <button type="button" data-v="nude" aria-pressed="true" style="--c:#e9c2b1"><i></i><b></b><span>Nude</span></button>
+    <button type="button" data-v="blush" aria-pressed="false" style="--c:#e79aa6"><i></i><b></b><span>Blush pink</span></button>
+    <button type="button" data-v="red" aria-pressed="false" style="--c:#a3182b"><i></i><b></b><span>Classic red</span></button>
+    <button type="button" data-v="black" aria-pressed="false" style="--c:#1d1716"><i></i><b></b><span>Black</span></button>
+    <button type="button" data-v="chrome" aria-pressed="false" style="--c:linear-gradient(135deg,#f4f4f6,#9fa3ad)"><i></i><b></b><span>Chrome</span></button>
+   </div></div>
+   <div class="summary" aria-live="polite">
+    <div><strong id="s-name">Medium almond, nude</strong><small id="s-time">About 1½ hours · gel extensions</small></div>
+    <a class="btn btn-esp" href="#book">Book this set</a>
+   </div>
+  </div>
+ </div>
+</div></section>
+
+<section class="s" style="background:var(--white)"><div class="wrap lash">
+ <div>
+  <h2 class="big reveal">Lashes, <em>your</em> way.</h2>
+  <p class="lead reveal">Not sure what classic, hybrid and volume actually mean? Tap each one and see the difference.</p>
+ </div>
+ <div class="eye reveal">
+  <svg viewBox="0 0 400 200" aria-hidden="true">
+   <path d="M30 130 Q200 20 370 130 Q200 190 30 130Z" fill="#fff" stroke="#2b1d19" stroke-width="3"/>
+   <circle cx="200" cy="125" r="40" fill="#6b4a3a"/><circle cx="200" cy="125" r="18" fill="#1d1412"/><circle cx="212" cy="112" r="7" fill="#fff"/>
+   <g id="lashes" stroke="#1d1412" stroke-linecap="round" fill="none"></g>
+  </svg>
+  <div class="seg" role="group" aria-label="Lash style" id="lashseg">
+   <button type="button" data-v="classic" aria-pressed="true">Classic</button><button type="button" data-v="hybrid" aria-pressed="false">Hybrid</button><button type="button" data-v="volume" aria-pressed="false">Volume</button>
+  </div>
+  <p class="note" id="lash-note">One extension on each natural lash. Soft and natural, like mascara.</p>
+ </div>
+</div></section>
+
+<section class="s"><div class="wrap">
+ <h2 class="big reveal">The <em>menu</em>.</h2>
+ <div class="menu">
+  <div class="reveal"><h3>Gel extensions</h3><b>~1½ hrs</b><p>Any shape and length, finished in gel colour or nail art.</p></div>
+  <div class="reveal"><h3>BIAB overlay</h3><b>~1 hr</b><p>Strength on your natural nails, for growing them out.</p></div>
+  <div class="reveal"><h3>Infills</h3><b>~1 hr</b><p>Keep your set fresh every 2 to 3 weeks.</p></div>
+  <div class="reveal"><h3>Lash extensions</h3><b>~2 hrs</b><p>Classic, hybrid or volume, matched to your eyes.</p></div>
+  <div class="reveal"><h3>Brows</h3><b>~30 mins</b><p>Shape, tint and lamination.</p></div>
+ </div>
+</div></section>
+
+<section class="s" id="book" style="background:var(--blush)"><div class="wrap split">
+ <div class="side">
+  <h2 class="big">Book your <em>set</em>.</h2>
+  <p>Tell us what you'd like and when suits you. We'll message you to confirm.</p>
+  <a class="tel" href="#book">07700 900123</a>
+ </div>
+ <form id="f" novalidate>
+  <label>Your name<input name="n" autocomplete="name" required></label>
+  <label>Phone<input name="p" type="tel" autocomplete="tel" required></label>
+  <label>Your set<input name="set" id="set" readonly></label>
+  <label>Treatment<select name="t"><option>Gel extensions</option><option>BIAB overlay</option><option>Infills</option><option>Lash extensions</option><option>Brows</option></select></label>
+  <label>When suits you?<select name="w"><option>Weekday daytime</option><option>Weekday evening</option><option>Saturday</option></select></label>
+  <button class="btn btn-esp" type="submit">Request my appointment</button>
+  <p class="sent" id="sent" hidden>Thanks. On the live site this goes straight to your phone.</p>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>Your Name Nails &amp; Lashes · 07700 900123</span><span class="concept">Concept design by NEMORA · nemora.uk</span></div></footer>
+<div class="bar"><a class="btn btn-line" href="#book">Call</a><a class="btn btn-esp" href="#book">Book</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var F=[[78,150,46],[138,122,48],[200,118,48],[262,140,44]]; // x centre, top y, width
+ var fg=document.getElementById('fingers'),ng=document.getElementById('nails');
+ F.forEach(function(f){var r=document.createElementNS('http://www.w3.org/2000/svg','rect');r.setAttribute('x',f[0]-f[2]/2);r.setAttribute('y',f[1]);r.setAttribute('width',f[2]);r.setAttribute('height',290-f[1]);r.setAttribute('rx',f[2]/2);fg.appendChild(r);
+  var p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('class','nail');ng.appendChild(p);
+  var h=document.createElementNS('http://www.w3.org/2000/svg','path');h.setAttribute('class','shine');h.setAttribute('stroke','rgba(255,255,255,.55)');h.setAttribute('stroke-width','4');h.setAttribute('stroke-linecap','round');h.setAttribute('fill','none');ng.appendChild(h);});
+ var st={shape:'almond',len:'medium',col:'nude'};
+ var LEN={short:14,medium:36,long:62},COL={nude:'#e9c2b1',blush:'#e79aa6',red:'#a3182b',black:'#1d1716',chrome:'url(#chrome)'};
+ var NAME={nude:'nude',blush:'blush pink',red:'classic red',black:'black',chrome:'chrome'};
+ function nail(cx,top,w,shape,ext){var hw=w/2-5,b=top+44,t=top-ext,l=cx-hw,r=cx+hw;
+  if(shape==='square')return 'M'+l+' '+b+' V'+(t+6)+' Q'+l+' '+t+' '+(l+6)+' '+t+' H'+(r-6)+' Q'+r+' '+t+' '+r+' '+(t+6)+' V'+b+' Z';
+  if(shape==='coffin')return 'M'+l+' '+b+' V'+(t+ext*0.45+10)+' L'+(cx-hw*0.5)+' '+t+' H'+(cx+hw*0.5)+' L'+r+' '+(t+ext*0.45+10)+' V'+b+' Z';
+  if(shape==='stiletto')return 'M'+l+' '+b+' V'+(top+8)+' Q'+l+' '+(t+ext*0.4)+' '+cx+' '+(t-6)+' Q'+r+' '+(t+ext*0.4)+' '+r+' '+(top+8)+' V'+b+' Z';
+  return 'M'+l+' '+b+' V'+(top+6)+' Q'+l+' '+(t+4)+' '+cx+' '+(t-2)+' Q'+r+' '+(t+4)+' '+r+' '+(top+6)+' V'+b+' Z';}
+ function draw(){var ext=LEN[st.len],paths=ng.querySelectorAll('.nail'),sh=ng.querySelectorAll('.shine');
+  F.forEach(function(f,i){paths[i].setAttribute('d',nail(f[0],f[1],f[2],st.shape,ext));paths[i].setAttribute('fill',COL[st.col]);
+   sh[i].setAttribute('d','M'+(f[0]-f[2]/2+12)+' '+(f[1]+30)+' V'+(f[1]-ext*0.4+8));sh[i].style.opacity=st.col==='chrome'?'0':'1';});
+  var name=st.len.charAt(0).toUpperCase()+st.len.slice(1)+' '+st.shape+', '+NAME[st.col];
+  var t=st.len==='short'?'About 1 hour · gel on natural nails or short extensions':(st.len==='medium'?'About 1½ hours · gel extensions':'About 2 hours · gel extensions');
+  if(st.col==='chrome')t+=' · chrome finish';
+  document.getElementById('s-name').textContent=name;document.getElementById('s-time').textContent=t;document.getElementById('set').value=name;}
+ document.querySelectorAll('.controls [data-k]').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});st[g.dataset.k]=b.dataset.v;draw();})});
+ draw();
+ var LG=document.getElementById('lashes'),NOTE={classic:'One extension on each natural lash. Soft and natural, like mascara.',hybrid:'A mix of classic and fluffy fans. Fuller, with a bit of texture.',volume:'Light fans of several fine lashes on each natural lash. Full and dramatic.'};
+ function lashes(type){var n=type==='classic'?16:(type==='hybrid'?28:44),wdt=type==='volume'?1.6:2.4;LG.innerHTML='';LG.setAttribute('stroke-width',wdt);
+  for(var i=0;i<n;i++){var u=.08+.84*i/(n-1),x=30+340*u,y=130-220*u*(1-u),len=(type==='classic'?22:30)+Math.sin(u*Math.PI)*14,ang=(u-.5)*1.3-1.57;
+   var x2=x+Math.cos(ang)*len,y2=y+Math.sin(ang)*len,p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d','M'+x.toFixed(1)+' '+y.toFixed(1)+' Q'+(x+(x2-x)*0.3+4).toFixed(1)+' '+(y+(y2-y)*0.6).toFixed(1)+' '+x2.toFixed(1)+' '+y2.toFixed(1));LG.appendChild(p);}
+  document.getElementById('lash-note').textContent=NOTE[type];}
+ document.getElementById('lashseg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});lashes(b.dataset.v);});
+ lashes('classic');
+ var f=document.getElementById('f');f.addEventListener('submit',function(e){e.preventDefault();if(!f.reportValidity())return;document.getElementById('sent').hidden=false;});
+ var els=document.querySelectorAll('.reveal');
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+ var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.1});
+ els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

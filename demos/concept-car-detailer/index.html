@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name Detailing | Mobile car detailing (concept)</title>
+<meta name="description" content="A concept website for a car detailer by NEMORA: tap any part of the car to see what gets done, then build your package.">
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:"Barlow Condensed";src:url(fonts/barlowc-700.woff) format("woff");font-weight:700;font-display:swap}
+@font-face{font-family:"Jost";src:url(fonts/jost-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Jost";src:url(fonts/jost-600.woff) format("woff");font-weight:600;font-display:swap}
+:root{--black:#0d0f12;--graph:#1a1e24;--steel:#2a3039;--line:rgba(236,239,243,.14);--white:#eceff3;--muted:#9aa3ae;--wax:#f2c230;--wax-d:#c99b12;--ease:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:400 17px/1.6 "Jost",system-ui,sans-serif;color:var(--white);background:var(--black);overflow-x:clip}
+h1,h2,h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;line-height:.95;text-transform:uppercase;letter-spacing:.01em}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:1rem;transition:transform 140ms var(--ease),background-color 160ms}
+.btn:active{transform:scale(.97)}
+.btn-wax{background:var(--wax);color:var(--black)}
+.btn-wax:hover{background:#ffd34a}
+.btn-line{border-color:var(--white);background:transparent;color:var(--white)}
+:focus-visible{outline:3px solid var(--wax);outline-offset:3px}
+.head .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{font-family:"Barlow Condensed",sans-serif;font-size:1.6rem;text-decoration:none;text-transform:uppercase;letter-spacing:.04em}
+.logo span{color:var(--wax)}
+.head-r{display:flex;gap:14px;align-items:center}
+.head-r .tel{font-weight:600;text-decoration:none}
+.hero{padding:32px 0 64px}
+.hero h1{font-size:clamp(3rem,9vw,7.4rem);max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--wax)}
+.hero .sub{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-top:18px}
+.hero .sub p{color:var(--muted);max-width:44ch;font-size:1.08rem}
+/* spec sheet */
+.spec{margin-top:36px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px;align-items:stretch}
+.drawing{background:var(--graph);border:1px solid var(--line);border-radius:14px;padding:24px;position:relative;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px}
+.drawing svg{width:100%;height:auto;display:block}
+.zone{cursor:pointer;outline:none}
+.zone .hit{fill:transparent}
+.zone .shape{transition:fill 200ms,stroke 200ms}
+.zone:hover .shape,.zone:focus-visible .shape{stroke:var(--wax)}
+.zone[aria-pressed=true] .shape{fill:rgba(242,194,48,.28);stroke:var(--wax)}
+.callout{font:700 15px "Barlow Condensed",sans-serif;letter-spacing:.06em;fill:var(--muted);text-transform:uppercase;transition:fill 200ms}
+.zone[aria-pressed=true] .callout{fill:var(--wax)}
+.leader{stroke:var(--muted);stroke-dasharray:4 4;transition:stroke 200ms}
+.zone[aria-pressed=true] .leader{stroke:var(--wax)}
+.drawing small{position:absolute;right:24px;bottom:16px;color:var(--muted);font-size:.85rem}
+.info{background:var(--steel);border-radius:14px;padding:28px;display:grid;align-content:start;gap:14px}
+.info .tag{font:700 14px "Barlow Condensed",sans-serif;letter-spacing:.1em;color:var(--wax);text-transform:uppercase}
+.info h2{font-size:2.6rem}
+.info ul{list-style:none;padding:0;display:grid;gap:8px}
+.info li{padding-left:22px;position:relative}
+.info li::before{content:"";position:absolute;left:0;top:.65em;width:10px;height:2px;background:var(--wax)}
+.zbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.zbtns button{font:700 15px "Barlow Condensed",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:10px 14px;border-radius:6px;border:1px solid var(--line);background:transparent;color:var(--white);cursor:pointer;transition:background-color 160ms,color 160ms}
+.zbtns button[aria-pressed=true]{background:var(--wax);color:var(--black);border-color:var(--wax)}
+section.s{padding:96px 0}
+.kick{font:700 15px "Barlow Condensed",sans-serif;letter-spacing:.14em;color:var(--wax);margin-bottom:12px;text-transform:uppercase}
+h2.big{font-size:clamp(2.6rem,6vw,4.6rem);max-width:14ch}
+/* builder */
+.builder{margin-top:40px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px}
+.choose{display:grid;gap:24px;align-content:start}
+.choose p{font-weight:600;margin-bottom:10px}
+.opts{display:grid;gap:8px}
+.opts button{display:flex;justify-content:space-between;align-items:center;text-align:left;font:600 16px "Jost",sans-serif;padding:14px 16px;border-radius:8px;border:1px solid var(--line);background:var(--graph);color:var(--white);cursor:pointer;transition:border-color 160ms,background-color 160ms,transform 140ms var(--ease)}
+.opts button:active{transform:scale(.98)}
+.opts button span{color:var(--muted);font-weight:400;font-size:.9rem}
+.opts button[aria-pressed=true]{border-color:var(--wax);background:#24221a}
+.ticket{background:var(--white);color:var(--black);border-radius:14px;padding:32px;display:grid;gap:16px;align-content:start;position:relative}
+.ticket::before{content:"";position:absolute;left:0;right:0;top:76px;border-top:2px dashed rgba(13,15,18,.2)}
+.ticket .tname{font-family:"Barlow Condensed",sans-serif;font-size:2.6rem;text-transform:uppercase;line-height:1}
+.ticket .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.ticket .meta b{background:var(--black);color:var(--wax);font:700 15px "Barlow Condensed",sans-serif;letter-spacing:.06em;padding:8px 12px;border-radius:4px;text-transform:uppercase}
+.ticket ul{list-style:none;padding:0;display:grid;gap:8px}
+.ticket li::before{content:"✓";color:#2f7d43;font-weight:700;margin-right:10px}
+.ticket small{color:#55606b}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:44px;counter-reset:n}
+.steps div{border-top:2px solid var(--wax);padding-top:18px}
+.steps div::before{counter-increment:n;content:"0" counter(n);font:700 2.6rem "Barlow Condensed",sans-serif;color:var(--wax);display:block}
+.steps h3{font-size:1.8rem}
+.steps p{color:var(--muted);margin-top:6px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px}
+form{background:var(--graph);border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;gap:16px}
+label{font-weight:600;display:grid;gap:6px;font-size:.95rem}
+input,select{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:8px;width:100%;background:var(--black);color:var(--white)}
+.sent{background:#24221a;border:1px solid var(--wax);padding:14px;border-radius:8px;font-weight:600}
+.side p{color:var(--muted);margin-top:14px}
+.side .tel{font:700 2.6rem "Barlow Condensed",sans-serif;text-decoration:none;display:inline-block;margin-top:16px}
+footer{padding:40px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.concept{font-weight:600;color:var(--white)}
+.bar{display:none}
+.reveal{transition:opacity 520ms var(--ease),transform 520ms var(--ease)}
+.js .reveal:not(.in){opacity:0;transform:translateY(12px)}
+@media (prefers-reduced-motion:reduce){.js .reveal:not(.in){transform:none}.btn,.opts button,.zone .shape{transition:none}}
+@media (max-width:860px){
+ .head-r .tel{display:none}
+ .spec,.builder,.split,.steps{grid-template-columns:minmax(0,1fr)}
+ section.s{padding:72px 0}
+ .callout{font-size:22px}
+ .bar{display:flex;gap:10px;position:fixed;z-index:9;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(13,15,18,.96);border-top:1px solid var(--line)}
+ .bar .btn{flex:1}
+}
+@media (max-width:560px){.head-r .btn{display:none}.logo{font-size:1.3rem}}
+</style>
+</head>
+<body>
+<header class="head"><div class="wrap">
+ <a class="logo" href="#">Your Name <span>Detailing</span></a>
+ <div class="head-r"><a class="tel" href="#book">07700 900123</a><a class="btn btn-wax" href="#book">Book a detail</a></div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <h1>Every panel. <em>Every</em> wheel. Done right.</h1>
+ <div class="sub"><p>Mobile car detailing that comes to you. Tap any part of the car to see exactly what we do to it.</p><a class="btn btn-line" href="#packages">Build your package</a></div>
+
+ <div class="spec">
+  <div class="drawing">
+   <svg viewBox="0 0 640 400" role="group" aria-label="Car diagram: choose a part">
+    <g class="zone" data-z="wheels" tabindex="0" role="button" aria-pressed="false" aria-label="Wheels and tyres">
+     <g class="shape" fill="#111418" stroke="#5c6672" stroke-width="2"><rect x="160" y="96" width="70" height="28" rx="9"/><rect x="420" y="96" width="70" height="28" rx="9"/><rect x="160" y="276" width="70" height="28" rx="9"/><rect x="420" y="276" width="70" height="28" rx="9"/></g>
+     <path class="leader" d="M195 304 L140 360"/><text class="callout" x="60" y="382">Wheels</text>
+    </g>
+    <g class="zone" data-z="paint" tabindex="0" role="button" aria-pressed="true" aria-label="Paintwork">
+     <path class="shape" d="M180 112 H470 Q545 112 550 200 Q545 288 470 288 H180 Q100 288 98 200 Q100 112 180 112Z M205 138 H440 V262 H205Z" fill-rule="evenodd" fill="rgba(236,239,243,.06)" stroke="#5c6672" stroke-width="2"/>
+     <path class="leader" d="M520 140 L575 80"/><text class="callout" x="548" y="70">Paint</text>
+    </g>
+    <g class="zone" data-z="interior" tabindex="0" role="button" aria-pressed="false" aria-label="Interior">
+     <path class="shape" d="M248 140 H392 V260 H248Z" fill="rgba(236,239,243,.03)" stroke="#5c6672" stroke-width="2"/>
+     <g fill="#3a424d"><rect x="330" y="150" width="46" height="40" rx="8"/><rect x="330" y="210" width="46" height="40" rx="8"/><rect x="262" y="150" width="50" height="100" rx="10"/></g>
+     <path class="leader" d="M248 200 L60 200"/><text class="callout" x="10" y="190">Interior</text>
+    </g>
+    <g class="zone" data-z="glass" tabindex="0" role="button" aria-pressed="false" aria-label="Glass">
+     <path class="shape" d="M396 140 L438 150 V250 L396 260Z M244 140 L208 152 V248 L244 260Z" fill="rgba(160,190,215,.2)" stroke="#5c6672" stroke-width="2"/>
+     <path class="leader" d="M418 145 L418 40"/><text class="callout" x="392" y="30">Glass</text>
+    </g>
+   </svg>
+   <small>Tap a part of the car</small>
+  </div>
+  <div class="info" aria-live="polite">
+   <span class="tag" id="z-tag">Part 1 of 4</span>
+   <h2 id="z-title">Paint</h2>
+   <ul id="z-list"></ul>
+   <div class="zbtns" id="zbtns">
+    <button type="button" data-z="paint" aria-pressed="true">Paint</button><button type="button" data-z="glass" aria-pressed="false">Glass</button><button type="button" data-z="interior" aria-pressed="false">Interior</button><button type="button" data-z="wheels" aria-pressed="false">Wheels</button>
+   </div>
+  </div>
+ </div>
+</div></section>
+
+<section class="s" id="packages" style="background:var(--graph)"><div class="wrap">
+ <p class="kick reveal">Build your package</p>
+ <h2 class="big reveal">Your car. Your clean. Two taps.</h2>
+ <div class="builder">
+  <div class="choose">
+   <div><p id="l-size">Your car</p><div class="opts" role="group" aria-labelledby="l-size" data-k="size">
+    <button type="button" data-v="s" aria-pressed="false">Small <span>Hatchback, city car</span></button>
+    <button type="button" data-v="m" aria-pressed="true">Medium <span>Saloon, estate</span></button>
+    <button type="button" data-v="l" aria-pressed="false">Large <span>SUV, 4x4, van</span></button></div></div>
+   <div><p id="l-lvl">The clean</p><div class="opts" role="group" aria-labelledby="l-lvl" data-k="lvl">
+    <button type="button" data-v="wash" aria-pressed="false">Maintenance wash <span>Keep it looking fresh</span></button>
+    <button type="button" data-v="valet" aria-pressed="true">Full valet <span>Inside and out</span></button>
+    <button type="button" data-v="enh" aria-pressed="false">Paint enhancement <span>Swirls polished out</span></button></div></div>
+  </div>
+  <div class="ticket" aria-live="polite">
+   <span class="tname" id="t-name">Full valet</span>
+   <div class="meta"><b id="t-size">Medium car</b><b id="t-time">About 3 hours</b><b>We come to you</b></div>
+   <ul id="t-list"></ul>
+   <small>Times are a guide. Every car is different, and we'll tell you up front if yours needs longer.</small>
+   <a class="btn btn-wax" href="#book" style="justify-self:start">Book this package</a>
+  </div>
+ </div>
+</div></section>
+
+<section class="s"><div class="wrap">
+ <p class="kick reveal">How it works</p>
+ <h2 class="big reveal">We bring everything. You don't move.</h2>
+ <div class="steps">
+  <div class="reveal"><h3>Pick a package</h3><p>Choose your car and the clean, or ask us and we'll suggest one.</p></div>
+  <div class="reveal"><h3>We turn up</h3><p>At home or at work, with our own water and power. You carry on with your day.</p></div>
+  <div class="reveal"><h3>You see it</h3><p>We walk you round the car before we leave, so you see every detail.</p></div>
+ </div>
+</div></section>
+
+<section class="s" id="book" style="background:var(--graph)"><div class="wrap split">
+ <div class="side">
+  <p class="kick">Book a detail</p>
+  <h2 class="big">Get your car looking new again.</h2>
+  <p>Tell us your car and where it'll be. We'll message you back with a time.</p>
+  <a class="tel" href="#book">07700 900123</a>
+ </div>
+ <form id="f" novalidate>
+  <label>Your name<input name="n" autocomplete="name" required></label>
+  <label>Phone<input name="p" type="tel" autocomplete="tel" required></label>
+  <label>Car make and model<input name="c" placeholder="e.g. Ford Focus"></label>
+  <label>Package<select name="k" id="k"><option>Maintenance wash</option><option selected>Full valet</option><option>Paint enhancement</option><option>Not sure</option></select></label>
+  <label>Postcode<input name="pc" autocomplete="postal-code"></label>
+  <button class="btn btn-wax" type="submit">Request a booking</button>
+  <p class="sent" id="sent" hidden>Thanks. On the live site this goes straight to your phone.</p>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>Your Name Detailing · Mobile · 07700 900123</span><span class="concept">Concept design by NEMORA · nemora.uk</span></div></footer>
+<div class="bar"><a class="btn btn-line" href="#book">Call</a><a class="btn btn-wax" href="#book">Book</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var Z={paint:['Paint',['Snow foam pre-wash to lift the grit first','Two-bucket hand wash, no swirl-making brushes','Decontamination to pull out tar and iron fallout','Protection that keeps it beading for weeks']],
+  glass:['Glass',['Inside and out, streak-free','Wipers and seals cleaned','Water-repellent coating on request']],
+  interior:['Interior',['Full vacuum, including boot and footwells','Seats and carpets shampooed','Dash, doors and trims cleaned and dressed','Pet hair removed']],
+  wheels:['Wheels',['Non-acid cleaner that is safe on alloys','Faces, barrels and nuts cleaned','Arches rinsed out','Tyres dressed for a deep black finish']]};
+ var order=['paint','glass','interior','wheels'];
+ function pick(z){var d=Z[z];document.getElementById('z-title').textContent=d[0];document.getElementById('z-tag').textContent='Part '+(order.indexOf(z)+1)+' of 4';
+  document.getElementById('z-list').innerHTML=d[1].map(function(x){return '<li>'+x+'</li>'}).join('');
+  document.querySelectorAll('[data-z]').forEach(function(el){el.setAttribute('aria-pressed',String(el.dataset.z===z))});}
+ document.querySelectorAll('.zone').forEach(function(g){g.addEventListener('click',function(){pick(g.dataset.z)});g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(g.dataset.z)}})});
+ document.getElementById('zbtns').addEventListener('click',function(e){var b=e.target.closest('button');if(b)pick(b.dataset.z)});
+ pick('paint');
+ var st={size:'m',lvl:'valet'};
+ var P={wash:['Maintenance wash',{s:'About 1 hour',m:'About 1¼ hours',l:'About 1½ hours'},['Snow foam and two-bucket hand wash','Wheels and tyres cleaned','Hand dried, no streaks','Glass cleaned outside']],
+  valet:['Full valet',{s:'About 2½ hours',m:'About 3 hours',l:'About 3½ hours'},['Everything in the maintenance wash','Full interior vacuum and wipe-down','Windows cleaned inside','Tyres dressed and paint sealed']],
+  enh:['Paint enhancement',{s:'About 6 hours',m:'About 7 hours',l:'A full day'},['Full decontamination wash','Machine polish to lift swirls and haze','Long-lasting paint protection','Wheels and glass deep cleaned']]};
+ var sz={s:'Small car',m:'Medium car',l:'Large car or van'},sel=document.getElementById('k');
+ function draw(){var p=P[st.lvl];document.getElementById('t-name').textContent=p[0];document.getElementById('t-time').textContent=p[1][st.size];document.getElementById('t-size').textContent=sz[st.size];
+  document.getElementById('t-list').innerHTML=p[2].map(function(x){return '<li>'+x+'</li>'}).join('');sel.value=p[0];}
+ document.querySelectorAll('.opts').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});st[g.dataset.k]=b.dataset.v;draw();})});
+ draw();
+ var f=document.getElementById('f');f.addEventListener('submit',function(e){e.preventDefault();if(!f.reportValidity())return;document.getElementById('sent').hidden=false;});
+ var els=document.querySelectorAll('.reveal');
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+ var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.1});
+ els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

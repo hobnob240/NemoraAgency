@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name Coaching | Personal trainer (concept)</title>
+<meta name="description" content="A concept website for a personal trainer by NEMORA: pick your goal and days, and see your first 12 weeks laid out.">
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:"Oswald";src:url(fonts/oswald-600.woff) format("woff");font-weight:600;font-display:swap}
+@font-face{font-family:"Barlow";src:url(fonts/barlow-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Barlow";src:url(fonts/barlow-600.woff) format("woff");font-weight:600;font-display:swap}
+:root{--chalk:#f3f1ec;--white:#fbfaf7;--iron:#141414;--iron-2:#232323;--muted:#5f5f5c;--red:#d6362f;--red-d:#a82822;--line:rgba(20,20,20,.12);--ease:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:400 17px/1.6 "Barlow",system-ui,sans-serif;color:var(--iron);background:var(--chalk);overflow-x:clip}
+h1,h2,h3{font-family:"Oswald",Impact,sans-serif;font-weight:600;line-height:.98;text-transform:uppercase}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:4px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:1rem;letter-spacing:.02em;transition:transform 140ms var(--ease),background-color 160ms}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d)}
+.btn-line{border-color:var(--iron);background:transparent}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.head .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{font-family:"Oswald",sans-serif;font-size:1.5rem;text-decoration:none;text-transform:uppercase;letter-spacing:.03em}
+.logo span{color:var(--red)}
+.head-r{display:flex;gap:14px;align-items:center}
+.head-r .tel{font-weight:600;text-decoration:none}
+.hero{padding:24px 0 64px}
+.hero .grid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:32px;align-items:end}
+.big12{font-family:"Oswald",sans-serif;font-size:clamp(9rem,26vw,20rem);line-height:.78;color:var(--red);letter-spacing:-.03em}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.6rem);max-width:12ch}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:40ch;margin-top:16px}
+/* planner */
+.planner{margin-top:44px;background:var(--white);border:1px solid var(--line);border-radius:10px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+.pick{padding:28px;border-right:1px solid var(--line);display:grid;gap:24px;align-content:start}
+.pick h2{font-size:2rem}
+.pick p{font-weight:600;margin-bottom:10px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:600 16px "Barlow",sans-serif;padding:11px 15px;border-radius:4px;border:2px solid var(--iron);background:transparent;color:var(--iron);cursor:pointer;transition:background-color 160ms,color 160ms,transform 140ms var(--ease)}
+.seg button:active{transform:scale(.96)}
+.seg button[aria-pressed=true]{background:var(--iron);color:var(--chalk)}
+.plan{padding:28px;display:grid;gap:20px;align-content:start}
+.plan .head2{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.plan h3{font-size:2.2rem}
+.plan .count{font:600 1.1rem "Oswald",sans-serif;text-transform:uppercase;color:var(--red)}
+.log{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px}
+.wk{display:grid;gap:5px;align-content:start}
+.wk span{font:600 12px "Oswald",sans-serif;color:var(--muted);text-align:center}
+.wk i{display:block;aspect-ratio:1;border-radius:3px;background:var(--iron);transform-origin:50% 100%;transition:background-color 200ms}
+.wk i.off{background:rgba(20,20,20,.07)}
+.wk.p2 i:not(.off){background:#444}
+.wk.p3 i:not(.off){background:var(--red)}
+.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.phases div{border-top:3px solid var(--iron);padding-top:10px}
+.phases div:nth-child(2){border-color:#444}.phases div:nth-child(3){border-color:var(--red)}
+.phases b{font:600 1rem "Oswald",sans-serif;text-transform:uppercase;display:block}
+.phases small{font-size:.8rem;color:var(--muted);font-weight:600}
+.phases p{font-size:.95rem;color:var(--muted);margin-top:4px}
+.plan .note{font-size:.9rem;color:var(--muted)}
+section.s{padding:96px 0}
+h2.big{font-size:clamp(2.4rem,5.4vw,4.2rem);max-width:15ch}
+.inc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;margin-top:40px;border-top:2px solid var(--iron)}
+.inc div{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:48px 1fr;gap:16px}
+.inc em{font:600 1.8rem "Oswald",sans-serif;font-style:normal;color:var(--red)}
+.inc h3{font-size:1.4rem}
+.inc p{color:var(--muted);margin-top:4px}
+.dark{background:var(--iron);color:var(--chalk)}
+.dark .muted{color:#a9a9a4}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+form{background:var(--white);color:var(--iron);border-radius:10px;padding:28px;display:grid;gap:16px}
+label{font-weight:600;display:grid;gap:6px;font-size:.95rem}
+input,select{font:inherit;padding:13px 14px;border:1px solid rgba(20,20,20,.25);border-radius:4px;width:100%;background:var(--chalk)}
+.sent{background:#f6dedb;padding:14px;border-radius:4px;font-weight:600}
+.side .tel{font:600 2.4rem "Oswald",sans-serif;text-decoration:none;display:inline-block;margin-top:16px}
+footer{padding:40px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.concept{font-weight:600;color:var(--iron)}
+.bar{display:none}
+.reveal{transition:opacity 520ms var(--ease),transform 520ms var(--ease)}
+.js .reveal:not(.in){opacity:0;transform:translateY(12px)}
+@media (prefers-reduced-motion:reduce){.js .reveal:not(.in){transform:none}.btn,.seg button,.wk i{transition:none}}
+@media (max-width:860px){
+ .hero .grid{grid-template-columns:minmax(0,1fr)}
+ .planner,.split,.inc{grid-template-columns:minmax(0,1fr)}
+ .pick{border-right:0;border-bottom:1px solid var(--line)}
+ .phases{grid-template-columns:minmax(0,1fr)}
+ .log{gap:4px}.wk span{font-size:10px}
+ .head-r .tel{display:none}
+ section.s{padding:72px 0}
+ .bar{display:flex;gap:10px;position:fixed;z-index:9;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(243,241,236,.96);border-top:1px solid var(--line)}
+ .bar .btn{flex:1}
+}
+@media (max-width:560px){.head-r .btn{display:none}.logo{font-size:1.25rem}}
+</style>
+</head>
+<body>
+<header class="head"><div class="wrap">
+ <a class="logo" href="#">Your Name <span>Coaching</span></a>
+ <div class="head-r"><a class="tel" href="#book">07700 900123</a><a class="btn btn-red" href="#book">Book a consultation</a></div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <div class="grid">
+  <span class="big12" aria-hidden="true">12</span>
+  <div>
+   <h1>Weeks to a stronger you. Here's how.</h1>
+   <p>One-to-one personal training. Pick your goal and how many days you can train, and see your first 12 weeks laid out.</p>
+  </div>
+ </div>
+
+ <div class="planner" id="planner">
+  <div class="pick">
+   <h2>Your plan</h2>
+   <div><p id="l-goal">Your goal</p><div class="seg" role="group" aria-labelledby="l-goal" data-k="goal">
+    <button type="button" data-v="fat" aria-pressed="true">Lose fat</button><button type="button" data-v="strong" aria-pressed="false">Get stronger</button><button type="button" data-v="fit" aria-pressed="false">Get fitter</button><button type="button" data-v="feel" aria-pressed="false">Feel better</button></div></div>
+   <div><p id="l-days">Days a week</p><div class="seg" role="group" aria-labelledby="l-days" data-k="days">
+    <button type="button" data-v="2" aria-pressed="false">2 days</button><button type="button" data-v="3" aria-pressed="true">3 days</button><button type="button" data-v="4" aria-pressed="false">4 days</button></div></div>
+   <a class="btn btn-red" href="#book" style="justify-self:start">Start this plan</a>
+  </div>
+  <div class="plan" aria-live="polite">
+   <div class="head2"><h3 id="p-title">Lose fat, 3 days a week</h3><span class="count" id="p-count">36 sessions</span></div>
+   <div class="log" id="log" aria-hidden="true"></div>
+   <div class="phases">
+    <div><b>Foundations</b><small>Weeks 1–4</small><p id="ph1"></p></div>
+    <div><b>Build</b><small>Weeks 5–8</small><p id="ph2"></p></div>
+    <div><b>Push</b><small>Weeks 9–12</small><p id="ph3"></p></div>
+   </div>
+   <p class="note">A guide to how the 12 weeks are shaped. Your real plan is built around you at your first consultation.</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="s"><div class="wrap">
+ <h2 class="big reveal">What you get.</h2>
+ <div class="inc">
+  <div class="reveal"><em>01</em><span><h3>A plan built for you</h3><p>Written around your goal, your body and the time you've actually got.</p></span></div>
+  <div class="reveal"><em>02</em><span><h3>Every session coached</h3><p>Form checked on every lift, so you get stronger without getting hurt.</p></span></div>
+  <div class="reveal"><em>03</em><span><h3>Weekly check-ins</h3><p>We look at how the week went and adjust before the next one.</p></span></div>
+  <div class="reveal"><em>04</em><span><h3>Food that fits your life</h3><p>Simple guidance on eating well, without strict diets or cutting things out.</p></span></div>
+ </div>
+</div></section>
+
+<section class="s dark" id="book"><div class="wrap split">
+ <div class="side">
+  <h2 class="big">Start with a chat.</h2>
+  <p class="muted" style="margin-top:14px">Tell us your goal and when you can train. We'll get back to you to arrange a consultation.</p>
+  <a class="tel" href="#book">07700 900123</a>
+ </div>
+ <form id="f" novalidate>
+  <label>Your name<input name="n" autocomplete="name" required></label>
+  <label>Phone<input name="p" type="tel" autocomplete="tel" required></label>
+  <label>Your goal<select name="g" id="g"><option>Lose fat</option><option>Get stronger</option><option>Get fitter</option><option>Feel better</option></select></label>
+  <label>Days a week<select name="d" id="d"><option>2</option><option selected>3</option><option>4</option></select></label>
+  <label>Best time to train<select name="t"><option>Early morning</option><option>Daytime</option><option>Evening</option></select></label>
+  <button class="btn btn-red" type="submit">Book my consultation</button>
+  <p class="sent" id="sent" hidden>Thanks. On the live site this goes straight to your phone.</p>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>Your Name Coaching · 07700 900123</span><span class="concept">Concept design by NEMORA · nemora.uk</span></div></footer>
+<div class="bar"><a class="btn btn-line" href="#book">Call</a><a class="btn btn-red" href="#book">Book</a></div>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+ var G={fat:['Lose fat',['Learn the key lifts and build the habit','More work in less time, with circuits added','Your strongest weeks, with a check on progress']],
+  strong:['Get stronger',['Master the big lifts: squat, hinge, press, pull','Steadily add weight every week','Test your new strength numbers']],
+  fit:['Get fitter',['Build a base of strength and stamina','Intervals and conditioning stepped up','Put your fitness to the test']],
+  feel:['Feel better',['Gentle, regular movement you enjoy','More confidence with every session','Training as a habit that sticks']]};
+ var st={goal:'fat',days:3},log=document.getElementById('log'),gs=document.getElementById('g'),ds=document.getElementById('d');
+ for(var w=1;w<=12;w++){var c=document.createElement('div');c.className='wk '+(w<=4?'p1':(w<=8?'p2':'p3'));c.innerHTML='<span>W'+w+'</span>'+'<i></i><i></i><i></i><i></i>';log.appendChild(c);}
+ function draw(){var g=G[st.goal];document.getElementById('p-title').textContent=g[0]+', '+st.days+' days a week';document.getElementById('p-count').textContent=(12*st.days)+' sessions';
+  ['ph1','ph2','ph3'].forEach(function(id,i){document.getElementById(id).textContent=g[1][i];});
+  log.querySelectorAll('.wk').forEach(function(wk){wk.querySelectorAll('i').forEach(function(i,n){i.classList.toggle('off',n>=st.days);});});
+  gs.value=g[0];ds.value=String(st.days);}
+ document.querySelectorAll('.pick [data-k]').forEach(function(grp){grp.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;grp.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});st[grp.dataset.k]=grp.dataset.k==='days'?+b.dataset.v:b.dataset.v;draw();})});
+ draw();
+ var f=document.getElementById('f');f.addEventListener('submit',function(e){e.preventDefault();if(!f.reportValidity())return;document.getElementById('sent').hidden=false;});
+ var els=document.querySelectorAll('.reveal');
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+ var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.1});
+ els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
